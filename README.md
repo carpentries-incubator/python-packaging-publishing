@@ -1,4 +1,4 @@
-# FIXME Lesson title
+# Fairness in Machine Learning
 
 FIXME
 
