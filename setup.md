@@ -1,6 +1,9 @@
 ---
 title: Setup
 ---
-FIXME
+
+Python - anaconda is best
+
+numpy, scicpy, sklearn
 
 {% include links.md %}

@@ -5,11 +5,11 @@ root: .
 ---
 ## Instructional Material
 
-All Software Carpentry and Data Carpentry instructional material is
+This instructional material is
 made available under the [Creative Commons Attribution
 license][cc-by-human]. The following is a human-readable summary of
 (and not a substitute for) the [full legal text of the CC BY 4.0
-license][cc-by-legal].
+license][cc-by-legal]. This is based on the  Software Carpentry and Data Carpentry lesson styles.
 
 You are free:
 
