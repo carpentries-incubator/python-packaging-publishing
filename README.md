@@ -1,6 +1,6 @@
-# Fairness in Machine Learning
+# Python Data Project
 
-FIXME
+This tutorial covers some next steps for getting your python -based data analysis project organized and ready to share, with collaborators or in general. 
 
 ## Contributing
 
@@ -15,7 +15,7 @@ and have a look at the [more detailed guidelines][lesson-example] on proper form
 
 ## Maintainer(s)
 
-* FIXME
+* Sarah M Brown (@Brownsarahm)
 
 ## Authors
 
