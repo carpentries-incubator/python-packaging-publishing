@@ -18,7 +18,15 @@ keypoints:
 - "Other popular environment managers are"
 ---
 
-Introduction text for the lesson as a whole
+# Environments and environment managers
+
+An environment consists of a certain Python version and some packages
+
+Why use one:
+- to delvier code and keep it the same versions
+- to contou use ribute to a package y
+
+how to chose which of the main strategies to use: virtualenv and pip or conda
 
 ## Dependencies
 

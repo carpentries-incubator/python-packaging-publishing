@@ -1,7 +1,7 @@
 # Contributing
 
-[Software Carpentry][swc-site] and [Data Carpentry][dc-site] are open source projects,
-and we welcome contributions of all kinds:
+This is an open source project modeled after
+[Software Carpentry][swc-site] and [Data Carpentry][dc-site]. we welcome contributions of all kinds:
 new lessons,
 fixes to existing material,
 bug reports,
@@ -14,6 +14,8 @@ you agree that we may redistribute your work under [our license](LICENSE.md).
 In exchange,
 we will address your issues and/or assess your change proposal as promptly as we can,
 and help you become a member of our community.
+
+This project adopts a code of conduct from
 Everyone involved in [Software Carpentry][swc-site] and [Data Carpentry][dc-site]
 agrees to abide by our [code of conduct](CONDUCT.md).
 
@@ -26,10 +28,10 @@ or a factual error.
 This is a good way to introduce yourself
 and to meet some of our community members.
 
-1.  If you do not have a [GitHub][github] account,
+<!-- 1.  If you do not have a [GitHub][github] account,
     you can [send us comments by email][email].
     However,
-    we will be able to respond more quickly if you use one of the other methods described below.
+    we will be able to respond more quickly if you use one of the other methods described below. -->
 
 2.  If you have a [GitHub][github] account,
     or are willing to [create one][github-join],
