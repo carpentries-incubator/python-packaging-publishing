@@ -22,7 +22,7 @@ We learned how to make functions before
 
 ## Python Packages
 
-A module is
+A module is an installable bit
 
 The file `__init__.py`
 
@@ -33,5 +33,15 @@ The file `__init__.py`
 
 ## Getting a Package from A Colleague
 
+Using git clone
+
+Downlaod and unzip their folder
+
+
+~~~
+cd project_dir
+pip install .
+~~~
+{: language-bash}
 
 {% include links.md %}
