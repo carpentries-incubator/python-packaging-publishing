@@ -26,7 +26,7 @@ This project is not an official project of the Carpentries, but it is inspired b
 
 We'd like to ask you to familiarize yourself
 with our [Contribution Guide](CONTRIBUTING.md)
-and have a look at the [more detailed Carpentreis guidelines][lesson-example] on proper formatting,
+and have a look at the [more detailed Carpentries guidelines][lesson-example] on proper formatting,
  ways to render the lesson locally, and even how to write new episodes.
 
 ## Maintainer(s)
@@ -37,7 +37,7 @@ and have a look at the [more detailed Carpentreis guidelines][lesson-example] on
 
 A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
 
-<!-- 
+<!--
 ## Citation
 
 
