@@ -4,6 +4,8 @@ Welcome Hacktoberfest participants, see the [roadmap](https://github.com/brownsa
 
 The [Contribution Guide](CONTRIBUTING.md) includes the general guidelines for contributing to the project, and the open issues highlight what is top priorities right now.  
 
+This project is inspired by the Carpentries and adopts their code of conduct, but reporting should be to the maintainers of this project.  The style guide of the Carpentries also applies here 
+
 # Getting Started: Python Data Project
 
 This is to be a collaboration among scientific computing researchers and educators to develop accessible tutorial materials and minimal templates that empower researchers developing new analysis techniques to release them in formats that encourage community adoption. We're working open to model the practices that the lesson teaches. By working open, we hope to increase the impact of the templates and tutorials by encouraging learners to contribute back.
