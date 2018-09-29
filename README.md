@@ -1,8 +1,12 @@
-# Python Data Project
+# Hacktoberfest Welcome
 
-This project aims to develop accessible tutorial materials and minimal templates that empower researchers developing new analysis techniques to release them in formats that encourage community adoption.
+Welcome Hacktoberfest participants, see the [roadmap](https://github.com/brownsarahm/python-data-project/projects/2) for planning on the project and some more information about expectations for contributing.  
 
-It's an open source project model the practices that it teaches and to increase the impact of the templates and tutorials by encouraging learners to contribute back.
+The [Contribution Guide](CONTRIBUTING.md) includes the general guidelines for contributing to the project, and the open issues highlight what is top priorities right now.  
+
+# Getting Started: Python Data Project
+
+This is to be a collaboration among scientific computing researchers and educators to develop accessible tutorial materials and minimal templates that empower researchers developing new analysis techniques to release them in formats that encourage community adoption. We're working open to model the practices that the lesson teaches. By working open, we hope to increase the impact of the templates and tutorials by encouraging learners to contribute back.
 
 This tutorial will cover some next steps for getting your python -based data analysis project organized and ready to share, with collaborators or in general. What differentiates this project from others is that it aims to specifically target minimal effort, maximal benefit open source practices to help researchers who want to share their work with minimal overhead.  
 
