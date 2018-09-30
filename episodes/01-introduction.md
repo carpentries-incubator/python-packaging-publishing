@@ -3,27 +3,35 @@ title: "Introduction to Data Python Data Analysis Projects"
 teaching: 0
 exercises: 0
 questions:
-- "How do I set up a project in practice?"
-- "What else to I need to do to get my project shared"
+- "What are common features of a project?"
+- "What do I need to do to get my project shared?"
+- "What will this lesson cover"
 objectives:
-- "Create a project structure"
-- "Save shortcuts"
 - "Categorize pieces of code and organize them for efficient future use"
 - "Identify components of a complete project"
 keypoints:
-- "Data and code should be governed by different principles"
-- "A package enables a project to be installed"
+- Projects have common structures
+- "Packaging enables a project to be installed"
 - "An environment allows different people to all have the same versions and run software more reliably"
 - "Documentation is an essential component of nay complete project and should exist with the code"
 ---
 
+This episode will introduce the various tools that will be taught throughout the lesson and how the components relate to one another.  This will set the foundation and motivation for the lesson.
+
 ## A Data Analysis Project
 
-In small groups, let's describe all of the steps we might go through and the things we want our project to do.  Then we'll discuss some of the components.  
+> ## Exercise
+> In small groups, describe all of the steps you might go through in developing a project, how it could work, and the things you want your project to do.
+> Then discuss problems you anticipate or have had.
+>
+> > ## Solution
+> > The rest of the episode adds them
+> {: .solution}
+{: .challenge} 
 
 ## Data and Code
 
- - Different back up needs, differnt space requirements
+ - Different back up needs, different space requirements
  - Different sharing needs
  - Shared server examples
 
