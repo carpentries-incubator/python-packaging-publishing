@@ -31,6 +31,16 @@ Let's look around on GitHub for some examples and compare and contrast them.
 FIXME: tutorial steps setting up a project, discussing components
 
 
+~~~
+git clone
+cd project-name
+mkdir data
+mkdir package-name
+mkdir docs
+~~~
+{: .language-bash}
+
+
 > ## Exercise
 > FIXME: multiple choice questions with code excerpts, asking where they go within the project organization
 >
