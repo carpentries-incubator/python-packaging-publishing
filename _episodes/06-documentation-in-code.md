@@ -8,7 +8,8 @@ objectives:
 - "Outline new functions with comment psuedocode"
 - "Create numpydoc friendly docstrings"
 keypoints:
-- "First key point. (answer questions)"
+- "Docstrings describe functions"
+- "comments throughout the code help onboard and debug"
 ---
 
 Introduction text for the lesson as a whole
