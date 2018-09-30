@@ -27,16 +27,21 @@ This episode will introduce the various tools that will be taught throughout the
 > > ## Solution
 > > The rest of the episode adds them
 > {: .solution}
-{: .challenge} 
+{: .challenge}
+
+## Workflows, project stages, and common challenges
+
+ - uploads
+ - collaboration
+ - work on multiple computers
+ - promote the work
+
 
 ## Data and Code
 
  - Different back up needs, different space requirements
  - Different sharing needs
  - Shared server examples
-
-## Types of Code
-
  - scripts, numerical experiments, plotting(that get narrative)
  - things that are project specific
  - things that are method-related might be reused
@@ -46,7 +51,7 @@ This episode will introduce the various tools that will be taught throughout the
 ## Environments
 
  - the set of requirements and dependencies
- - what version of differt  sotware and pacakges
+ - what version of different  software and pacakges
  - don't need to track it ourselves, the environment is like a wrapper
  - many different managers; one is conda
 
@@ -59,12 +64,6 @@ This episode will introduce the various tools that will be taught throughout the
  - need to write the parts in natural language; but don't need to work on the infrastrcutre, tools can do that for you
 
 
-## Project Organization
 
-Now that we've brainstormed the parts of a project and talked a little bit about what each of them consists of.  How should we organize the code?
-
-There isn't a specific answer, but some guiding principles.
-
-Let's look around on github for some examples and compare and contrast them.
 
 {% include links.md %}
