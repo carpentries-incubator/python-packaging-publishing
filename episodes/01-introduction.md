@@ -51,7 +51,7 @@ This episode will introduce the various tools that will be taught throughout the
 ## Environments
 
  - the set of requirements and dependencies
- - what version of different  software and pacakges
+ - what version of different  software and packages
  - don't need to track it ourselves, the environment is like a wrapper
  - many different managers; one is conda
 

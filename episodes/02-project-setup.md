@@ -23,4 +23,16 @@ There isn't a specific answer, but some guiding principles.
 
 Let's look around on GitHub for some examples and compare and contrast them.
 
+## Guiding Principles
+
+
+## Setting up a project
+
+FIXME: tutorial steps setting up a project, discussing components
+
+
+> ## Exercise
+> FIXME: multiple choice questions with code excerpts, asking where they go within the project organization
+>
+
 {% include links.md %}
