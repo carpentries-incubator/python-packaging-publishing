@@ -1,6 +1,9 @@
 ---
 title: "Instructor Notes"
 ---
-FIXME
+
+notes on teaching:
+ -
+ -
 
 {% include links.md %}

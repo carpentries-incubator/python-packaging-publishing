@@ -7,7 +7,7 @@ Tyrone is a PhD student in machine learning. He develops novel methods to analyz
 
 This lesson will teach him to prepare and package his work so that his clinical collaborators can use his techniques.
 
-## Marzyeh Neuron
+## Marzyeh Microglia
 
 Marzyeh is a lab manager of a neuroscience lab. With many of the PhD students in the lab, she recently completed a software carpentry workshop together. The lab has converted the analysis pipeliens into a number of specialized functions.  They have also developed a number of custom visualizations that all members of the lab are supposed to use.  Currently, the students all commit the plotting functions to a common repository for storage and then copy and paste them into their individual projects. They frequently have errors and conflicts with different versions packages between students who have older installs and new installs of python.
 
