@@ -1,6 +1,6 @@
 # Hacktoberfest Welcome
 
-This project is participating in Hacktoberfest as a part of the Mozilla Open Leaders Program. We welcome contributors and new potential maintainers.
+This project is participating in Hacktoberfest as a part of the Mozilla Open Leaders Program. We welcome [contributions as detailed here]((https://github.com/brownsarahm/python-data-project/issues?q=is%3Aissue+is%3Aopen+label%3AHacktoberfest)) and new potential maintainers.
 
 
 # Mozilla Open Leaders
