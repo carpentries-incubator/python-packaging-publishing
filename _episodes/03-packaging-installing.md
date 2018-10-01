@@ -20,7 +20,15 @@ keypoints:
 
 We learned how to make functions before
 
-FIXME: Example on writing functions to motivate packaging
+example of a function-
+
+def greet(name):
+	"""This function greets to
+	the person passed in as
+	parameter"""
+	print("Hello, " + name + ". Good morning!")
+  
+
 
 ## Pip
 
