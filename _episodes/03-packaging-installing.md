@@ -37,7 +37,10 @@ FIXME: describe structure of how a package works in python
 
 ## SetupTools
 
-FIXME: how to setup the setup.py file
+to setup the setup.py file, write the following command on command prompt
+~~~
+python setup.py install
+~~~
 
 ## Installing locally
 
