@@ -6,7 +6,7 @@ questions:
 - "How can I include a number of use cases?"
 objectives:
 - "Add sphinx-gallery as an extension"
-- "Outline example materrial"
+- "Outline example material"
 keypoints:
 - "SPhinx Gallery creates a gallery for "
 - "examples and tutorials "
@@ -21,7 +21,7 @@ keypoints:
 
 ## Sphinx Gallery
 
-## WHat does a good exmple look like?
+## What does a good example look like?
 
 
 {% include links.md %}
