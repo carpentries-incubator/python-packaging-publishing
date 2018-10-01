@@ -46,7 +46,7 @@ Why Environments?
 Getting a requirements.txt from ...
 
 ~~~
-pip install FIXME
+pip install -r requirements.txt
 ~~~
 {: .language-python}
 
