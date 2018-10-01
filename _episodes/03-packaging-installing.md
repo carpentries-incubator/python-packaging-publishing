@@ -42,11 +42,11 @@ FIXME: how to setup the setup.py file
 ## Installing locally
 
 
-FIXME
+Download the wheel(.whl) file of the package that is to be installed.
 
 ~~~
-cd
-pip install .
+cd <path of package file>
+pip install <package name>
 ~~~
 {; .language-pythons}
 
