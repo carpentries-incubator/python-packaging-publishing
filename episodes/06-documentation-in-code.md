@@ -15,8 +15,11 @@ keypoints:
 ## Documenting for collaboration
 
 
+
 ## API Documentation
 
-Numpydoc
+
+Numpydoc syntax
+
 
 {% include links.md %}

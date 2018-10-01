@@ -22,10 +22,15 @@ Now that we've brainstormed the parts of a project and talked a little bit about
 
 There isn't a specific answer, but some guiding principles.
 
-Let's look around on GitHub for some examples and compare and contrast them.
+> ## Exercise
+> Let's look around on GitHub for some examples and compare and contrast them.
+> Questions
+> 1. FIXME
+{: .challenge}
 
 ## Guiding Principles
 
+FIXME
 
 ## Setting up a project
 
@@ -50,31 +55,33 @@ mkdir docs
 
 Open source guidelines are generally written to be ready to scale.  Here we propose the basics to get your project live and usable vs things that will help if it grows and builds a community, but n
 
-### Readme
+### README
 
 > ## Exercise
-> read 2 readme files and discuss with a group
+> read 2 README files and discuss with a group
 >  - what are common sections?
 >  - what is the purpose?
 >  - what
 {: .challenge}
 
-
+A readme describes FIXME
 
 ### Licenses
 
+FIXME
+
 > ## Exercise
-> Discuss and compare liceses and why you should choose
+> Discuss and compare licenses and why you should choose
 >
 {: .challenge}
 
 ### Citation
 
-
+FIXME
 
 ## Open Source, Advanced
 
-Other common components are 
-
+Other common components are
+FIXME
 
 {% include links.md %}

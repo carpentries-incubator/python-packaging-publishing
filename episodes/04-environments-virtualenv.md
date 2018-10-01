@@ -30,15 +30,25 @@ how to chose which of the main strategies to use: virtualenv and pip or conda
 
 ## Dependencies
 
+what are dependencies?
 
+> ## Exercise
+> FIXME
 
 ## Create an environment
 
+Why Environments?
+ - FIXME
 
 
 ## Install from a requirements.txt
 
+Getting a requirements.txt from ...
 
+~~~
+pip install FIXME
+~~~
+{: .language-python}
 
 ## Install from scratch
 
@@ -46,6 +56,7 @@ how to chose which of the main strategies to use: virtualenv and pip or conda
 > create a new environment
 >
 {: .challenge}
+
 
 
 ## save an environment

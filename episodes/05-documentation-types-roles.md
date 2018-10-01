@@ -15,22 +15,47 @@ keypoints:
 
 Introduction text for the lesson as a whole
 
-## Audiences for documentationn
+## Audiences for documentation
 
-## Recall Accessing Help
+ - future self
+ - collaborators
+ - users (who would cite you)
+ - contributors
 
+## How is help used?
+
+Accessing Help:
 This is one way we access documentation
 
 
+To setup:
+
+As a reference
+
 ## Literal Documentation
 
-installation
+installation guides
+
+Purpose:
+
+Location:
 
 ## API Documentation
 
+Purpose:
+
+Location:
+
 ## Tutorials
+
+Purpose:
+
+Location:
 
 ## Examples
 
+Purpose:
+
+Location:
 
 {% include links.md %}

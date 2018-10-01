@@ -8,7 +8,7 @@ objectives:
 - "Add sphinx-gallery as an extension"
 - "Outline example material"
 keypoints:
-- "SPhinx Gallery creates a gallery for "
+- "Sphinx Gallery creates a gallery for "
 - "examples and tutorials "
 ---
 
