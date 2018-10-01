@@ -24,7 +24,7 @@ FIXME: Example on writing functions to motivate packaging
 
 ## Pip
 
-Pip is used to install packages from FIXME.
+Pip is used to install packages from [Python Package Index (PyPI)](https://pypi.org/).It is repository for python package that developed by Python Community. Pip works by fetching package from this repository and install it locally.
 
 ## Python Packages
 
