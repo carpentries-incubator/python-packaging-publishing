@@ -19,9 +19,13 @@ Introduction text for the lesson as a whole
 
 This is one way we access documentation
 
+## Readme
+
 ## General documentation
 
 ## Tutorials
+
+## Examples
 
 
 {% include links.md %}

@@ -20,6 +20,10 @@ keypoints:
 
 We learned how to make functions before
 
+## Pip
+
+Pip is used to install packages from FIXME.
+
 ## Python Packages
 
 A module is an installable unit of code.
@@ -30,14 +34,19 @@ The file `__init__.py`
 ## SetupTools
 
 
-## Pip
+## Installing locally
+
 
 
 ## Getting a Package from A Colleague
 
+Many projects are distributed via GitHub as open source projects, we can use pip to install those as well.
+
 Using git clone
 
 Download and unzip their folder
+
+Direct download?
 
 
 ~~~
