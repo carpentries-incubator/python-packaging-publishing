@@ -43,10 +43,10 @@ Why Environments?
 
 ## Install from a requirements.txt
 
-Getting a requirements.txt from ...
+Getting a requirements.txt from base folder of the package repository.
 
 ~~~
-pip install FIXME
+pip install -r requirements.txt
 ~~~
 {: .language-python}
 
