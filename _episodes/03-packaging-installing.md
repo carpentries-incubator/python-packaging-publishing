@@ -20,6 +20,8 @@ keypoints:
 
 We learned how to make functions before
 
+FIXME: Example on writing functions to motivate packaging
+
 ## Pip
 
 Pip is used to install packages from FIXME.
@@ -31,12 +33,22 @@ A module is an installable unit of code.
 
 The file `__init__.py`
 
+FIXME: describe structure of how a package works in python
+
 ## SetupTools
 
+FIXME: how to setup the setup.py file
 
 ## Installing locally
 
 
+FIXME
+
+~~~
+cd
+pip install .
+~~~
+{; .language-pythons}
 
 ## Getting a Package from A Colleague
 

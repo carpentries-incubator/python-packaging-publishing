@@ -18,7 +18,7 @@ Sphinx is a tool for building documentation.
 ## What does sphinx produce?
 
 > ## Exercise
-> Look up the docuemtnation for sklearn, FIXME
+> Look up the documentation for sklearn, FIXME
 > What is the components
 >
 {: .challenge}
@@ -29,7 +29,7 @@ FIXME: guide through setup and what options mean
 
 ## Adding literal documentation
 
-FIXME: RST overivew
+FIXME: RST overview
 
 FIXME: adding pages
 
