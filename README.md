@@ -17,7 +17,7 @@ This tutorial will cover some next steps for getting your python-based data anal
 
 ## Contributing
 
-This lesson is in early development as a part of the Mozilla Open Leaders Cohort 6 and participating in Hacktoberfest.  For Hacktoberfest, please check the issues and the [roadmap](https://github.com/brownsarahm/python-data-project/projects/2)
+This lesson is in early development as a part of the Mozilla Open Leaders Cohort 6 and participating in Hacktoberfest.  For Hacktoberfest, please check [the Hacktoberfest label on issues](https://github.com/brownsarahm/python-data-project/issues?q=is%3Aissue+is%3Aopen+label%3AHacktoberfest) and the [roadmap](https://github.com/brownsarahm/python-data-project/projects/2)
 Maintainers will do their best to help you if you have any
 questions, concerns, or experience any difficulties along the way.
 
