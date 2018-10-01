@@ -33,7 +33,8 @@ A module is an installable unit of code.
 
 The file `__init__.py`
 
-FIXME: describe structure of how a package works in python
+is required to make Python treat the directories as containing packages; this is done to prevent directories with a common name, such as 
+string, from unintentionally hiding valid modules that occur later on the module search path.
 
 ## SetupTools
 
