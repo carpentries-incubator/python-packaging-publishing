@@ -15,13 +15,18 @@ keypoints:
 
 Introduction text for the lesson as a whole
 
+## Audiences for documentationn
+
 ## Recall Accessing Help
 
 This is one way we access documentation
 
-## Readme
 
-## General documentation
+## Literal Documentation
+
+installation
+
+## API Documentation
 
 ## Tutorials
 

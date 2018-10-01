@@ -12,6 +12,16 @@ keypoints:
 - "examples and tutorials "
 ---
 
-Introduction text for the lesson as a whole
+> ## Exercise
+> look at pages with good examples. FIXME
+> FIXME: discussion questions
+
+
+## Sphinx Gallery Setup
+
+## Sphinx Gallery
+
+## WHat does a good exmple look like?
+
 
 {% include links.md %}
