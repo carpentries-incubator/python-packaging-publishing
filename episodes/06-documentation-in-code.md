@@ -12,6 +12,11 @@ keypoints:
 - "comments throughout the code help onboard and debug"
 ---
 
-Introduction text for the lesson as a whole
+## Documenting for collaboration
+
+
+## API Documentation
+
+Numpydoc
 
 {% include links.md %}

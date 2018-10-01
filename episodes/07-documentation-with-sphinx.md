@@ -13,6 +13,28 @@ keypoints:
 - "Sphinx will auto build a website from plain text files and your docstrings"
 ---
 
-Introduction text for the lesson as a whole
+Sphinx is a tool for building documentation.
+
+## What does sphinx produce?
+
+> ## Exercise
+> Look up the docuemtnation for sklearn, FIXME
+> What is the components
+>
+{: .challenge}
+
+## Sphinx quiksetup
+
+FIXME: guide through setup and what options mean
+
+## Adding literal documentation
+
+FIXME: RST overivew
+
+FIXME: adding pages
+
+## API Documentation
+
+FIXME: Make api page work
 
 {% include links.md %}
