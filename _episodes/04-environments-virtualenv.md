@@ -43,8 +43,7 @@ Why Environments?
 
 ## Install from a requirements.txt
 
-Getting a requirements.txt from base folder of the package repository.
-
+Getting a requirements.txt from project folder. Usually all projects that use python have this file. The file contains all dependencies that need to be installed.
 ~~~
 pip install -r requirements.txt
 ~~~
