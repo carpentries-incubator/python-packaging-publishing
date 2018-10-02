@@ -1,6 +1,6 @@
 # Hacktoberfest Welcome
 
-This project is participating in Hacktoberfest as a part of the Mozilla Open Leaders Program. We welcome [contributions as detailed here]((https://github.com/brownsarahm/python-data-project/issues?q=is%3Aissue+is%3Aopen+label%3AHacktoberfest)) and new potential maintainers. We are happy to help you improve your contributions to make a quality contribution.  There is a lot of information below including in the links provided to help you make a high quality contribution.  Work in progress PRs or comments on issues are both great ways to avoid duplication of effort.  
+This project is participating in [Hacktoberfest](https://hacktoberfest.digitalocean.com/) as a part of the Mozilla Open Leaders Program. We welcome [contributions as detailed here]((https://github.com/brownsarahm/python-data-project/issues?q=is%3Aissue+is%3Aopen+label%3AHacktoberfest)) and new potential maintainers. We are happy to help you improve your contributions to make a quality contribution.  There is a lot of information below including in the links provided to help you make a high quality contribution.  Work in progress PRs or comments on issues are both great ways to avoid duplication of effort.  
 
 
 # Mozilla Open Leaders
