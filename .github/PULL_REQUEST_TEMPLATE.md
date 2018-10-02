@@ -1,4 +1,4 @@
-<!-- Add the issue number addressed, if relevant and complete below -->
+<!-- Add the issue number addressed, if relevant, and complete below -->
 Closes #
 
 Summary of changes:
