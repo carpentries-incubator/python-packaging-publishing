@@ -1,8 +1,7 @@
 # Contributing
 
 This is an open source project modeled after
-[Software Carpentry][swc-site] and [Data Carpentry][dc-site]. we welcome contributions of all kinds:
-new lessons,
+[Software Carpentry][swc-site] and [Data Carpentry][dc-site]. We welcome contributions of all kinds:
 fixes to existing material,
 bug reports,
 and reviews of proposed changes are all welcome.
@@ -15,7 +14,7 @@ In exchange,
 we will address your issues and/or assess your change proposal as promptly as we can,
 and help you become a member of our community.
 
-This project adopts a code of conduct from
+This project adopts a code of conduct from the Carpentries. 
 Everyone involved in [Software Carpentry][swc-site] and [Data Carpentry][dc-site]
 agrees to abide by our [code of conduct](CONDUCT.md).
 
@@ -48,22 +47,11 @@ and to meet some of our community members.
 ## Where to Contribute
 
 1.  If you wish to change this lesson,
-    please work in <https://github.com/swcarpentry/FIXME>,
-    which can be viewed at <https://swcarpentry.github.io/FIXME>.
+    please work in <https://github.com/brownsarahm/python-data-project>,
+    which can be viewed at <https://brownsarahm.github.io/python-data-project/index.html>.
 
-2.  If you wish to change the example lesson,
-    please work in <https://github.com/swcarpentry/lesson-example>,
-    which documents the format of our lessons
-    and can be viewed at <https://swcarpentry.github.io/lesson-example>.
-
-3.  If you wish to change the template used for workshop websites,
-    please work in <https://github.com/swcarpentry/workshop-template>.
-    The home page of that repository explains how to set up workshop websites,
-    while the extra pages in <https://swcarpentry.github.io/workshop-template>
-    provide more background on our design choices.
-
-4.  If you wish to change CSS style files, tools,
-    or HTML boilerplate for lessons or workshops stored in `_includes` or `_layouts`,
+4.  This lesson is using the Carpentries styles repository as a template. If you wish to change CSS style files, tools,
+    or HTML boilerplate stored in `_includes` or `_layouts`,
     please work in <https://github.com/swcarpentry/styles>.
 
 ## What to Contribute
@@ -74,9 +62,7 @@ to updating or filling in the documentation
 and submitting [bug reports][issues]
 about things that don't work, aren't clear, or are missing.
 If you are looking for ideas, please see the 'Issues' tab for
-a list of issues associated with this repository,
-or you may also look at the issues for [Data Carpentry][dc-issues]
-and [Software Carpentry][swc-issues] projects.
+a list of issues associated with this repository.
 
 Comments on issues and reviews of pull requests are just as welcome:
 we are smarter together than we are on our own.
@@ -87,16 +73,7 @@ so fresh eyes are always welcome.
 
 ## What *Not* to Contribute
 
-Our lessons already contain more material than we can cover in a typical workshop,
-so we are usually *not* looking for more concepts or tools to add to them.
-As a rule,
-if you want to introduce a new idea,
-you must (a) estimate how long it will take to teach
-and (b) explain what you would take out to make room for it.
-The first encourages contributors to be honest about requirements;
-the second, to think hard about priorities.
-
-We are also not looking for exercises or other material that only run on one platform.
+We are not looking for exercises or other material that only run on one platform.
 Our workshops typically contain a mixture of Windows, Mac OS X, and Linux users;
 in order to be usable,
 our lessons must run equally well on all three.
@@ -133,21 +110,4 @@ of the originating repository for reference while revising.
 
 ## Other Resources
 
-General discussion of [Software Carpentry][swc-site] and [Data Carpentry][dc-site]
-happens on the [discussion mailing list][discuss-list],
-which everyone is welcome to join.
-You can also [reach us by email][email].
-
-[email]: mailto:admin@software-carpentry.org
-[dc-issues]: https://github.com/issues?q=user%3Adatacarpentry
-[dc-lessons]: http://datacarpentry.org/lessons/
-[dc-site]: http://datacarpentry.org/
-[discuss-list]: http://lists.software-carpentry.org/listinfo/discuss
-[github]: https://github.com
-[github-flow]: https://guides.github.com/introduction/flow/
-[github-join]: https://github.com/join
-[how-contribute]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[issues]: https://guides.github.com/features/issues/
-[swc-issues]: https://github.com/issues?q=user%3Aswcarpentry
-[swc-lessons]: https://software-carpentry.org/lessons/
-[swc-site]: https://software-carpentry.org/
+The Learner profiles will help you calibrate your contribution to the target audience. The Carpentries example lesson has explicit style guide tips and the carpentries lessons are good examples of the style we want this project to adhere to.
