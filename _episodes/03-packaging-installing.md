@@ -24,12 +24,33 @@ FIXME: Example on writing functions to motivate packaging
 
 ## Pip
 
-Pip is used to install packages from [Python Package Index (PyPI)](https://pypi.org/).It is repository for python package that developed by Python Community. Pip works by fetching package from this repository and installing it locally.
+Pip stands for FIXME is used to install packages from [Python Package Index (PyPI)](https://pypi.org/). PyPI is a repository for python package that are developed by Python Community. Pip works by fetching package from this repository and installing it locally.
+
+We use pip at the command line, by calling `pip <command>`
 
 ~~~
 pip install sphinx
 ~~~
-{: language-bash}
+{: .language-bash}
+
+when this happens we see
+
+~~~
+
+~~~
+{: .output}
+
+FIXME: explain the output
+
+Pip has other functions that we will see throughout this lesson. 
+
+> ## Exercise
+> FIXME
+> 
+> > ## Solution 
+> > 
+> {: .solution}
+{: .challenge}
 
 ## Python Packages
 
