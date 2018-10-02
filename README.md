@@ -13,7 +13,7 @@ This project is a part of the Mozilla Open leaders Program as, "Good Enough Open
 This is to be a collaboration among scientific computing researchers and educators to develop accessible tutorial materials and minimal templates that empower researchers developing new analysis techniques to release them in formats that encourage community adoption. We're working open to model the practices that the lesson teaches. By working open, we hope to increase the impact of the templates and tutorials by encouraging learners to contribute back.
 
 
-This tutorial will cover some next steps for getting your python-based data analysis project organized and ready to share.  See the [learner profiles]() with collaborators or in general. What differentiates this project from others is that it aims to specifically target minimal effort, maximal benefit open source practices to help researchers who want to share their work with minimal overhead.  
+This tutorial will cover some next steps for getting your python-based data analysis project organized and ready to share.  See the [learner profiles](https://brownsarahm.github.io/python-data-project/learner-profiles/index.html) with collaborators or in general. What differentiates this project from others is that it aims to specifically target minimal effort, maximal benefit open source practices to help researchers who want to share their work with minimal overhead.  
 
 ## Contributing
 
