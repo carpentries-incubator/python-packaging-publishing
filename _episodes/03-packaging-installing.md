@@ -26,6 +26,11 @@ FIXME: Example on writing functions to motivate packaging
 
 Pip is used to install packages from [Python Package Index (PyPI)](https://pypi.org/).It is repository for python package that developed by Python Community. Pip works by fetching package from this repository and installing it locally.
 
+~~~
+pip install sphinx
+~~~
+{: language-bash}
+
 ## Python Packages
 
 A module is an installable unit of code.
