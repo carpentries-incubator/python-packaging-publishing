@@ -3,7 +3,7 @@ title: "Learner Profiles"
 ---
 
 ## Tyrone Tensor
-Tyrone is a PhD student in machine learning. He develops novel methods to analyze healthcare data and wants his collaborators to be able to use her packages.  He is a Carpentries instructor and will teach a workshop to the researchers at the hospital research lab. He would like to add a module after to teach them to use the techniques she developed in her most recent study.
+Tyrone is a PhD student in machine learning. He develops novel methods to analyze healthcare data and wants his collaborators to be able to use his packages.  He is a Carpentries instructor and will teach a workshop to the researchers at the hospital research lab. He would like to add a module after to teach them to use the techniques he developed in his most recent study.
 
 This lesson will teach him to prepare and package his work so that his clinical collaborators can use his techniques.
 
