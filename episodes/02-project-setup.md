@@ -24,6 +24,11 @@ There isn't a specific answer, but some guiding principles.
 
 > ## Exercise
 > Let's look around on GitHub for some examples and compare and contrast them.
+>
+> Here are some ideas to consider:
+> - [Detecting Simpson's Paradox](https://github.com/fairnessforensics/detect_simpsons_paradox)
+> - [MAD-bayes](https://github.com/tbroderick/bp-means)
+>
 > Questions
 > 1. FIXME
 {: .challenge}
