@@ -28,12 +28,86 @@ Pip is used to install packages from FIXME.
 
 ## Python Packages
 
-A module is an installable unit of code.
+A module is a piece of code that serves a paticular functionalty. In python module end with a **.py** extension and the name of the module is the name of the file. A module can contain classes, functions or a combination of both. 
 
+Packages are namespaces or containers (e.g. a directory) which contain multiple packages and modules.
 
-The file `__init__.py`
+Working with Python packages and modules is easy to learn. We need to:
 
-FIXME: describe structure of how a package works in python
+* Create a directory and give it package's name.
+* Put modules in it.
+* Create a __init__.py file in the directory
+
+The __init__.py file tells python that the directory is supposed to be read as a package.
+
+e.g.
+
+Let us create a package called **Vehicles** with two modules **Land** and **Water**.
+
+### Step 1: Creating a directory
+Create a directory called **Vehicles**
+
+### Step 2: Adding Modules
+
+~~~
+class Land:
+    def __init__(self):
+        ''' Constructor for this class. '''
+        # Create some vehicles 
+        self.members = ['Cars', 'Trucks']
+ 
+    def printMembers(self):
+        print('Printing members of the Land  class')
+        for member in self.members:
+            print('\t%s ' % member)
+~~~
+{: .language-python}
+
+The class has a property named members – which is a list of some vehicles we might be interested in. It also has a method named printMembers which simply prints the list of vehicles of this class.Note: all classes defined must be capable of being imported, and won't be executed directly. this will be saved in a file called **Land.py**
+
+Next we create another module named **Water**. Create a file named **Water.py** inside the **Vehicles** directory and add the code below:
+
+~~~ 
+def isWater(v):
+    waterv =['ship', 'boat']
+    for obj in v:
+        if obj in waterv:
+            print("It is a water vehicle")
+        else:
+            print("It is not a water vehicle")
+~~~
+{: .language-python}
+
+Note the code here is a function that checks which items in a list are water vehicles. 
+
+### Step 3 Adding the init file
+
+Finally, we create a file named __init__.py inside the **Vehicles** directory and add the following code:
+~~~
+from Land import Land
+from Water import isWater
+~~~
+{: .language-python}
+
+Now we can import the package **Vehicles** 
+
+e.g
+
+~~~
+from Vehicles import Land, Water
+
+v1 =Land()
+v1.printMembers()
+
+v2= ["boat", "car"]
+isWater(v2)
+~~~
+{: .language-python}
+
+> ## Exercise
+> Add a module for air vehicles with a function that checks if an air vehicle is also a water vehicles (e.g. hovercraft)
+>
+{: .challenge}
 
 ## SetupTools
 
