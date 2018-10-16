@@ -104,9 +104,10 @@ isWater(v2)
 ~~~
 {: .language-python}
 
-### Exercise
-
-Try incorporating a module for air vehicles and a function that checks if an air vehicle is also a water vehicles (e.g. hovercraft)
+> ## Exercise
+> Add a module for air vehicles with a function that checks if an air vehicle is also a water vehicles (e.g. hovercraft)
+>
+{: .challenge}
 
 ## SetupTools
 
