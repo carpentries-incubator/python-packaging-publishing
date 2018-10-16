@@ -18,4 +18,4 @@ This lesson will teach Marzyeh to package the research code for the students so 
 
 Cristina is a post doc in machine learning and has a paper that she recently published and released the code for. Her paper was selected, for an oral presentation at a top conference and is now generating a high rate of inquiries. Her e-mail inbox is full of redundant inquires about how to use the project and helping users install the right version of requirements. She has drafted default replies that she sends to each person.   
 
-This lesson will help Maria learn to improve the online documentation for her paper and add environment information so that users can use her technique faster and with fewer e-mails.
+This lesson will help Cristina learn to improve the online documentation for her paper and add environment information so that users can use her technique faster and with fewer e-mails.
