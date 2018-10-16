@@ -69,7 +69,12 @@ Open source guidelines are generally written to be ready to scale.  Here we prop
 >  - what
 {: .challenge}
 
-A readme describes FIXME
+A readme is the first information about your project most people will see. It should encourage people to start using it and cover key steps in that process. It includes key information, such as:
+* What the project does
+* Why the project is useful
+* How users can get started with the project
+* Where users can get help with the project
+* Who maintains and contributes to the project
 
 ### Licenses
 
