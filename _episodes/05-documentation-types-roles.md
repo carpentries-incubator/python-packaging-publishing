@@ -1,5 +1,5 @@
 ---
-title: "Documentation"
+title: "Getting started with Documentation"
 teaching: 0
 exercises: 0
 questions:
@@ -9,53 +9,89 @@ objectives:
 - "Access different types of documentation for a given project"
 keypoints:
 - "Documentation tells people how to use code and provides examples"
-- "Types of documenation include: API, tutorial, (overview)"
-- "x documentation lives in loc"
+- "Types of documentation include: literal, API,  and tutorial/example"
+- "Literal Documentation lives outside the code"
+- "API documentation lives in docstrings within the code"
+- "examples are scripts that live inside the repo"
 ---
 
-Introduction text for the lesson as a whole
+
 
 ## Audiences for documentation
 
+Documentation serves many purposes and many audiences, including
+
  - future self
  - collaborators
- - users (who would cite you)
+ - users
  - contributors
 
-## How is help used?
 
-Accessing Help:
-This is one way we access documentation
+> ## Exercise
+> in small groups, brainstorm the different goals for reading documentation that different audiences might have
+>
+{: .chalenge}
 
 
-To setup:
+## How is documentation used?
 
-As a reference
+For a potential user, they first need to understand what your code does and how it works enough to determine if they want to use it.  They might need to know what dependencies it has, what features, limitations, etc
+
+Next the user will need to know how to install the code and make it run. A collaborator or contributor might need different instructions than a more passive user.
+
+Once we're using it we may have questions about details of the implementation or how the pieces work together.  We may need to know the usage for a specific function.
+
+In any python kernel we have access to information about all objects available through the `help()` function.
+
+~~~
+help(print)
+~~~
+{:.language-python}
+
+We can use this at a terminal or in a Jupyter noteook.  In a Jupyter notebook we can also access help with `?` and with <kbd>shift</kbd> + <kbd>tab</kbd>. These forms of help all use the docstring in python.  
+
 
 ## Literal Documentation
 
-installation guides
+installation guides,
 
-Purpose:
+Purpose: Literal documentation helps users understand what your tool does and how to get started using it.
 
-Location:
+Location: Literal documentation lives outside of the code, but best practice is to keep it close. We will see that tools to support literal documentation in your code base recommend a `docs` folder with the files in there.  These can be rendered as a book.
 
 ## API Documentation
 
-Purpose:
+Purpose: API documentation describes the usage (input, output, description of what it does) for each piece of your code.  This includes classes and functions
 
-Location:
+Location and Format: Doc strings in python live inside the function. We'll see more eamples of these in the next episode
+
+~~~
+def best_function_ever(a_param, another_parameter):
+  """
+  this is the docstring
+  """
+~~~
+{:.language-python}
+
 
 ## Tutorials
 
-Purpose:
+Purpose: To give a thorough, runnable overview of how to accomplish something with your package, maybe reprduce experimental results, or how to get started.  
 
-Location:
+Location and Format: These go alongside the literal documentation often and are typically in a `.y`
 
-## Examples
+## Examples or Cookbooks
 
-Purpose:
+Purpose: To give common or anticipated patterns of use for your code.
 
-Location:
+Location and Format: These are smaller excerpts of code, they typically live in a gallery type format.  
+
+
+## Putting it all together
+
+> ## Exercise
+> FIXME: matching exercise sorting examples of documentation into the types and/ or matching questions/goals to a type of documentation or location
+>
+{: . challenge}
 
 {% include links.md %}
