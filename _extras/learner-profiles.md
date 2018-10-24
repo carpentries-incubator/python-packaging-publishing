@@ -20,6 +20,6 @@ This lesson will teach Marzyeh to package the research code so that all members 
 
 ## Cristina Calibration
 
-Cristina is a post doc in machine learning and has a paper that she recently published and released the code for. Her paper was selected for an oral presentation at a top conference, the attention has created a lot of intnerest inthe community to use her method. Her e-mail inbox is full of redundant inquires about how to use the project and helping users install the right version of requirements. She has drafted default replies that she sends to each person.   
+Cristina is a post doc in machine learning and has a paper that she recently published and released the code for. Her paper was selected for an oral presentation at a top conference, the attention has created a lot of interest in the community to use her method. Her e-mail inbox is full of redundant inquires about how to use the project and helping users install the right version of requirements. She has drafted default replies that she sends to each person.   
 
 This lesson will help Cristina learn to improve the online documentation for her paper and add environment information so that users can use her technique faster and with fewer e-mails. She's looking forward to the documentation and environments episodes most.  After the workshop, she'll be able to quickly convert her default replies into a website that accompanies her paper.  
