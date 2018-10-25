@@ -30,6 +30,8 @@ There isn't a specific answer, but some guiding principles.
 > - [MAD-bayes](https://github.com/tbroderick/bp-means)
 >
 > Questions
+> 1. What files and directory structures are common?
+> 1. Which ones do you think you could get started with right away?
 > 1. FIXME
 {: .challenge}
 

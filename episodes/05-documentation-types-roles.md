@@ -10,9 +10,9 @@ objectives:
 keypoints:
 - "Documentation tells people how to use code and provides examples"
 - "Types of documentation include: literal, API,  and tutorial/example"
-- "Literal Documentation lives outside the code"
-- "API documentation lives in docstrings within the code"
-- "examples are scripts that live inside the repo"
+- "Literal Documentation lives outside the code and explains the big picture ideas of the project and how to get it ste up"
+- "API documentation lives in docstrings within the code and explains how to use functions in detail"
+- "Examples are scripts (or notebooks, or code excerpts) that live alongside the project and connect between the details and the common tasks."
 ---
 
 
