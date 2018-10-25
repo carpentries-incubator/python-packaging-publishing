@@ -8,7 +8,7 @@ questions:
 objectives:
 - "Identify the components of a python package"
 - "Apply a template for packaging existing code"
-- "Update the packaged project after adding to the code"
+- "Update the packaged project after modifying to the code"
 - "Install and update a local or GitHub-hosted package"
 keypoints:
 - "Packaged python code is resuable within and across systems"
@@ -28,7 +28,7 @@ Pip is used to install packages from FIXME.
 
 ## Python Packages
 
-A module is a piece of code that serves a paticular functionalty. In python module end with a **.py** extension and the name of the module is the name of the file. A module can contain classes, functions or a combination of both. 
+A module is a piece of code that serves a paticular functionalty. In python module end with a **.py** extension and the name of the module is the name of the file. A module can contain classes, functions or a combination of both.
 
 Packages are namespaces or containers (e.g. a directory) which contain multiple packages and modules.
 
@@ -53,9 +53,9 @@ Create a directory called **Vehicles**
 class Land:
     def __init__(self):
         ''' Constructor for this class. '''
-        # Create some vehicles 
+        # Create some vehicles
         self.members = ['Cars', 'Trucks']
- 
+
     def printMembers(self):
         print('Printing members of the Land  class')
         for member in self.members:
@@ -67,7 +67,7 @@ The class has a property named members – which is a list of some vehicles we m
 
 Next we create another module named **Water**. Create a file named **Water.py** inside the **Vehicles** directory and add the code below:
 
-~~~ 
+~~~
 def isWater(v):
     waterv =['ship', 'boat']
     for obj in v:
@@ -78,7 +78,7 @@ def isWater(v):
 ~~~
 {: .language-python}
 
-Note the code here is a function that checks which items in a list are water vehicles. 
+Note the code here is a function that checks which items in a list are water vehicles.
 
 ### Step 3 Adding the init file
 
@@ -89,7 +89,7 @@ from Water import isWater
 ~~~
 {: .language-python}
 
-Now we can import the package **Vehicles** 
+Now we can import the package **Vehicles**
 
 e.g
 
