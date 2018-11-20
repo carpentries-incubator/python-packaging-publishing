@@ -20,7 +20,14 @@ keypoints:
 
 We learned how to make functions before
 
+<!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
+
+
 FIXME: Example on writing functions to motivate packaging
+
+What is my modular resuable code vs what is my analysis
+Keep motivation as easing in  and gradually scaling up to stay inclusive
+
 
 ## Pip
 

@@ -51,9 +51,15 @@ help(print)
 We can use this at a terminal or in a Jupyter noteook.  In a Jupyter notebook we can also access help with `?` and with <kbd>shift</kbd> + <kbd>tab</kbd>. These forms of help all use the docstring in python.  
 
 
+<!-- Introducing documentation and motivation
+Take an analysis, extract a piece
+To a function
+Doc
+Then show help -->
+
 ## Literal Documentation
 
-installation guides,
+installation guides, README files, how to repeat analysis
 
 Purpose: Literal documentation helps users understand what your tool does and how to get started using it.
 
