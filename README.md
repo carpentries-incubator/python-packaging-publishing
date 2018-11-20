@@ -1,11 +1,9 @@
-# Hacktoberfest Welcome
-
-This project is participating in [Hacktoberfest](https://hacktoberfest.digitalocean.com/) as a part of the Mozilla Open Leaders Program. We welcome [contributions as detailed here]((https://github.com/brownsarahm/python-data-project/issues?q=is%3Aissue+is%3Aopen+label%3AHacktoberfest)) and new potential maintainers. We are happy to help you improve your contributions to make a quality contribution.  There is a lot of information below including in the links provided to help you make a high quality contribution.  Work in progress PRs or comments on issues are both great ways to avoid duplication of effort.  
-
 
 # Mozilla Open Leaders
 
-This project is a part of the Mozilla Open leaders Program as, "Good Enough Open Source Practices for Python Data Analysis Projects." Through this project sprint the goal is to gather the necessary information and get an outline and preliminary materials gathered to facilitate an initial pilot run of the workshop.  
+This project is a part of the Mozilla Open leaders Program as, "Good Enough Open Source Practices for Python Data Analysis Projects." Through this project sprint, the goal is to gather the necessary information, complete an outline and gather preliminary materials to facilitate an initial pilot run of the workshop.
+
+There will be a pilot run of the workshop in February 2019 at Brown University, Providence, RI USA.  If you are interested in hosting a pilot (including self study) comment on [this issue](https://github.com/brownsarahm/python-data-project/issues/43).  
 
 
 # Getting Started: Python Data Project
