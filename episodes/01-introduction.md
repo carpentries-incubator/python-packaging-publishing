@@ -35,6 +35,8 @@ This episode will introduce the various tools that will be taught throughout the
  - collaboration
  - work on multiple computers
  - promote the work
+ - Make file:
+ - Pipeline tools
 
 
 ## Data and Code
@@ -46,7 +48,9 @@ This episode will introduce the various tools that will be taught throughout the
  - things that are project specific
  - things that are method-related might be reused
     - these can be grouped as a package for install and then imported
-    -
+ - can become citable: Zenodo, get a DOI
+ - Data documentation, who , where, when, why: [Mozilla has a checklist](http://mozillascience.github.io/checklist/)
+
 
 ## Environments
 
@@ -63,7 +67,11 @@ This episode will introduce the various tools that will be taught throughout the
  - multiscale: overview, details,
  - need to write the parts in natural language; but don't need to work on the infrastrcutre, tools can do that for you
 
+## Why do good practices matter?
 
+- Jupytercon talk on issues about the problems with notebooks
+- automation tools are based on good practices: a little bit of good, helps fancy stuff be easy
+- exmples of finding good practices
 
 
 {% include links.md %}

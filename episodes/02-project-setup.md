@@ -18,7 +18,7 @@ keypoints:
 
 ## Project Organization
 
-Now that we've brainstormed the parts of a project and talked a little bit about what each of them consists of.  How should we organize the code?
+Now that we've brainstormed the parts of a project and talked a little bit about what each of them consists of.  How should we organize the code to help our future self and collaborators?
 
 There isn't a specific answer, but some guiding principles.
 
@@ -35,12 +35,27 @@ There isn't a specific answer, but some guiding principles.
 > 1. FIXME
 {: .challenge}
 
+Pulling out bits of code that are eligible for functions and loops
+Eg: what things are repeated with
+
+## File naming
+
+This is the least resistence step you can take to make your code more resusable.
+
+Three principles for (file) names
+1. Machine readable
+1. Human readable
+1. Plays well with default ordering
+
+<!-- Good filenaming: https://datacarpentry.org/rr-organization1/01-file-naming/ -->
+
 ## Guiding Principles
 
 FIXME
 
 ## Setting up a project
 
+Sometimes we get to start from scratch.
 FIXME: tutorial steps setting up a project, discussing components
 
 
@@ -57,6 +72,8 @@ mkdir docs
 > ## Exercise
 > FIXME: multiple choice questions with code excerpts, asking where they go within the project organization
 >
+
+
 
 ## Open Source Basics, MWE
 
@@ -77,6 +94,7 @@ A readme is the first information about your project most people will see. It sh
 * How users can get started with the project
 * Where users can get help with the project
 * Who maintains and contributes to the project
+* how to repeat the analysis
 
 ### Licenses
 
@@ -95,5 +113,16 @@ FIXME
 
 Other common components are
 FIXME
+
+## Re-organizing a project
+
+<!-- Frame intro into organizing existing stuff
+Clean up and organize content: where to different pieces of code go -->
+
+> ## Exercise
+> FIXME: provide a dummy project folder, spend time sorting, or allow people some time to work on their own projects and generating questions.
+>
+
+
 
 {% include links.md %}
