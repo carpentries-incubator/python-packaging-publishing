@@ -11,7 +11,7 @@ objectives:
 - "Update the packaged project after modifying to the code"
 - "Install and update a local or GitHub-hosted package"
 keypoints:
-- "Packaged python code is resuable within and across systems"
+- "Packaged code is resuable within and across systems"
 - "A python package consists of modules"
 - "Projects can be distributed in many ways and installed with a package manager"
 ---
@@ -28,11 +28,11 @@ Pip is used to install packages from FIXME.
 
 ## Python Packages
 
-A module is a piece of code that serves a paticular functionalty. In python module end with a **.py** extension and the name of the module is the name of the file. A module can contain classes, functions or a combination of both.
+A module is a piece of code that serves a specific purpose. In python, a module is written in a **.py** file and the name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, `numpy` defines the value of pi (`numpy.Pi`).
 
-Packages are namespaces or containers (e.g. a directory) which contain multiple packages and modules.
+Packages are namespaces or containers (e.g. a directory) which can contain multiple packages and modules.
 
-Working with Python packages and modules is easy to learn. We need to:
+Making python code a package (packaging it) requires no extra tools. We need to:
 
 * Create a directory and give it package's name.
 * Put modules in it.
