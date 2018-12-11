@@ -22,6 +22,8 @@ Now that we've brainstormed the parts of a project and talked a little bit about
 
 There isn't a specific answer, but some guiding principles.
 
+<!--  Shablona, Cookie cutter-->
+
 > ## Exercise
 > Let's look around on GitHub for some examples and compare and contrast them.
 >
