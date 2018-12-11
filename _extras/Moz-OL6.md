@@ -37,10 +37,10 @@ feedback:
 - address resource
 
 
-This is to be a collaboration among scientific computing researchers and educators to develop accessible tutorial materials and minimal templates that empower researchers developing new analysis techniques to release them in formats that encourage community adoption. -->
+This is to be a collaboration among scientific computing researchers and educators to develop accessible tutorial materials and minimal templates that empower researchers developing new analysis techniques to release them in formats that encourage community adoption.
 
 
-<!--
+
 ## Week 12 Vision  Ex
 
 What I plan to create as a leader on this project
@@ -63,9 +63,9 @@ Looking for
  - ideas on activities/examples
  - exercises for practice
 
-Crowd AI as a possible resource -->
+Crowd AI as a possible resource
 
-<!--
+
 I am building an open curriculum to prepare researchers to release the python data analysis projects and tools in ways that better support repeatability and comparison of methods. The lesson is designed to be delivered in the participatory live coding that is a signature of the Carpentries.
- <!-- means that the material is novice-friendly, learner-centric, and intended to be delivered in a live-code-along format. -->
+ <!-- means that the material is novice-friendly, learner-centric, and intended to be delivered in a live-code-along format.
 It focuses on researchers by anchoring on the core principles of open source that will provide benefit without too much unrewarded overhead to researchers. A focus on repeatability and comparison, is a step beyond reproducibility into a realm of more collaborative research and emphasizes documentation, packaging, and usability in a different way that a set of scripts that can be run, but not understood. -->
