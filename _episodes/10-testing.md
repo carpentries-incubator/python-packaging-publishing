@@ -11,7 +11,7 @@ keypoints:
 
 
 
-esting
+Testing
 Check pretty basic things about the results save to file
 Then you dont have to worry about breaking
 Note that you’re testing interactively as you develop, then break it out as a formal test

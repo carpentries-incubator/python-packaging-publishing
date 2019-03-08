@@ -18,7 +18,10 @@ keypoints:
 
 ## Recall: Functions
 
-We learned how to make functions before
+When we develop research code we organize it into functions and classes.
+
+These might be in notebooks or you might have put them in a `.py` file. If you've never put them in another file.
+
 
 <!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
 
@@ -33,29 +36,82 @@ Keep motivation as easing in  and gradually scaling up to stay inclusive
 
 Pip stands for FIXME is used to install packages from [Python Package Index (PyPI)](https://pypi.org/). PyPI is a repository for python package that are developed by Python Community. Pip works by fetching package from this repository and installing it locally.
 
-We use pip at the command line, by calling `pip <command>`
+We use pip at the command line. We'll start by exploring it's help manual.
 
 ~~~
-pip install sphinx
+pip
 ~~~
-{: .language-bash}
+{:.language-bash}
+
 
 when this happens we see
 
 ~~~
+Usage:   
+  pip <command> [options]
 
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring
+                              environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort).
+  --trusted-host <hostname>   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate
+                              in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+  --no-color                  Suppress colored output
 ~~~
 {: .output}
 
-FIXME: explain the output
-
-Pip has other functions that we will see throughout this lesson. 
+This shows the basic commands and the general options.
 
 > ## Exercise
-> FIXME
-> 
-> > ## Solution 
-> > 
+> 1. Install the sphinx package, we will need it later.
+> 2. Choose a command and look up it's options, share and discuss with your
+> neighbor, be sure to choose two different ones so that you each.
+>
+> > ## Solution
+> >
+> > ~~~
+> > pip install sphinx
+> > ~~~
+> > {: .language-bash}
 > {: .solution}
 {: .challenge}
 
@@ -67,9 +123,10 @@ Packages are namespaces or containers (e.g. a directory) which can contain multi
 
 Making python code a package (packaging it) requires no extra tools. We need to:
 
-* Create a directory and give it package's name.
-* Put modules in it.
-* Create a __init__.py file in the directory
+- Create a directory and give it package's name.
+- Put modules in it.
+- Create a __init__.py file in the directory
+- Create a setup.py file at the top leel
 
 The __init__.py file tells python that the directory is supposed to be read as a package.
 
@@ -79,6 +136,11 @@ Let us create a package called **Vehicles** with two modules **Land** and **Wate
 
 ### Step 1: Creating a directory
 Create a directory called **Vehicles**
+
+~~~
+mkdir packagename
+~~~
+{: .language-bash}
 
 ### Step 2: Adding Modules
 
@@ -146,16 +208,45 @@ isWater(v2)
 
 FIXME: how to setup the setup.py file
 
+~~~
+mport setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="example-pkg-your-username",
+    version="0.0.1",
+    author="Example Author",
+    author_email="author@example.com",
+    description="A small example package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/pypa/sampleproject",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
+~~~
+{: .language-python}
+
 ## Installing locally
 
+Now that our code is organized into a package, how can we use it? If we try importing it now, what happens?
 
-FIXME
+We need to install it first.  There are many ways that `pip` can install code.  We saw before that it can install from PiPy, but it can also install from a local diretory.
 
 ~~~
 cd
 pip install .
 ~~~
 {; .language-pythons}
+
+
+Now we can try importing and using our package.
 
 ## Getting a Package from A Colleague
 
@@ -175,5 +266,69 @@ pip install .
 {: language-bash}
 
 
+## PiPy Submission
+
+To make `pip install packagename` work you have to submit your package to the repository.  We won't do that today, but an important thing to think about if you might want to go this direction, is that the name must be unique.  This mens that i's helpful to check pipy before creating your package so that you chooses a name that is availalbe.
+
+To do this, you also need to package it up somewhat more. There are two types of archives that it looks for, as 'compiled' versions of your code. One is a source archive (`tar.gz`) and the other is a built distribution (`.whl`).  The built version will be used most often, but the source archive is a backup and makes your package more broadly compatible.
+
+The next step is to generate distribution packages for the package. These are archives that are uploaded to the Package Index and can be installed by pip.
+
+Make sure you have the latest versions of setuptools and wheel installed:
+
+~~~
+python3 -m pip install --user --upgrade setuptools wheel
+~~~
+{: .language-bash}
+
+~~~
+python3 setup.py sdist bdist_wheel
+~~~
+{: language-bash}
+This command should output a lot of text and once completed should generate two files in the dist directory:
+
+~~~
+dist/
+  example_pkg_your_username-0.0.1-py3-none-any.whl
+  example_pkg_your_username-0.0.1.tar.gz
+~~~
+{: language-bash}
+
+Finally, it’s time to upload your package to the Python Package Index!
+
+First, we'll register for accounts on Test PyPI, intended for testing and experimentation. This way, we can practice all of the steps, without publishing our dummy code that we've been working with.
+
+Go to [test.pypi.org/account/register/](https://test.pypi.org/account/register/) and complete the steps on that page, then verify your account.
+
+Now that you are registered, you can use twine to upload the distribution packages. You’ll need to install Twine:
+
+~~~
+python3 -m pip install --user --upgrade twine
+~~~
+{: .language-bash}
+Once installed, run Twine to upload all of the archives under dist:
+
+~~~
+python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+~~~
+{: .language-bash}
+
+You will be prompted for the username and password you registered with Test PyPI. After the command completes, you should see output similar to this:
+
+~~~
+Uploading distributions to https://test.pypi.org/legacy/
+Enter your username: [your username]
+Enter your password:
+Uploading example_pkg_your_username-0.0.1-py3-none-any.whl
+100%|█████████████████████| 4.65k/4.65k [00:01<00:00, 2.88kB/s]
+Uploading example_pkg_your_username-0.0.1.tar.gz
+100%|█████████████████████| 4.25k/4.25k [00:01<00:00, 3.05kB/s]
+~~~
+{: .language-bash}
+Once uploaded your package should be viewable on TestPyPI, for example, https://test.pypi.org/project/example-pkg-your-username
+
+test by having your neighbor install your package.
+
+Since they're nonsene, we should uninstall once we're done with `pip uninstall`
 
 {% include links.md %}

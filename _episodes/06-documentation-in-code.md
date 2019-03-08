@@ -14,12 +14,16 @@ keypoints:
 
 ## Documenting for collaboration
 
+- explain the steps,
+- psuedocode
+
 
 
 ## API Documentation
 
-
+Doctrings
 Numpydoc syntax
+reference for that
 
 
 {% include links.md %}

@@ -18,27 +18,44 @@ keypoints:
 - "Virtualenv is ..."
 ---
 
-# Environments and environment managers
+# Environments and Package managers
 
-An environment consists of a certain Python version and some packages
+An environment consists of a certain Python version and some packages. A virtual environment allows you to have multiple, independent versions of python on your system. Environments can also be saved so that you can install all of the packages and replicate the environment on a new system.
 
 Why use one:
 - to deliver code and keep it the same versions
-- to use contribute to a package y
+- to use contribute to a package you also use
+- to install on servers
+- to share your environment with others
 
-how to chose which of the main strategies to use: virtualenv and pip or conda
+how to chose which of the main strategies to use: `virtualenv` and `pip` or `conda`
 
-## Dependencies
+`conda` comes from Anaconda and does both package management and provides a virtual environment.
+
+`pip` is the main python package installer
+
+`virtualenv` creates environments and are `pip` install compatible.
+
+Making your own packages pip installable requires fewer dependencies, so we'll focus on `virtualenv` and `pip` in this workshop
+
+<!-- ## Dependencies
 
 what are dependencies?
 
 > ## Exercise
-> FIXME
+> FIXME -->
 
 ## Create an environment
 
-Why Environments?
- - FIXME
+First, we'll download create an environment
+
+~~~
+
+virtualenv
+~~~
+{: .language-bash}
+
+
 
 
 ## Install from a requirements.txt
@@ -48,7 +65,7 @@ Getting a requirements.txt from ...
 ~~~
 pip install FIXME
 ~~~
-{: .language-python}
+{: .language-bash}
 
 ## Install from scratch
 
