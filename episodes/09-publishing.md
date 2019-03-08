@@ -9,11 +9,24 @@ objectives:
 keypoints:
 ---
 
-## Serving the documentation
+## Why and what
 
+Publishing makes the code, data, and documentation accessible. We 'll address
+each in turn.  
 
-## Getting A DOI
+Releasing isn't necessarily enough.
+
+## Publishing Code Getting A DOI
 
 Zenodo, archiving a copy, and doi
+
+
+## Serving the documentation
+
+|Read the Docs |  Gh-pages|
+
+
+
+
 
 {% include links.md %}
