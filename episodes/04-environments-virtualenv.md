@@ -47,34 +47,51 @@ what are dependencies?
 
 ## Create an environment
 
-First, we'll download create an environment
+Before we create and environment, let's see what happens when we import one of
+our favorite packages.  In a python interpreter:
 
 ~~~
-
-virtualenv
+import numpy
 ~~~
-{: .language-bash}
+{: .language-python}
 
+That should work, because we have the package installed on our system.
 
-
-
-## Install from a requirements.txt
-
-Getting a requirements.txt from ...
+Next, we'll create an environment an environment from scratch.
 
 ~~~
-pip install FIXME
+virtualenv myenv
 ~~~
 {: .language-bash}
 
-## Install from scratch
+if python 3 isn't your default you might need to pass the version of python that you want installed:
 
-> ## Exercise
-> create a new environment
->
-{: .challenge}
+~~~
+virtualenv myenv -p python3.6
+~~~
+{: .language-bash}
 
+then we can activate the environment
 
+~~~
+source myenv/bin/activate
+~~~
+{: .language-bash}
+
+Now we see that the cli changes to show the environment name and we can further
+test our environment with our favorite package from before.
+
+~~~
+import numpy
+~~~
+{: .language-python}
+
+Now, it won't work, but we can install it and a few other favorites.
+
+~~~
+pip install
+~~~
+{: .language-bash}
 
 ## save an environment
 
@@ -82,5 +99,35 @@ pip install FIXME
 pip freeze > requirements.txt
 ~~~
 {: .language-bash}
+
+
+
+## Deactivate an environment
+
+When you're done with an environment, you exit it with deactivate.  Also note
+that an environment only exists in the one terminal window. If you open a new
+terminal, you'll be back to your default environment.  
+
+~~~
+deactivate
+~~~
+{: .language-bash}
+
+
+
+> ## Exercise
+> download a project, create a new environment and install from the
+>  requirements file
+>
+> Hint: use the pip man file to find options you can pass to `pip install`
+>
+> > ## Solution
+> > ~~~
+> > pip install -r requirements.txt
+> > ~~~
+> > {: .language-bash}
+> > {: .solution}
+{: .challenge}
+
 
 {% include links.md %}

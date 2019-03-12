@@ -46,6 +46,16 @@ FIXME: adding pages
 
 ## API Documentation
 
-FIXME: Make api page work
+Add an api line to the `indnex.rst` so that it has a link to it.
+
+The create an API.rst file:
+
+~~~
+API documentation
+==================
+
+
+~~~
+{: .language-bash}
 
 {% include links.md %}
