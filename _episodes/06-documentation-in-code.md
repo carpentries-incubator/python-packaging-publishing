@@ -22,8 +22,8 @@ keypoints:
 ## API Documentation
 
 Doctrings
-Numpydoc syntax
-reference for that
+[Numpydoc syntax](https://numpydoc.readthedocs.io/en/latest/format.html)
+
 
 
 {% include links.md %}
