@@ -1,5 +1,5 @@
 ---
-title: "Packaging Python projects"
+title: "Packaging Python Projects"
 teaching: 0
 exercises: 0
 questions:
