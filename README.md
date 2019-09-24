@@ -27,12 +27,14 @@ This tutorial will cover some next steps for getting your python-based data anal
 
 ## Contributing
 
-This lesson will agian participate in Hacktoberfest in 2019.  For Hacktoberfest, please check [the Hacktoberfest label on issues](https://github.com/brownsarahm/python-data-project/issues?q=is%3Aissue+is%3Aopen+label%3AHacktoberfest).
+This lesson will again participate in Hacktoberfest in 2019.  For Hacktoberfest, please check [the Hacktoberfest label on issues](https://github.com/brownsarahm/python-data-project/issues?q=is%3Aissue+is%3Aopen+label%3AHacktoberfest).
 Maintainers will do their best to help you if you have any
 questions, concerns, or experience any difficulties along the way.
 
+As a Carpentries Incubator Project all contributors and maintainers of this project, pledge to follow the [Carpentry Code of Conduct][coc].
 
-This project is not an official project of the Carpentries, but it is inspired by the Carpentries. We adopt the Carpentries Code of Conduct, but reporting should be to the maintainers of this project.  The style guide of the Carpentries below also applies to this project.  
+Instances of abusive, harassing, or otherwise unacceptable behavior
+may be reported by following our [reporting guidelines][coc-reporting].
 
 We'd like to ask you to familiarize yourself
 with our [Contribution Guide](CONTRIBUTING.md)
@@ -42,6 +44,7 @@ and have a look at the [more detailed Carpentries guidelines][lesson-example] on
 ## Maintainer(s)
 
 * Sarah M Brown (@Brownsarahm)
+* you? add an issue using the "maintainer app" button
 
 ## Authors
 
