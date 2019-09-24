@@ -1,3 +1,7 @@
+---
+name: maintainer application
+about: apply to be a maintainer of this lesson
+---
 ## Why do you want to be a maintainer of this lesson?
 
 

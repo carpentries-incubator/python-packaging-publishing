@@ -1,3 +1,7 @@
+---
+name: issue
+about: general issues
+---
 Please delete the text below before submitting your contribution.
 
 ---
