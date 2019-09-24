@@ -6,7 +6,7 @@
 carpentry: ""
 
 # Overall title for pages.
-title: "Python Data Project"
+title: "Packaging and Publishing with Python"
 
 # Contact.  This *must* include the protocol: if it's an email
 # address, it must look like "mailto:lessons@software-carpentry.org",

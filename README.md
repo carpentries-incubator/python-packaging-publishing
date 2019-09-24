@@ -1,9 +1,16 @@
 
+
+
+If you are interested in hosting a pilot (including self study) comment on [this issue](https://github.com/brownsarahm/python-data-project/issues/43) to get support and help incorporate your feedback better.
+
+This GitHub repository generates the lesson website "Packaging and Publishing with Python " The lesson website can be viewed here. Making changes in this GitHub repository allows us to change the content of the lesson website.
+
+The following people are maintainers for this lesson, and are responsible for determining which changes to incorporate into the lesson:  
+
+
 # Mozilla Open Leaders
 
-This project is a part of the Mozilla Open leaders Program as, "Good Enough Open Source Practices for Python Data Analysis Projects." Through this project sprint, the goal is to gather the necessary information, complete an outline and gather preliminary materials to facilitate an initial pilot run of the workshop.
-
-There will be a pilot run of the workshop in March 2019 at Brown University, Providence, RI USA.  If you are interested in hosting a pilot (including self study) comment on [this issue](https://github.com/brownsarahm/python-data-project/issues/43).  
+This project was a part of the Mozilla Open leaders Cohor 6 as, "Good Enough Open Source Practices for Python Data Analysis Projects." Through that project sprint, the goal is to gather the necessary information, complete an outline and gather preliminary materials to facilitate an initial pilot run of the workshop.
 
 
 # Getting Started: Python Data Project
