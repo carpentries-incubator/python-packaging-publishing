@@ -115,9 +115,21 @@ This shows the basic commands and the general options.
 > {: .solution}
 {: .challenge}
 
+## Python Modules
+
+A module is a piece of code that serves a specific purpose. In python, a module is written in a `.py` file and the name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, `numpy` defines the value of pi (`numpy.Pi`).
+
+
+If the `.py` file is on the path, we can import functions from one file to another.
+
+FIXME: example
+
+
 ## Python Packages
 
-A module is a piece of code that serves a specific purpose. In python, a module is written in a **.py** file and the name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, `numpy` defines the value of pi (`numpy.Pi`).
+We don't have to manually add to the path every time though. Instead, we can
+package our modules to be installable, and then we can import directly.  This
+way of importing allows us to better allow python on the backend handle differences in paths across different user systems.  
 
 Packages are namespaces or containers (e.g. a directory) which can contain multiple packages and modules.
 
@@ -125,10 +137,10 @@ Making python code a package (packaging it) requires no extra tools. We need to:
 
 - Create a directory and give it package's name.
 - Put modules in it.
-- Create a __init__.py file in the directory
-- Create a setup.py file at the top leel
+- Create an `__init__.py` file in the directory
+- Create a setup.py file at the top level
 
-The __init__.py file tells python that the directory is supposed to be read as a package.
+The `__init__.py` file tells python that the directory is supposed to be read as a package.
 
 e.g.
 
@@ -177,14 +189,19 @@ Note the code here is a function that checks which items in a list are water veh
 
 ### Step 3 Adding the init file
 
-Finally, we create a file named __init__.py inside the **Vehicles** directory and add the following code:
+Finally, we create a file named `__init__.py` inside the `/Vehicles` directory and add the following code:
+
 ~~~
 from Land import Land
 from Water import isWater
 ~~~
 {: .language-python}
 
-Now we can import the package **Vehicles**
+The init file is the map that tells python what you package looks like.  It is
+also what makes python know a folder is a module. An empty init file makes a
+folder a module, but by adding code, we can make our package easier to use.
+
+Now, if we launch a new python terminal, from this directory, we can import the package **Vehicles**
 
 e.g
 
@@ -204,12 +221,14 @@ isWater(v2)
 >
 {: .challenge}
 
-## SetupTools
+Now we can import from within this folder
+
+## SetupTools and Installing Locally
 
 FIXME: how to setup the setup.py file
 
 ~~~
-mport setuptools
+import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -233,20 +252,23 @@ setuptools.setup(
 ~~~
 {: .language-python}
 
-## Installing locally
 
-Now that our code is organized into a package, how can we use it? If we try importing it now, what happens?
+Now that our code is organized into a package and has setup instructions, how can we use it? If we try importing it now, what happens?
 
-We need to install it first.  There are many ways that `pip` can install code.  We saw before that it can install from PiPy, but it can also install from a local diretory.
+We need to install it first.  There are many ways that `pip` can install code.  We saw before that it can install from PiPy, but it can also install from a local directory.
 
 ~~~
 cd
 pip install .
 ~~~
-{; .language-pythons}
+{; .language-bash}
 
 
 Now we can try importing and using our package.
+
+## Command Line Tools
+
+https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html
 
 ## Getting a Package from A Colleague
 
@@ -256,7 +278,7 @@ Using git clone
 
 Download and unzip their folder
 
-Direct download?
+Direct download via pip
 
 
 ~~~
