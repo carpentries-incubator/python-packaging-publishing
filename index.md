@@ -6,7 +6,7 @@ permalink: index.html  # Is the only page that don't follow the partner /:path/i
 
 # Next Steps for a Data Analysis in Python Projects
 
-Data Carpentry workshops provide the fundamentals to learning to use scientific computing to facilitate research. In this lesson, we look at some next steps and examples of best practices for organizing a project. We will integrate the data organization ideas from the Spreadsheets lesson with coding in Python and explore how to share code within a lab and when published. This informal afternoon session will start with an overview, provide resources, then open for discussion and hands-on practice with the ideas based on audience interest.
+Data Carpentry workshops provide the fundamentals to learning to use scientific computing to facilitate research. In this lesson, we look at some next steps and examples of best practices for organizing a project. We will integrate the data organization ideas from the Spreadsheets lesson with coding in Python and explore how to share code within a lab and as published material.
 
 > ## Prerequisites
 >
