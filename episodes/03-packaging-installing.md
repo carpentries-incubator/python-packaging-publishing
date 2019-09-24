@@ -268,7 +268,9 @@ Now we can try importing and using our package.
 
 ## Command Line Tools
 
-https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html
+FIXME: how to make a tool command line installable
+
+More details on this may be found at [on the python packaging documentation site](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html)
 
 ## Getting a Package from A Colleague
 
