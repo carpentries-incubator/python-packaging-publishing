@@ -1,7 +1,7 @@
 
 # Packaging and Publishing in Python
 
-This GitHub repository generates the lesson website "Packaging and Publishing with Python " The lesson website can be viewed here. Making changes in this GitHub repository allows us to change the content of the lesson website.
+This GitHub repository generates the lesson website "Packaging and Publishing with Python " The lesson website can be viewed [here](https://carpentries-incubator.github.io/python-packaging-publishing/). Making changes in this GitHub repository allows us to change the content of the lesson website.
 
 The following people are maintainers for this lesson, and are responsible for determining which changes to incorporate into the lesson:  
 
