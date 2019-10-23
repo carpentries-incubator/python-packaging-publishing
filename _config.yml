@@ -3,7 +3,7 @@
 #------------------------------------------------------------
 
 # Which carpentry is this ("swc", "dc", or "lc")?
-carpentry: ""
+carpentry: "incubator"
 
 # Overall title for pages.
 title: "Packaging and Publishing with Python"
@@ -87,3 +87,6 @@ exclude:
 
 # Turn on built-in syntax highlighting.
 highlighter: rouge
+
+# Remote theme
+remote_theme: carpentries/carpentries-theme
