@@ -4,8 +4,6 @@ root: .  # Is the only page that don't follow the partner /:path/index.html
 permalink: index.html  # Is the only page that don't follow the partner /:path/index.html
 ---
 
-# Packaging and Publishing with Python
-
 Data Carpentry workshops provide the fundamentals to learning to use scientific computing to facilitate research. In this lesson, we look at some next steps and examples of best practices for organizing a project. We will integrate the data organization ideas from the Spreadsheets lesson with coding in Python and explore how to share code within a lab and as published material.
 
 > ## Prerequisites
