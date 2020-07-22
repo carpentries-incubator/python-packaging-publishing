@@ -57,6 +57,8 @@ import numpy
 
 That should work, because we have the package installed on our system.
 
+
+
 Next, we'll create an environment an environment from scratch.
 
 ~~~
