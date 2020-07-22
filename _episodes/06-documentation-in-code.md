@@ -14,12 +14,16 @@ keypoints:
 
 ## Documenting for collaboration
 
+- explain the steps,
+- psuedocode
+
 
 
 ## API Documentation
 
+Doctrings
+[Numpydoc syntax](https://numpydoc.readthedocs.io/en/latest/format.html)
 
-Numpydoc syntax
 
 
 {% include links.md %}

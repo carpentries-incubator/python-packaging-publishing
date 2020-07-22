@@ -1,18 +1,8 @@
-<!-- Add the issue number addressed, if relevant, and complete below -->
-Closes #
-
-Summary of changes:
- -
-
 ---
-Checklist
- - [ ] resources used added to _extras/resources.md
- - [ ] I would like to be recognized for my contribution, so I've added myself to AUTHORS
- - [ ] I have used the learner profiles and contributing guidelines to inform my contribution
-
-
+name: issue
+about: general issues
+---
 Please delete the text below before submitting your contribution.
-
 
 ---
 

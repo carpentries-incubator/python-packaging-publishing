@@ -31,10 +31,14 @@ This episode will introduce the various tools that will be taught throughout the
 
 ## Workflows, project stages, and common challenges
 
- - uploads
+ <!-- - uploads -->
  - collaboration
  - work on multiple computers
  - promote the work
+ - Make file:
+ - Pipeline tools
+ - backup
+ -
 
 
 ## Data and Code
@@ -46,7 +50,9 @@ This episode will introduce the various tools that will be taught throughout the
  - things that are project specific
  - things that are method-related might be reused
     - these can be grouped as a package for install and then imported
-    -
+ - can become citable: Zenodo, get a DOI
+ - Data documentation, who , where, when, why: [Mozilla has a checklist](http://mozillascience.github.io/checklist/)
+
 
 ## Environments
 
@@ -61,9 +67,22 @@ This episode will introduce the various tools that will be taught throughout the
  - help your team use your code
  - clarify your thinking to do it in real time
  - multiscale: overview, details,
- - need to write the parts in natural language; but don't need to work on the infrastrcutre, tools can do that for you
+ - need to write the parts in natural language; but don't need to work on the infrastructure, tools can do that for you
+
+## Why do good practices matter?
 
 
+Lots of things _can_ work and following "best" practices can take a lot of extra time.  Why should we follow them and seek them?
+
+- Jupytercon [talk](https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/preview?slide=id.g3d168d2fd3_0_130) on issues about the problems with notebooks
+  - hidden states
+  - more risk for beginners
+  - bad habits
+  - hinder reproducibility
+- automation tools are based on good practices: a little bit of good, helps fancy stuff be easy
+  - sphinx autodocs
+  -
+- examples of finding good practices
 
 
 {% include links.md %}

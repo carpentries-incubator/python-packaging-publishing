@@ -15,7 +15,7 @@ keypoints:
 - "An environment is"
 - "An environment manager enables one step installing and documentation of dependencies, including versions"
 - "Conda is the included environment manager with Anaconda; it is also an installer"
-- "Other popular environment managers are"
+- "Other popular environment managers are FIXME"
 ---
 
 # Environments and environment managers
