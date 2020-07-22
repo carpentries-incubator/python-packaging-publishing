@@ -18,12 +18,23 @@ Sphinx is a tool for building documentation.
 ## What does sphinx produce?
 
 > ## Exercise
-> Look up the documentation for sklearn, FIXME
-> What is the components
+> In a group, have each member open one of the following packages' documentation
+> - [pytest](https://docs.pytest.org/en/latest/)
+> - [seaborn](https://seaborn.pydata.org/)
+> - [numpy](https://docs.scipy.org/doc/numpy/reference/)
+- - [scipy-cookbook](https://scipy-cookbook.readthedocs.io/)
+> - [scikit-learn](http://scikit-learn.org/stable/)
 >
+> Discuss what the common components are, what is helpful about these
+> documentation sites, how they address the general concepts on documentation,
+> how they're similar and how they're different.
+>
+>
+> > ## Solution
+> > these all use sphinx to generate them?
 {: .challenge}
 
-## Sphinx quiksetup
+## Sphinx quicksetup
 
 FIXME: guide through setup and what options mean
 
@@ -35,6 +46,16 @@ FIXME: adding pages
 
 ## API Documentation
 
-FIXME: Make api page work
+Add an api line to the `indnex.rst` so that it has a link to it.
+
+The create an API.rst file:
+
+~~~
+API documentation
+==================
+
+
+~~~
+{: .language-bash}
 
 {% include links.md %}
