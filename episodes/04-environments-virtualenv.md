@@ -47,7 +47,7 @@ what are dependencies?
 
 ## Create an environment
 
-Before we create and environment, let's see what happens when we import one of
+Before we create an environment, let's see what happens when we import one of
 our favorite packages.  In a python interpreter:
 
 ~~~
@@ -55,7 +55,8 @@ import numpy
 ~~~
 {: .language-python}
 
-That should work, because we have the package installed on our system.
+That should work, because we have the package installed on our system. If not,
+use a package you know you have installed, or install numpy.
 
 
 
@@ -91,7 +92,7 @@ import numpy
 Now, it won't work, but we can install it and a few other favorites.
 
 ~~~
-pip install
+pip install numpy
 ~~~
 {: .language-bash}
 
