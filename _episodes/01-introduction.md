@@ -81,8 +81,7 @@ Lots of things _can_ work and following "best" practices can take a lot of extra
   - hinder reproducibility
 - automation tools are based on good practices: a little bit of good, helps fancy stuff be easy
   - sphinx autodocs
-  -
-- examples of finding good practices
+<!-- - examples of finding good practices -->
 
 
 {% include links.md %}

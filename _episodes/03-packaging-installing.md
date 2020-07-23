@@ -150,7 +150,7 @@ Let us create a package called **Vehicles** with two modules **Land** and **Wate
 Create a directory called **Vehicles**
 
 ~~~
-mkdir packagename
+mkdir package-name
 ~~~
 {: .language-bash}
 
@@ -320,7 +320,7 @@ dist/
 
 Finally, it’s time to upload your package to the Python Package Index!
 
-First, we'll register for accounts on Test PyPI, intended for testing and experimentation. This way, we can practice all of the steps, without publishing our dummy code that we've been working with.
+First, we'll register for accounts on Test PyPI, intended for testing and experimentation. This way, we can practice all of the steps, without publishing our sample code that we've been working with.
 
 Go to [test.pypi.org/account/register/](https://test.pypi.org/account/register/) and complete the steps on that page, then verify your account.
 
@@ -353,6 +353,6 @@ Once uploaded your package should be viewable on TestPyPI, for example, https://
 
 test by having your neighbor install your package.
 
-Since they're nonsene, we should uninstall once we're done with `pip uninstall`
+Since they're not actually a packaged with functionality, we should uninstall once we're done with `pip uninstall`
 
 {% include links.md %}

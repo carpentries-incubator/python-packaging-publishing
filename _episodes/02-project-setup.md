@@ -31,6 +31,7 @@ We will begin in this section talking about how to start from scratch, noting th
 >
 > Here are some ideas to consider:
 > - [Detecting Simpson's Paradox](https://github.com/fairnessforensics/detect_simpsons_paradox)
+> - [Wiggum](https://github.com/fairnessforensics/wiggum)
 > - [MAD-bayes](https://github.com/tbroderick/bp-means)
 >
 > Questions
@@ -63,7 +64,7 @@ Sometimes we get to start from scratch. So we can set up everything from the beg
 
 <!--  Shablona, Cookie cutter, tool from issue-->
 
-You can also download a template, like [Shablona](https://github.com/uwescience/shablona)
+You can also download a template, like [Shablona](https://github.com/uwescience/shablona) or several others.
 
 
 We're going to work with something a little smaller, but similar for this workshop.
@@ -83,18 +84,29 @@ We will also have a `.gitignore` file and some files and folders that are not in
 
 > ## Exercise
 >
-> Label each of the following files for where it goes in the project
+> Make each of the following files in the project in the correct location by
+replacing the `__` on each line
 >
 > ~~~
-> raw_data.csv
-> generate_figures.py
-> new_technique.py
-> reproduce_paper.py
-> helper_functions.py
-> how_to_setup.md
+> touch __ raw_data.csv
+> touch __ generate_figures.py
+> touch __ new_technique.py
+> touch __ reproduce_paper.py
+> touch __ helper_functions.py
+> touch __ how_to_setup.md
 > ~~~
 > {: .language-bash}
 >
+> > ## Solution
+> > touch data/raw_data.csv
+> > touch experiments/generate_figures.py
+> > touch package-name/new_technique.py
+> > touch experiments/reproduce_paper.py
+> > touch package-name/helper_functions.py
+> > touch docs/how_to_setup.md
+{: .challenge}
+
+> ## Exercise
 >
 > Label each of the following excerpts for where it goes in the project
 >
@@ -169,7 +181,7 @@ Let's take a look at a helpful tool for choosing a [license](https://choosealice
 
 FIXME -->
 
-## Open Source, Advanced
+## Open Source, Next Steps
 
 Other common components are
 - code of conduct
@@ -189,7 +201,7 @@ For training and mentoring see [Mozilla Open Leaders](https://foundation.mozilla
 Clean up and organize content: where to different pieces of code go -->
 
 > ## Exercise
-> FIXME: provide a dummy project folder, spend time sorting, or allow people some time to work on their own projects and generating questions.
+> FIXME: provide a example project folder, spend time sorting, or allow people some time to work on their own projects and generating questions.
 >
 
 
