@@ -50,10 +50,8 @@ and have a look at the [more detailed Carpentries guidelines][lesson-example] on
 
 A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
 
-<!--
 ## Citation
 
+To cite this lesson, please consult with [CITATION](CITATION).
 
-To cite this lesson, please consult with [CITATION](CITATION)
-
-[lesson-example]: https://swcarpentry.github.io/lesson-example -->
+[lesson-example]: https://swcarpentry.github.io/lesson-example
