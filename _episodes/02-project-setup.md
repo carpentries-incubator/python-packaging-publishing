@@ -22,7 +22,7 @@ Now that we've brainstormed the parts of a project and talked a little bit about
 
 There isn't a specific answer, but there are some guiding principles.  There are also some packages that create a basic setup for you.  These are helpful for getting started sometimes, if you are building something that follows a lot of standards, but do not help you reorganize your existing ode.
 
-We will begin in this section talking about how to start from scratch, noting that often the reality is that you have code and want to organize and sort it to be more functional.  We start from clean to give you the ideas and concepts, then we'll return to how to sort and organize code into the bins we created.  
+We will begin in this section talking about how to start from scratch, noting that often the reality is that you have code and want to organize and sort it to be more functional.  We start from clean to give you the ideas and concepts, then we'll return to how to sort and organize code into the bins we created.
 
 
 
@@ -88,22 +88,27 @@ We will also have a `.gitignore` file and some files and folders that are not in
 replacing the `__` on each line
 >
 > ~~~
-> touch __ raw_data.csv
-> touch __ generate_figures.py
-> touch __ new_technique.py
-> touch __ reproduce_paper.py
-> touch __ helper_functions.py
-> touch __ how_to_setup.md
+> touch __/raw_data.csv # raw data for processing
+> touch __/generate_figures.py # functions to create figures for presentation/publication
+> touch __/new_technique.py # contains the novel method at the core of your publication
+> touch __/reproduce_paper.py # code to re-run the analyses reported in your methods paper about the package
+> touch __/helper_functions.py # auxilliary functions for routine tasks associated with the novel method
+> touch __/how_to_setup.md # details to help others prepare equivalent experiments to those presented in your paper
 > ~~~
 > {: .language-bash}
 >
 > > ## Solution
+> >
+> > ~~~
 > > touch data/raw_data.csv
 > > touch experiments/generate_figures.py
 > > touch package-name/new_technique.py
 > > touch experiments/reproduce_paper.py
 > > touch package-name/helper_functions.py
 > > touch docs/how_to_setup.md
+> > ~~~
+> > {: .language-bash }
+> {: .solution }
 {: .challenge}
 
 > ## Exercise
@@ -170,10 +175,37 @@ A readme is the first information about your project most people will see. It sh
 
 ### Licenses
 
-Let's take a look at a helpful tool for choosing a [license](https://choosealicense.com/)
+As a creative work, software is subject to copyright.
+When code is published without a license describing the terms
+under which it can be used by others,
+all of the author's rights are reserved by default.
+This means that no-one else is allowed to copy, re-use, or adapt the software
+without the express permission of the author.
+[Such cases are surprisingly common](https://snyk.io/blog/over-10-of-python-packages-on-pypi-are-distributed-without-any-license/)
+but, if you want your methods to be useful to, and used by, other people
+you should make sure to include a license to tell them how you want them to do this.
+
+Choosing a license for your software can be intimidating and confusing,
+and you should make sure you feel well-informed before you do so.
+[This lesson](https://swcarpentry.github.io/git-novice/11-licensing/index.html)
+and [the paper linked from it](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598)
+provide more information about why licenses are important,
+which are in common use for research software,
+and what you might consider when choosing one for your own project.
+[Choosealicense.com](https://choosealicense.com/)
+is another a helpful tool to guide you through this process.
 
 > ## Exercise
-> Discuss and compare licenses and why you should choose
+> Using the resources linked above, compare the terms of the following licenses:
+>
+> - MIT
+> - GPL
+> - [a proprietary license](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598#s4a)
+>
+> What do you think are the benefits and drawbacks
+> of each with regards to research software?
+> 
+> Discuss with a partner before sharing your thoughts with the rest of the group.
 >
 {: .challenge}
 
