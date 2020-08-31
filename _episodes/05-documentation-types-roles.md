@@ -30,7 +30,7 @@ Documentation serves many purposes and many audiences, including
 > ## Exercise
 > in small groups, brainstorm the different goals for reading documentation that different audiences might have
 >
-{: .chalenge}
+{: .challenge}
 
 
 ## How is documentation used?
