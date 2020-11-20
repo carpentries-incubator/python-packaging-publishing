@@ -18,10 +18,9 @@ keypoints:
 
 ## Recall: Functions
 
-When we develop research code we organize it into functions and classes.
-
-These might be in notebooks or you might have put them in a `.py` file. If you've never put them in another file.
-
+When we develop code for research, we often start by writing unorganized code in notebook cells or a script. 
+Eventually, we might want to re-use the code we wrote in other contexts. When you want to re-use code, it is 
+helpful to organize it into functions and classes in separate `.py` files.
 
 <!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
 
@@ -34,9 +33,9 @@ Keep motivation as easing in  and gradually scaling up to stay inclusive
 
 ## Pip
 
-Pip stands for FIXME is used to install packages from [Python Package Index (PyPI)](https://pypi.org/). PyPI is a repository for python package that are developed by Python Community. Pip works by fetching package from this repository and installing it locally.
+Pip is the most common package manager for python. Pip allows you to easily install python packages locally from your computer or from an online repository like the [Python Package Index (PyPI)](https://pypi.org/). Once a package is installed with pip, you can `import` that package and use it in your own code.
 
-We use pip at the command line. We'll start by exploring it's help manual.
+Pip is a command line tool. We'll start by exploring it's help manual:
 
 ~~~
 pip
@@ -150,7 +149,7 @@ Let us create a package called **Vehicles** with two modules **Land** and **Wate
 Create a directory called **Vehicles**
 
 ~~~
-mkdir package-name
+mkdir Vehicles
 ~~~
 {: .language-bash}
 
@@ -189,7 +188,7 @@ Note the code here is a function that checks which items in a list are water veh
 
 ### Step 3 Adding the init file
 
-Finally, we create a file named `__init__.py` inside the `/Vehicles` directory and add the following code:
+Finally, we create a file named `__init__.py` inside the `Vehicles/` directory and add the following code:
 
 ~~~
 from Land import Land
@@ -221,7 +220,8 @@ isWater(v2)
 >
 {: .challenge}
 
-Now we can import from within this folder
+Now we can import from within this folder, but only if our working directory is at the top level `Vehicles/` 
+directory. What if we want to use the `Vehicles` package from another project or folder?
 
 ## SetupTools and Installing Locally
 
@@ -255,14 +255,17 @@ setuptools.setup(
 
 Now that our code is organized into a package and has setup instructions, how can we use it? If we try importing it now, what happens?
 
-We need to install it first.  There are many ways that `pip` can install code.  We saw before that it can install from PiPy, but it can also install from a local directory.
+We need to install it first. We saw before that pip can install packages remotely from PiPy, but it can also install 
+from a local directory. 
 
 ~~~
-cd
-pip install .
+cd Vehicles
+pip install -e .
 ~~~
 {; .language-bash}
-
+The `-e` flag (aka `--editable`) tells `pip` to install this package in `editable` mode. This allows us to make 
+changes to the package without re-installing it. Analysis code can change dramatically over time, so this is a 
+useful option!
 
 Now we can try importing and using our package.
 
