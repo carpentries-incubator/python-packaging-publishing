@@ -263,7 +263,9 @@ cd Vehicles
 pip install -e .
 ~~~
 {; .language-bash}
-The `-e` flag (aka `--editable`) tells `pip` to install this package in `editable` mode. This allows us to make changes to the package without re-installing it. Analysis code can change dramatically over time, so this is a useful option!
+The `-e` flag (aka `--editable`) tells `pip` to install this package in `editable` mode. This allows us to make 
+changes to the package without re-installing it. Analysis code can change dramatically over time, so this is a 
+useful option!
 
 Now we can try importing and using our package.
 
