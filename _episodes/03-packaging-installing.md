@@ -220,7 +220,8 @@ isWater(v2)
 >
 {: .challenge}
 
-Now we can import from within this folder, but only if our working directory is at the top level `Vehicles/` directory. What if we want to use the `Vehicles` package from another project or folder?
+Now we can import from within this folder, but only if our working directory is at the top level `Vehicles/` 
+directory. What if we want to use the `Vehicles` package from another project or folder?
 
 ## SetupTools and Installing Locally
 
