@@ -18,7 +18,9 @@ keypoints:
 
 ## Recall: Functions
 
-When we develop code for research, we often start by writing unorganized code in notebook cells or a script. Eventually, we might want to re-use the code we wrote in other contexts. When you want to re-use code, it is helpful to organize it into functions and classes in separate `.py` files.
+When we develop code for research, we often start by writing unorganized code in notebook cells or a script. 
+Eventually, we might want to re-use the code we wrote in other contexts. When you want to re-use code, it is 
+helpful to organize it into functions and classes in separate `.py` files.
 
 <!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
 
