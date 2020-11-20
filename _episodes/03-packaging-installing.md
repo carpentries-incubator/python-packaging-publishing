@@ -255,7 +255,8 @@ setuptools.setup(
 
 Now that our code is organized into a package and has setup instructions, how can we use it? If we try importing it now, what happens?
 
-We need to install it first. We saw before that pip can install packages remotely from PiPy, but it can also install from a local directory. 
+We need to install it first. We saw before that pip can install packages remotely from PiPy, but it can also install 
+from a local directory. 
 
 ~~~
 cd Vehicles
