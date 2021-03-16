@@ -146,7 +146,9 @@ Once the module you want is in sys.path, it can be imported just like any other 
 
 To save adding modules to the path every time we want to use them, we can
 package our modules to be installable.  This
-method of importing standardises how we import modules across different user systems.
+method of importing standardises how we import modules across different user systems. This is why when we import packages like `pandas` and `matplotlib` we don't have to write out their path, or add it to the path 
+before importing.  When we install a package, it's location gets added to the path, or it's saved to a location
+already on the path. 
 
 Packages are namespaces or containers which can contain multiple modules. e.g. the `scipy` package contains the `interpolate` and `optimize` modules.
 
@@ -214,7 +216,7 @@ import speed
 ~~~
 {: .language-python}
 
-The init file is the map that tells python what our package looks like.  It is
+The init file is the map that tells Python what our package looks like.  It is
 also what tells Python a directory is a module. An empty init file marks a
 directory as a module. By adding import code, we can make our package easier to use.
 
