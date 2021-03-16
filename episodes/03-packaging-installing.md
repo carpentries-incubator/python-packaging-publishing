@@ -28,7 +28,12 @@ e.g. a function to convert from degrees Fahrenheit to Celsius
 
 ~~~
 def fahr_to_celsius(temperature):
-    return ((temperature - 32) * (5/9))
+    """
+    Function to convert temperature from fahrenheit to Celsius
+    :param temperature: temperature in fahrenheit
+    :return: temperature in Celsius
+    """
+    return (temperature - 32) * (5 / 9)
 
 ~~~
 {: .language-python}
@@ -212,7 +217,12 @@ mkdir conversions
 conversions/temperature.py
 ~~~
 def fahr_to_celsius(temperature):
-    return ((temperature - 32) * (5/9))
+    """
+    Function to convert temperature from fahrenheit to Celsius
+    :param temperature: temperature in fahrenheit
+    :return: temperature in Celsius
+    """
+    return (temperature - 32) * (5 / 9)
 ~~~
 {: .language-python}
 
@@ -221,12 +231,24 @@ the file temperature.py will be treated as a module called temperature. This mod
 
 
 > ## Exercise
-> 1. Create a file named **speed.py** inside the **conversions** directory and add a function named `kph_to_ms` that will convert kilometres per hour to meters per second:
->
+> 1. Create a file named **speed.py** inside the **conversions** directory and add a function named `kph_to_ms` that will convert kilometres per hour to meters per second. Here's the docstring desribing the function:
+> ~~~
+>     """
+>     Function to convert speed from kilometres per hour to meters per second
+>     :param speed: speed in kilometres per hour
+>     :return: speed in meters per second
+>     """
+> ~~~
+> {: .language-python}
 > > ## Solution
 > > conversions/speed.py
 > > ~~~
 > > def kph_to_ms(speed):
+> >     """
+> >     Function to convert speed from kilometres per hour to meters per second
+> >     :param speed: speed in kilometres per hour
+> >     :return: speed in meters per second
+> >     """
 > >     return speed / 3.6
 > > ~~~
 > > {: .language-python}
