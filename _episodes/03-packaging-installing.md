@@ -19,7 +19,7 @@ keypoints:
 ## Recall: Functions
 
 When we develop code for research, we often start by writing unorganized code in notebook cells or a script. 
-Eventually, we might want to re-use the code we wrote in other contexts. When we want to re-use code, it is 
+Eventually, we might want to re-use the code we wrote in other contexts. In order to re-use code, it is 
 helpful to organize it into functions and classes in separate `.py` files.
 
 <!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
@@ -32,6 +32,9 @@ def fahr_to_celsius(temp):
 
 ~~~
 {: .language-python}
+
+<!-- What is my modular resuable code vs what is my analysis
+Keep motivation as easing in  and gradually scaling up to stay inclusive -->
 
 
 ## Pip
@@ -102,8 +105,8 @@ General Options:
 This shows the basic commands available with pip and and the general options.
 
 > ## Exercise
-> 1. Use pip to install the sphinx package, we will need it later.
-> 2. Choose a pip command and look up it's options. Discuss the command with your
+> 1. Use pip to install the `sphinx` package, we will need it later.
+> 2. Choose a pip command and look up its options. Discuss the command with your
 > neighbour.
 >
 > > ## Solution
