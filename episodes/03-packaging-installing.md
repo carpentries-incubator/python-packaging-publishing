@@ -131,16 +131,39 @@ sys.path
 ~~~
 {:.language-python}
 
-sys.path is a list of strings, each describing the absolute path to a directory. Python will look in these directories for modules. If we have a directory containing modules we want Python to be aware of, we append it to the path:
+~~~
+['',
+'/home/vlad/anaconda3/lib/python37.zip',
+'/home/vlad/anaconda3/lib/python3.7',
+'/home/vlad/anaconda3/lib/python3.7/lib-dynload',
+'/home/vlad/anaconda3/lib/python3.7/site-packages'
+]
+~~~
+{: .output}
+
+Here we see that Python is aware of the path to the Python executable, as well as other directories like `site-packages`.
+
+sys.path is a list of strings, each describing the absolute path to a directory. Python will look in these directories for modules. If we have a directory containing modules we want Python to be aware of, we append it that directory to the path. If I have a package in `/home/vlad/Documents/science/cool-package` I add it with `sys.path.append`
 
 
 ~~~
-sys.path.append('/path/to/module/')
+sys.path.append('/home/vlad/Documents/science/cool-package')
 sys.path
 ~~~
 {:.language-python}
 
-Once the module you want is in sys.path, it can be imported just like any other module.
+~~~
+['',
+'/home/vlad/anaconda3/lib/python37.zip',
+'/home/vlad/anaconda3/lib/python3.7',
+'/home/vlad/anaconda3/lib/python3.7/lib-dynload',
+'/home/vlad/anaconda3/lib/python3.7/site-packages',
+'/home/vlad/Documents/science/cool-package'
+]
+~~~
+{: .output}
+
+We can see that the path to our module has been added to `sys.path`. Once the module you want is in sys.path, it can be imported just like any other module.
 
 ## Python Packages
 
