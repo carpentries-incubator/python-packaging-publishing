@@ -170,10 +170,15 @@ We can see that the path to our module has been added to `sys.path`. Once the mo
 To save adding modules to the path every time we want to use them, we can
 package our modules to be installable.  This
 method of importing standardises how we import modules across different user systems. This is why when we import packages like `pandas` and `matplotlib` we don't have to write out their path, or add it to the path 
-before importing.  When we install a package, it's location gets added to the path, or it's saved to a location
+before importing.  When we install a package, its location gets added to the path, or it's saved to a location
 already on the path. 
 
-Packages are namespaces or containers which can contain multiple modules. e.g. the `scipy` package contains the `interpolate` and `optimize` modules.
+Many packages contain multiple modules. When we `import matplotlib.pyplot as plt` we are importing only the pyplot 
+module, not the entire matplotlib package. This use of `package.module` is a practice referred to as a **namespace**. 
+Python namespaces help to keep modules and functions with the same name separate. For instance, both scipy and numpy have a `rand`function to create arrays of random numbers. We can differentiate them in our code by using `scipy.sparse.rand` 
+and `numpy.random.rand`. respectively
+
+In this way, namespaces allow multiple packages to have functions of the same name without creating conflicts. Packages are namespaces or containers which can contain multiple modules.
 
 Making python code into a package requires no extra tools. We need to
 
