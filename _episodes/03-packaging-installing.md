@@ -27,8 +27,8 @@ helpful to organize it into functions and classes in separate `.py` files.
 e.g. a function to convert from degrees Fahrenheit to Celsius
 
 ~~~
-def fahr_to_celsius(temp):
-    return ((temp - 32) * (5/9))
+def fahr_to_celsius(temperature):
+    return ((temperature - 32) * (5/9))
 
 ~~~
 {: .language-python}
@@ -197,7 +197,7 @@ Our final package will look like this:
 
 The `__init__.py` file tells python that the directory is supposed to be tread as a package.
 
-Let's create a package called **conversions** with two modules **temp** and **speed**.
+Let's create a package called **conversions** with two modules **temperature** and **speed**.
 
 ### Step 1: Creating a directory
 Create a directory called **conversions**
@@ -209,15 +209,15 @@ mkdir conversions
 
 ### Step 2: Adding Modules
 
-conversions/temp.py
+conversions/temperature.py
 ~~~
-def fahr_to_celsius(temp):
-    return ((temp - 32) * (5/9))
+def fahr_to_celsius(temperature):
+    return ((temperature - 32) * (5/9))
 ~~~
 {: .language-python}
 
-the file temp.py will be treated as a module called temp. This module contains the function `fahr_to_celsius`. The top level container is the package `conversions`. The end user will import this as:
-`from conversions.temp import fahr_to_celsius` 
+the file temperature.py will be treated as a module called temperature. This module contains the function `fahr_to_celsius`. The top level container is the package `conversions`. The end user will import this as:
+`from conversions.temperature import fahr_to_celsius` 
 
 
 > ## Exercise
@@ -239,7 +239,7 @@ the file temp.py will be treated as a module called temp. This module contains t
 Finally, we create a file named `__init__.py` inside the `conversions` directory and add the following code:
 
 ~~~
-import temp
+import temperature
 import speed
 ~~~
 {: .language-python}
@@ -253,9 +253,9 @@ Now, if we launch a new python terminal from this directory, we can import the p
 e.g
 
 ~~~
-from conversions import temp, speed
+from conversions import temperature, speed
 
-print(temp.fahr_to_celsius(100))
+print(temperature.fahr_to_celsius(100))
 ~~~
 {: .language-python}
 
