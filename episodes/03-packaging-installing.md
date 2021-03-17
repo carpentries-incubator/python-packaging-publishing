@@ -8,10 +8,10 @@ questions:
 objectives:
 - "Identify the components of a python package"
 - "Apply a template for packaging existing code"
-- "Update the packaged project after modifying to the code"
+- "Update the packaged project after modifying the code"
 - "Install and update a local or GitHub-hosted package"
 keypoints:
-- "Packaged code is resuable within and across systems"
+- "Packaged code is reusable within and across systems"
 - "A python package consists of modules"
 - "Projects can be distributed in many ways and installed with a package manager"
 ---
@@ -19,32 +19,49 @@ keypoints:
 ## Recall: Functions
 
 When we develop code for research, we often start by writing unorganized code in notebook cells or a script. 
-Eventually, we might want to re-use the code we wrote in other contexts. When you want to re-use code, it is 
+Eventually, we might want to re-use the code we wrote in other contexts. In order to re-use code, it is 
 helpful to organize it into functions and classes in separate `.py` files.
 
 <!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
 
+e.g. a function to convert from degrees Fahrenheit to Celsius
 
-FIXME: Example on writing functions to motivate packaging
+~~~
+def fahr_to_celsius(temperature):
+    """
+    Function to convert temperature from fahrenheit to Celsius
 
-What is my modular resuable code vs what is my analysis
-Keep motivation as easing in  and gradually scaling up to stay inclusive
+    Parameters
+    -------------
+    temperature : float
+         temperature in Fahrenheit
+         
+    Returns
+    --------
+    temperature_c : float
+          temperature in Celsius
+    """
+    return (temperature - 32) * (5 / 9)
+
+~~~
+{: .language-python}
+
+<!-- What is my modular resuable code vs what is my analysis
+Keep motivation as easing in  and gradually scaling up to stay inclusive -->
 
 
 ## Pip
 
 Pip is the most common package manager for python. Pip allows you to easily install python packages locally from your computer or from an online repository like the [Python Package Index (PyPI)](https://pypi.org/). Once a package is installed with pip, you can `import` that package and use it in your own code.
 
-Pip is a command line tool. We'll start by exploring it's help manual:
+Pip is a command line tool. We'll start by exploring its help manual:
 
 ~~~
 pip
 ~~~
 {:.language-bash}
 
-
-when this happens we see
-
+The output will look like this
 ~~~
 Usage:   
   pip <command> [options]
@@ -98,12 +115,12 @@ General Options:
 ~~~
 {: .output}
 
-This shows the basic commands and the general options.
+This shows the basic commands available with pip and and the general options.
 
 > ## Exercise
-> 1. Install the sphinx package, we will need it later.
-> 2. Choose a command and look up it's options, share and discuss with your
-> neighbor, be sure to choose two different ones so that you each.
+> 1. Use pip to install the `sphinx` package, we will need it later.
+> 2. Choose a pip command and look up its options. Discuss the command with your
+> neighbour.
 >
 > > ## Solution
 > >
@@ -116,117 +133,192 @@ This shows the basic commands and the general options.
 
 ## Python Modules
 
-A module is a piece of code that serves a specific purpose. In python, a module is written in a `.py` file and the name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, `numpy` defines the value of pi (`numpy.Pi`).
+A module is a piece of code that serves a specific purpose. In python, a module is written in a `.py` file. The name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, [numpy](https://numpy.org/) defines the value of pi with `numpy.pi`.
 
 
-If the `.py` file is on the path, we can import functions from one file to another.
+If a `.py` file is on the path, we can import functions from it to our current file. Open up Python, import `sys` and print the path.
 
-FIXME: example
+~~~
+import sys
+sys.path
+~~~
+{:.language-python}
 
+~~~
+['',
+'/home/vlad/anaconda3/lib/python37.zip',
+'/home/vlad/anaconda3/lib/python3.7',
+'/home/vlad/anaconda3/lib/python3.7/lib-dynload',
+'/home/vlad/anaconda3/lib/python3.7/site-packages'
+]
+~~~
+{: .output}
+
+Here we see that Python is aware of the path to the Python executable, as well as other directories like `site-packages`.
+
+sys.path is a list of strings, each describing the absolute path to a directory. Python will look in these directories for modules. If we have a directory containing modules we want Python to be aware of, we append it that directory to the path. If I have a package in `/home/vlad/Documents/science/cool-package` I add it with `sys.path.append`
+
+
+~~~
+sys.path.append('/home/vlad/Documents/science/cool-package')
+sys.path
+~~~
+{:.language-python}
+
+~~~
+['',
+'/home/vlad/anaconda3/lib/python37.zip',
+'/home/vlad/anaconda3/lib/python3.7',
+'/home/vlad/anaconda3/lib/python3.7/lib-dynload',
+'/home/vlad/anaconda3/lib/python3.7/site-packages',
+'/home/vlad/Documents/science/cool-package'
+]
+~~~
+{: .output}
+
+We can see that the path to our module has been added to `sys.path`. Once the module you want is in sys.path, it can be imported just like any other module.
 
 ## Python Packages
 
-We don't have to manually add to the path every time though. Instead, we can
-package our modules to be installable, and then we can import directly.  This
-way of importing allows us to better allow python on the backend handle differences in paths across different user systems.  
+To save adding modules to the path every time we want to use them, we can
+package our modules to be installable.  This
+method of importing standardises how we import modules across different user systems. This is why when we import packages like `pandas` and `matplotlib` we don't have to write out their path, or add it to the path 
+before importing.  When we install a package, its location gets added to the path, or it's saved to a location
+already on the path. 
 
-Packages are namespaces or containers (e.g. a directory) which can contain multiple packages and modules.
+Many packages contain multiple modules. When we `import matplotlib.pyplot as plt` we are importing only the pyplot 
+module, not the entire matplotlib package. This use of `package.module` is a practice referred to as a **namespace**. 
+Python namespaces help to keep modules and functions with the same name separate. For instance, both scipy and numpy have a `rand`function to create arrays of random numbers. We can differentiate them in our code by using `scipy.sparse.rand` 
+and `numpy.random.rand`. respectively
 
-Making python code a package (packaging it) requires no extra tools. We need to:
+In this way, namespaces allow multiple packages to have functions of the same name without creating conflicts. Packages are namespaces or containers which can contain multiple modules.
 
-- Create a directory and give it package's name.
-- Put modules in it.
+Making python code into a package requires no extra tools. We need to
+
+- Create a directory, named after our package.
+- Put modules (`.py` files) in the directory.
 - Create an `__init__.py` file in the directory
-- Create a setup.py file at the top level
+- Create a `setup.py` file alongside the directory
 
-The `__init__.py` file tells python that the directory is supposed to be read as a package.
+Our final package will look like this:
 
-e.g.
+├── package-name  
+│   ├── \_\_init__.py  
+│   ├── module-a.py  
+│   └── module-b.py  
+└── setup.py
 
-Let us create a package called **Vehicles** with two modules **Land** and **Water**.
+The `__init__.py` file tells python that the directory is supposed to be tread as a package.
+
+Let's create a package called **conversions** with two modules **temperature** and **speed**.
 
 ### Step 1: Creating a directory
-Create a directory called **Vehicles**
+Create a directory called **conversions**
 
 ~~~
-mkdir Vehicles
+mkdir conversions
 ~~~
 {: .language-bash}
 
 ### Step 2: Adding Modules
 
+conversions/temperature.py
 ~~~
-class Land:
-    def __init__(self):
-        ''' Constructor for this class. '''
-        # Create some vehicles
-        self.members = ['Cars', 'Trucks']
+def fahr_to_celsius(temperature):
+    """
+    Function to convert temperature from fahrenheit to Celsius
 
-    def printMembers(self):
-        print('Printing members of the Land  class')
-        for member in self.members:
-            print('\t%s ' % member)
-~~~
-{: .language-python}
-
-The class has a property named members – which is a list of some vehicles we might be interested in. It also has a method named printMembers which simply prints the list of vehicles of this class.Note: all classes defined must be capable of being imported, and won't be executed directly. this will be saved in a file called **Land.py**
-
-Next we create another module named **Water**. Create a file named **Water.py** inside the **Vehicles** directory and add the code below:
-
-~~~
-def isWater(v):
-    waterv =['ship', 'boat']
-    for obj in v:
-        if obj in waterv:
-            print("It is a water vehicle")
-        else:
-            print("It is not a water vehicle")
+    Parameters
+    -------------
+    temperature : float
+         temperature in Fahrenheit
+         
+    Returns
+    --------
+    temperature_c : float
+          temperature in Celsius
+    """
+    return (temperature - 32) * (5 / 9)
 ~~~
 {: .language-python}
 
-Note the code here is a function that checks which items in a list are water vehicles.
+the file temperature.py will be treated as a module called temperature. This module contains the function `fahr_to_celsius`. The top level container is the package `conversions`. The end user will import this as:
+`from conversions.temperature import fahr_to_celsius` 
+
+
+> ## Exercise
+> 1. Create a file named **speed.py** inside the **conversions** directory and add a function named `kph_to_ms` that will convert kilometres per hour to meters per second. Here's the docstring desribing the function:
+> ~~~
+>     """
+>     Function to convert speed from kilometres per hour to meters per second
+> 
+>     Parameters
+>     -------------
+>     speed : float
+>          speed in kilometres per hour
+> 
+>     Returns
+>     --------
+>     speed_ms : float
+>           speed in meters per second
+>     """
+> ~~~
+> {: .language-python}
+> > ## Solution
+> > conversions/speed.py
+> > ~~~
+> > def kph_to_ms(speed):
+> >     """
+> >     Function to convert speed from kilometres per hour to meters per second
+> > 
+> >     Parameters
+> >     -------------
+> >     speed : float
+> >          speed in kilometres per hour
+> > 
+> >     Returns
+> >     --------
+> >     speed_ms : float
+> >           speed in meters per second
+> >     """
+> >     return speed / 3.6
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
+
 
 ### Step 3 Adding the init file
 
-Finally, we create a file named `__init__.py` inside the `Vehicles/` directory and add the following code:
+Finally, we create a file named `__init__.py` inside the `conversions` directory and add the following code:
 
 ~~~
-from Land import Land
-from Water import isWater
+import temperature
+import speed
 ~~~
 {: .language-python}
 
-The init file is the map that tells python what you package looks like.  It is
-also what makes python know a folder is a module. An empty init file makes a
-folder a module, but by adding code, we can make our package easier to use.
+The init file is the map that tells Python what our package looks like.  It is
+also what tells Python a directory is a module. An empty init file marks a
+directory as a module. By adding import code, we can make our package easier to use.
 
-Now, if we launch a new python terminal, from this directory, we can import the package **Vehicles**
+Now, if we launch a new python terminal from this directory, we can import the package **conversions**
 
 e.g
 
 ~~~
-from Vehicles import Land, Water
+from conversions import temperature, speed
 
-v1 =Land()
-v1.printMembers()
-
-v2= ["boat", "car"]
-isWater(v2)
+print(temperature.fahr_to_celsius(100))
 ~~~
 {: .language-python}
 
-> ## Exercise
-> Add a module for air vehicles with a function that checks if an air vehicle is also a water vehicles (e.g. hovercraft)
->
-{: .challenge}
+Now we can import from within this folder, but only if our working directory is at the top level `conversions` 
+directory. What if we want to use the **conversions** package from another project or directory?
 
-Now we can import from within this folder, but only if our working directory is at the top level `Vehicles/` 
-directory. What if we want to use the `Vehicles` package from another project or folder?
+## SetupTools and installing Locally
 
-## SetupTools and Installing Locally
-
-FIXME: how to setup the setup.py file
-
+The file **setup.py** contains the essential information about our package for PyPI. It needs to be machine readable, so be sure to format it correctly
 ~~~
 import setuptools
 
@@ -234,11 +326,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="example-pkg-your-username",
+    name="conversions",
     version="0.0.1",
     author="Example Author",
     author_email="author@example.com",
-    description="A small example package",
+    description="An example  package to perform unit conversions",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/pypa/sampleproject",
@@ -255,15 +347,15 @@ setuptools.setup(
 
 Now that our code is organized into a package and has setup instructions, how can we use it? If we try importing it now, what happens?
 
-We need to install it first. We saw before that pip can install packages remotely from PiPy, but it can also install 
-from a local directory. 
+We need to install it first. Earlier, we saw that pip can install packages remotely from PyPI. pip can also install 
+from a local directory.
 
 ~~~
-cd Vehicles
+cd conversions
 pip install -e .
 ~~~
-{; .language-bash}
-The `-e` flag (aka `--editable`) tells `pip` to install this package in `editable` mode. This allows us to make 
+{: .language-bash}
+The `-e` flag (aka `--editable`) tells pip to install this package in editable mode. This allows us to make 
 changes to the package without re-installing it. Analysis code can change dramatically over time, so this is a 
 useful option!
 
@@ -293,7 +385,7 @@ pip install .
 {: language-bash}
 
 
-## PiPy Submission
+## PyPI Submission
 
 To make `pip install packagename` work you have to submit your package to the repository.  We won't do that today, but an important thing to think about if you might want to go this direction, is that the name must be unique.  This mens that i's helpful to check pipy before creating your package so that you chooses a name that is availalbe.
 
