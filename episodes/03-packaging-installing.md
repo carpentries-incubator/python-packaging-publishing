@@ -30,8 +30,16 @@ e.g. a function to convert from degrees Fahrenheit to Celsius
 def fahr_to_celsius(temperature):
     """
     Function to convert temperature from fahrenheit to Celsius
-    :param temperature: temperature in fahrenheit
-    :return: temperature in Celsius
+
+    Parameters
+    -------------
+    temperature : float
+         temperature in Fahrenheit
+         
+    Returns
+    --------
+    temperature_c : float
+          temperature in Celsius
     """
     return (temperature - 32) * (5 / 9)
 
