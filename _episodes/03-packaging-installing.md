@@ -227,8 +227,16 @@ conversions/temperature.py
 def fahr_to_celsius(temperature):
     """
     Function to convert temperature from fahrenheit to Celsius
-    :param temperature: temperature in fahrenheit
-    :return: temperature in Celsius
+
+    Parameters
+    -------------
+    temperature : float
+         temperature in Fahrenheit
+         
+    Returns
+    --------
+    temperature_c : float
+          temperature in Celsius
     """
     return (temperature - 32) * (5 / 9)
 ~~~
@@ -243,8 +251,16 @@ the file temperature.py will be treated as a module called temperature. This mod
 > ~~~
 >     """
 >     Function to convert speed from kilometres per hour to meters per second
->     :param speed: speed in kilometres per hour
->     :return: speed in meters per second
+> 
+>     Parameters
+>     -------------
+>     speed : float
+>          speed in kilometres per hour
+> 
+>     Returns
+>     --------
+>     speed_ms : float
+>           speed in meters per second
 >     """
 > ~~~
 > {: .language-python}
@@ -254,8 +270,16 @@ the file temperature.py will be treated as a module called temperature. This mod
 > > def kph_to_ms(speed):
 > >     """
 > >     Function to convert speed from kilometres per hour to meters per second
-> >     :param speed: speed in kilometres per hour
-> >     :return: speed in meters per second
+> > 
+> >     Parameters
+> >     -------------
+> >     speed : float
+> >          speed in kilometres per hour
+> > 
+> >     Returns
+> >     --------
+> >     speed_ms : float
+> >           speed in meters per second
 > >     """
 > >     return speed / 3.6
 > > ~~~
