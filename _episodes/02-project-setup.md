@@ -236,9 +236,10 @@ For reading, check out the [curriculum](https://mozilla.github.io/open-leadershi
 <!-- Frame intro into organizing existing stuff
 Clean up and organize content: where to different pieces of code go -->
 
-> ## Exercise
-> FIXME: provide a example project folder, spend time sorting, or allow people some time to work on their own projects and generating questions.
->
+> ## Practice working on projects
+> FIXME: provide a example project folder, spend time sorting,
+> or allow people some time to work on their own projects and generating questions.
+{: .challenge}
 
 [no-license-article]: https://snyk.io/blog/over-10-of-python-packages-on-pypi-are-distributed-without-any-license/
 [licensing-episode]: https://swcarpentry.github.io/git-novice/11-licensing/index.html
