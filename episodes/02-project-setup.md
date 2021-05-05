@@ -61,7 +61,13 @@ These are the three main characteristics of a good file name:
 
 ## Guiding Principles
 
-FIXME
+There are numerous resources on good practices for starting and developing your project, such as:
+* [NeurIPS Tips for Publishing Research Code](https://github.com/paperswithcode/releasing-research-code)
+* [GitHub's Open Source Guide](https://opensource.guide/)
+* [Good Enough Practices in Scientific Computing (PLoS Comp Bio)][good-practices-paper]
+
+In this lesson, we are going to create a project that attempts to abide by the guiding principles presented in these 
+resources.
 
 ## Setting up a project
 
@@ -241,6 +247,7 @@ Clean up and organize content: where to different pieces of code go -->
 > or allow people some time to work on their own projects and generating questions.
 {: .challenge}
 
+[good-practices-paper]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
 [no-license-article]: https://snyk.io/blog/over-10-of-python-packages-on-pypi-are-distributed-without-any-license/
 [licensing-episode]: https://swcarpentry.github.io/git-novice/11-licensing/index.html
 [plos-license-paper]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598
