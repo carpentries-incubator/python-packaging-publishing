@@ -18,11 +18,16 @@ keypoints:
 
 ## Project Organization
 
-Now that we've brainstormed the parts of a project and talked a little bit about what each of them consists of.  How should we organize the code to help our future self and collaborators?
+Now that we've brainstormed the parts of a project and talked a little bit about what each of them consists of.
+How should we organize the code to help our future self and collaborators?
 
-There isn't a specific answer, but there are some guiding principles.  There are also some packages that create a basic setup for you.  These are helpful for getting started sometimes, if you are building something that follows a lot of standards, but do not help you reorganize your existing ode.
+There isn't a specific answer, but there are some guiding principles. There are also some packages that create a basic
+setup for you. These are helpful for getting started sometimes, if you are building something that follows a lot of
+standards, but do not help you reorganize your existing ode.
 
-We will begin in this section talking about how to start from scratch, noting that often the reality is that you have code and want to organize and sort it to be more functional.  We start from clean to give you the ideas and concepts, then we'll return to how to sort and organize code into the bins we created.
+We will begin in this section talking about how to start from scratch, noting that often the reality is that you have
+code and want to organize and sort it to be more functional. We start from clean to give you the ideas and concepts,
+then we'll return to how to sort and organize code into the bins we created.
 
 
 
@@ -45,7 +50,7 @@ So next we think about how these ideas and which of these and talk about some sp
 
 ## File naming
 
-This is the least resistence step you can take to make your code more resusable.
+This is the least resistence step you can take to make your code more reusable.
 
 Three principles for (file) names
 1. Machine readable
@@ -70,11 +75,11 @@ You can also download a template, like [Shablona](https://github.com/uwescience/
 We're going to work with something a little smaller, but similar for this workshop.
 ~~~
 git clone
-cd project-name
+cd project
 mkdir data
 mkdir docs
 mkdir experiments
-mkdir package-name
+mkdir package
 touch setup.py
 touch README.md
 ~~~
@@ -154,7 +159,8 @@ replacing the `__` on each line
 
 ## Open Source Basics, MWE
 
-Open source guidelines are generally written to be ready to scale.  Here we propose the basics to get your project live and usable vs things that will help if it grows and builds a community, but n
+Open source guidelines are generally written to be ready to scale.  Here we propose the basics to get your project live
+and usable vs. things that will help if it grows and builds a community, but n
 
 ### README
 
@@ -175,31 +181,23 @@ A readme is the first information about your project most people will see. It sh
 
 ### Licenses
 
-As a creative work, software is subject to copyright.
-When code is published without a license describing the terms
-under which it can be used by others,
-all of the author's rights are reserved by default.
-This means that no-one else is allowed to copy, re-use, or adapt the software
-without the express permission of the author.
-[Such cases are surprisingly common](https://snyk.io/blog/over-10-of-python-packages-on-pypi-are-distributed-without-any-license/)
-but, if you want your methods to be useful to, and used by, other people
-you should make sure to include a license to tell them how you want them to do this.
+As a creative work, software is subject to copyright. When code is published without a license describing the terms
+under which it can be used by others, all of the author's rights are reserved by default.
+This means that no-one else is allowed to copy, re-use, or adapt the softwarewithout the express permission of the
+author. [Such cases are surprisingly common][no-license-article] but, if you want your methods to be useful to, and used
+by, other people you should make sure to include a license to tell them how you want them to do this.
 
-Choosing a license for your software can be intimidating and confusing,
-and you should make sure you feel well-informed before you do so.
-[This lesson](https://swcarpentry.github.io/git-novice/11-licensing/index.html)
-and [the paper linked from it](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598)
-provide more information about why licenses are important,
-which are in common use for research software,
-and what you might consider when choosing one for your own project.
-[Choosealicense.com](https://choosealicense.com/)
-is another a helpful tool to guide you through this process.
+Choosing a license for your software can be intimidating and confusing, and you should make sure you feel well-informed
+before you do so. [This lesson][licensing-episode] and [the paper linked from it][plos-license-paper] provide more
+information about why licenses are important, which are in common use for research software, and what you might consider
+when choosing one for your own project. [Choosealicense.com](https://choosealicense.com/) is another a helpful tool to
+guide you through this process.
 
 > ## Exercise
 > Using the resources linked above, compare the terms of the following licenses:
 >
-> - MIT
-> - GPL
+> - [MIT](https://choosealicense.com/licenses/mit/)
+> - [GPL](https://choosealicense.com/licenses/gpl-3.0/)
 > - [a proprietary license](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598#s4a)
 >
 > What do you think are the benefits and drawbacks
@@ -225,7 +223,8 @@ Even more advanced for building a community
 - pull request templates
 - pathways and personas
 
-For training and mentoring see [Mozilla Open Leaders](https://foundation.mozilla.org/en/opportunity/mozilla-open-leaders/).  For reading, check out the [curriculum](https://mozilla.github.io/open-leadership-training-series/).
+For training and mentoring see [Mozilla Open Leaders][open-leaders].
+For reading, check out the [curriculum](https://mozilla.github.io/open-leadership-training-series/).
 
 ## Re-organizing a project
 
@@ -236,6 +235,9 @@ Clean up and organize content: where to different pieces of code go -->
 > FIXME: provide a example project folder, spend time sorting, or allow people some time to work on their own projects and generating questions.
 >
 
-
+[no-license-article]: https://snyk.io/blog/over-10-of-python-packages-on-pypi-are-distributed-without-any-license/
+[licensing-episode]: https://swcarpentry.github.io/git-novice/11-licensing/index.html
+[plos-license-paper]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598
+[open-leaders]: https://foundation.mozilla.org/en/opportunity/mozilla-open-leaders/
 
 {% include links.md %}
