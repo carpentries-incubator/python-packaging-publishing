@@ -112,9 +112,9 @@ replacing the `__` on each line
 > > ~~~
 > > touch data/raw_data.csv
 > > touch experiments/generate_figures.py
-> > touch package-name/new_technique.py
+> > touch package/new_technique.py
 > > touch experiments/reproduce_paper.py
-> > touch package-name/helper_functions.py
+> > touch package/helper_functions.py
 > > touch docs/how_to_setup.md
 > > ~~~
 > > {: .language-bash }
