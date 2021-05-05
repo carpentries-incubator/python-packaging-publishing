@@ -65,14 +65,18 @@ FIXME
 
 ## Setting up a project
 
-Sometimes we get to start from scratch. So we can set up everything from the beginning.  For some types of projects there are tools that generate the base structure for you.
+Sometimes we get to start from scratch. So we can set up everything from the beginning.
 
-<!--  Shablona, Cookie cutter, tool from issue-->
+> ## Templates
+> For some types of projects there are tools that generate the base structure for you. These tools are sometimes called
+> "cookie cutters" or simply project templates. They are available in a variety of languages, and some examples include:
+> * [Shablona](https://github.com/uwescience/shablona)
+> * [NLeSC Python template](https://github.com/nlesc/python-template)
+> * [Cookiecutter command-line utility](https://github.com/cookiecutter/cookiecutter)
+{: .callout}
 
-You can also download a template, like [Shablona](https://github.com/uwescience/shablona) or several others.
+For our lesson, we will be manually creating a small project. However, it will be similar to the examples above.
 
-
-We're going to work with something a little smaller, but similar for this workshop.
 ~~~
 git clone
 cd project
@@ -85,7 +89,8 @@ touch README.md
 ~~~
 {: .language-bash}
 
-We will also have a `.gitignore` file and some files and folders that are not included.  In general data is ignored, but scripts that download or process the data in some way, are good to keep. Results should be ignored.
+We will also have a `.gitignore` file and some files and folders that are not included. In general data is ignored,
+but scripts that download or process the data in some way, are good to keep. Results should be ignored.
 
 > ## Exercise
 >
