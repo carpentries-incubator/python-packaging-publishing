@@ -13,9 +13,15 @@ keypoints:
 - "Sphinx will auto build a website from plain text files and your docstrings"
 ---
 
-Sphinx is a tool for building documentation.
+[Sphinx](https://www.sphinx-doc.org/en/master/) is a tool for building documentation. It is
+very popular for Python packages, because it was originally created for the Python documentation, but
+it currently supports a range of languages.
 
-## What does sphinx produce?
+## What does Sphinx produce?
+
+Sphinx renders the package source code, including docstrings, as formatted
+HTML pages and a few other formats, like PDF, ePUB, and plain text. This is incredibly
+useful because it saves a lot of effort in creating the documentation.
 
 > ## Exercise
 > In a group, have each member open one of the following packages' documentation
