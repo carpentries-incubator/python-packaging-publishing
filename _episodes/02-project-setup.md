@@ -48,16 +48,16 @@ then we'll return to how to sort and organize code into the bins we created.
 So next we think about how these ideas and which of these and talk about some specific advice in each topic.
 
 
-## File naming
+## File Naming
 
-This is the least resistence step you can take to make your code more reusable.
+This is the least resistence step you can take to make your code more reusable. Naming things is an important aspect
+of programming. This [Data Carpentry episode](https://datacarpentry.org/rr-organization1/01-file-naming/index.html)
+provides some useful principles for file naming.
 
-Three principles for (file) names
+These are the three main characteristics of a good file name:
 1. Machine readable
-1. Human readable
-1. Plays well with default ordering
-
-<!-- Good filenaming: https://datacarpentry.org/rr-organization1/01-file-naming/ -->
+2. Human readable
+3. Plays well with default ordering
 
 ## Guiding Principles
 
