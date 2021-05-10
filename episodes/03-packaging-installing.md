@@ -350,6 +350,28 @@ Now that our code is organized into a package and has setup instructions, how ca
 We need to install it first. Earlier, we saw that pip can install packages remotely from PyPI. pip can also install 
 from a local directory.
 
+> ## Relative file paths
+> We want to install the package located in the `conversions/` directory.
+> If we move inside that directory, we can refer to it as `.`. This is a special
+> file path that means the current directory. We can see what directory we are in with
+> the `pwd` command, that stands for "print working directory". Other special file paths
+> are `..`, meaning "the directory containing this one", and `~`, that refers to the current
+> user's home directory (usually `/home/<user-name>` for UNIX systems).
+> 
+> Usually the `.` and `..` file paths are hidden if we run `ls` (and the same happens for all file names that start
+> with the `.` character), but if we run `ls -a`, we can list them:
+> ~~~
+> ls -a
+> ~~~
+> {: .language-bash}
+> ~~~
+> . .. conversions setup.py
+> ~~~
+> {: .output}
+{: .callout}
+
+So, to install our package, we can run:
+
 ~~~
 cd conversions
 pip install -e .
