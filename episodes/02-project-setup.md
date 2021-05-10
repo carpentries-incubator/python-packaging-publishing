@@ -175,20 +175,25 @@ and usable vs. things that will help if it grows and builds a community, but n
 
 ### README
 
-> ## Exercise
-> read 2 README files and discuss with a group
->  - what are common sections?
->  - what is the purpose?
->  - what
-{: .challenge}
-
-A readme is the first information about your project most people will see. It should encourage people to start using it and cover key steps in that process. It includes key information, such as:
+A README file is the first information about your project most people will see.
+It should encourage people to start using it and cover key steps in that process. It includes key information, such as:
 * What the project does
 * Why the project is useful
 * How users can get started with the project
 * Where users can get help with the project
 * Who maintains and contributes to the project
-* how to repeat the analysis
+* How to repeat the analysis (if it is a data project)
+
+If you are not sure of what to put in your README, these bullet points are a good starting point. There are many
+resources on how to write good README files, such as [Awesome README](https://github.com/matiassingers/awesome-readme).
+
+> ## Exercise
+> Choose 2 README files from the Awesome README gallery examples or from projects that you regularly use
+> and discuss with a group:
+>  - What are common sections?
+>  - What is the purpose of the file?
+>  - What useful information does it contain?
+{: .challenge}
 
 ### Licenses
 
