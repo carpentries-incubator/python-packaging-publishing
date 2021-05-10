@@ -13,25 +13,37 @@ keypoints:
 - "Sphinx will auto build a website from plain text files and your docstrings"
 ---
 
-Sphinx is a tool for building documentation.
+[Sphinx](https://www.sphinx-doc.org/en/master/) is a tool for building documentation. It is
+very popular for Python packages, because it was originally created for the Python documentation, but
+it currently supports a range of languages.
 
-## What does sphinx produce?
+## What does Sphinx produce?
 
-> ## Exercise
-> In a group, have each member open one of the following packages' documentation
-> - [pytest](https://docs.pytest.org/en/latest/)
-> - [seaborn](https://seaborn.pydata.org/)
-> - [numpy](https://docs.scipy.org/doc/numpy/reference/)
-- - [scipy-cookbook](https://scipy-cookbook.readthedocs.io/)
-> - [scikit-learn](http://scikit-learn.org/stable/)
+Sphinx renders the package source code, including docstrings, as formatted
+HTML pages and a few other formats, like PDF, ePUB, and plain text. This is incredibly
+useful because it saves a lot of effort in creating the documentation.
+
+> ## What do good docs have in common?
+> In a group, have each member open one of the following projects' documentation:
+> - [Pytest](https://docs.pytest.org/en/latest/)
+> - [Seaborn](https://seaborn.pydata.org/)
+> - [NumPy](https://docs.scipy.org/doc/numpy/reference/)
+> - [SciPy](https://docs.scipy.org/doc/scipy/reference/)
+>  - [SciPy-cookbook](https://scipy-cookbook.readthedocs.io/)
+> - [Scikit-learn](http://scikit-learn.org/stable/)
 >
 > Discuss what the common components are, what is helpful about these
 > documentation sites, how they address the general concepts on documentation,
 > how they're similar and how they're different.
 >
->
 > > ## Solution
-> > these all use sphinx to generate them?
+> > All of these projects use Sphinx to generate their documentation, albeit with different themes. All of them also
+> > have the following items (except for SciPy-cookbook), which itself is complementary documentation
+> > for the SciPy package.:
+> >  - User guide;
+> >  - Tutorials;
+> >  - an API reference.
+> {: .solution}
 {: .challenge}
 
 ## Sphinx quickstart
@@ -92,7 +104,7 @@ FIXME: adding pages
 
 ## API Documentation
 
-Add an api line to the `indnex.rst` so that it has a link to it.
+Add an api line to the `index.rst` so that it has a link to it.
 
 The create an API.rst file:
 
