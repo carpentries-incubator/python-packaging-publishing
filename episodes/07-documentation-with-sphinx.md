@@ -29,7 +29,7 @@ useful because it saves a lot of effort in creating the documentation.
 > - [Seaborn](https://seaborn.pydata.org/)
 > - [NumPy](https://docs.scipy.org/doc/numpy/reference/)
 > - [SciPy](https://docs.scipy.org/doc/scipy/reference/)
->   - [SciPy-cookbook](https://scipy-cookbook.readthedocs.io/)
+>  - [SciPy-cookbook](https://scipy-cookbook.readthedocs.io/)
 > - [Scikit-learn](http://scikit-learn.org/stable/)
 >
 > Discuss what the common components are, what is helpful about these
