@@ -20,11 +20,14 @@ keypoints:
 
 When we develop code for research, we often start by writing unorganized code in notebook cells or a script. 
 Eventually, we might want to re-use the code we wrote in other contexts. In order to re-use code, it is 
-helpful to organize it into functions and classes in separate `.py` files.
+helpful to organize it into functions and classes in separate `.py` files. We call these files **modules**, and will
+soon go into more detail about them. Whenever we refer to a **module** in Python, we can think of it as
+as `.py` file that has a bunch of functions (and other objects) in them.
 
 <!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
 
-e.g. a function to convert from degrees Fahrenheit to Celsius
+For example, say we are making a program that deals with temperature date. We have a function to convert
+from degrees Fahrenheit to Celsius:
 
 ~~~
 def fahr_to_celsius(temperature):
@@ -45,6 +48,10 @@ def fahr_to_celsius(temperature):
 
 ~~~
 {: .language-python}
+
+We use this function a lot, so we don't want to have to copy and paste it every time. Instead, we can store it in a 
+module and **import** it from there. You have probably imported modules or functions before, this time we will do that
+for our own code!
 
 <!-- What is my modular resuable code vs what is my analysis
 Keep motivation as easing in  and gradually scaling up to stay inclusive -->
