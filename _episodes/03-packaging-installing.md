@@ -297,21 +297,18 @@ the file temperature.py will be treated as a module called temperature. This mod
 
 ### Step 3 Adding the init file
 
-Finally, we create a file named `__init__.py` inside the `conversions` directory and add the following code:
+Finally, we create a file named `__init__.py` inside the `conversions` directory:
 
 ~~~
-import temperature
-import speed
+touch conversions/__init__.py
 ~~~
-{: .language-python}
+{: .language-bash}
 
 The init file is the map that tells Python what our package looks like.  It is
 also what tells Python a directory is a module. An empty init file marks a
-directory as a module. By adding import code, we can make our package easier to use.
+directory as a module.
 
 Now, if we launch a new python terminal from this directory, we can import the package **conversions**
-
-e.g
 
 ~~~
 from conversions import temperature, speed
@@ -320,7 +317,27 @@ print(temperature.fahr_to_celsius(100))
 ~~~
 {: .language-python}
 
-Now we can import from within this folder, but only if our working directory is at the top level `conversions` 
+Even if the `__init__.py` file is empty, its existence indicates to Python that we can import names
+from that package. However, by adding import code to it, we can make our package easier to use.
+Add the following code to the init file:
+
+~~~
+from .temperature import fahr_to_celsius
+from .speed import kph_to_ms
+~~~
+{: .language-python}
+
+The `.` before the `temperature` and `speed` mean that they refer to local modules, that is,
+files in the same directory as the `__init__.py` file. If we start a new Python interpreter,
+we can now import `fahr_to_celsius` and `kph_to_ms` directly from the `conversions` module:
+
+~~~
+from conversions import fahr_to_celsius, kph_to_ms
+~~~
+{: .language-python}
+
+
+Now, we can import from `conversions`, but only if our working directory is one level above the `conversions` 
 directory. What if we want to use the **conversions** package from another project or directory?
 
 ## SetupTools and installing Locally
