@@ -49,88 +49,6 @@ def fahr_to_celsius(temperature):
 <!-- What is my modular resuable code vs what is my analysis
 Keep motivation as easing in  and gradually scaling up to stay inclusive -->
 
-
-## Pip
-
-Pip is the most common package manager for python. Pip allows you to easily install python packages locally from your computer or from an online repository like the [Python Package Index (PyPI)](https://pypi.org/). Once a package is installed with pip, you can `import` that package and use it in your own code.
-
-Pip is a command line tool. We'll start by exploring its help manual:
-
-~~~
-pip
-~~~
-{:.language-bash}
-
-The output will look like this
-~~~
-Usage:   
-  pip <command> [options]
-
-Commands:
-  install                     Install packages.
-  download                    Download packages.
-  uninstall                   Uninstall packages.
-  freeze                      Output installed packages in requirements format.
-  list                        List installed packages.
-  show                        Show information about installed packages.
-  check                       Verify installed packages have compatible dependencies.
-  config                      Manage local and global configuration.
-  search                      Search PyPI for packages.
-  wheel                       Build wheels from your requirements.
-  hash                        Compute hashes of package archives.
-  completion                  A helper command used for command completion.
-  help                        Show help for commands.
-
-General Options:
-  -h, --help                  Show help.
-  --isolated                  Run pip in an isolated mode, ignoring
-                              environment variables and user configuration.
-  -v, --verbose               Give more output. Option is additive, and can be
-                              used up to 3 times.
-  -V, --version               Show version and exit.
-  -q, --quiet                 Give less output. Option is additive, and can be
-                              used up to 3 times (corresponding to WARNING,
-                              ERROR, and CRITICAL logging levels).
-  --log <path>                Path to a verbose appending log.
-  --proxy <proxy>             Specify a proxy in the form
-                              [user:passwd@]proxy.server:port.
-  --retries <retries>         Maximum number of retries each connection should
-                              attempt (default 5 times).
-  --timeout <sec>             Set the socket timeout (default 15 seconds).
-  --exists-action <action>    Default action when a path already exists:
-                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort).
-  --trusted-host <hostname>   Mark this host as trusted, even though it does
-                              not have valid or any HTTPS.
-  --cert <path>               Path to alternate CA bundle.
-  --client-cert <path>        Path to SSL client certificate, a single file
-                              containing the private key and the certificate
-                              in PEM format.
-  --cache-dir <dir>           Store the cache data in <dir>.
-  --no-cache-dir              Disable the cache.
-  --disable-pip-version-check
-                              Don't periodically check PyPI to determine
-                              whether a new version of pip is available for
-                              download. Implied with --no-index.
-  --no-color                  Suppress colored output
-~~~
-{: .output}
-
-This shows the basic commands available with pip and and the general options.
-
-> ## Exercise
-> 1. Use pip to install the `sphinx` package, we will need it later.
-> 2. Choose a pip command and look up its options. Discuss the command with your
-> neighbour.
->
-> > ## Solution
-> >
-> > ~~~
-> > pip install sphinx
-> > ~~~
-> > {: .language-bash}
-> {: .solution}
-{: .challenge}
-
 ## Python Modules
 
 A module is a piece of code that serves a specific purpose. In python, a module is written in a `.py` file. The name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, [numpy](https://numpy.org/) defines the value of pi with `numpy.pi`.
@@ -370,16 +288,100 @@ from a local directory.
 > {: .output}
 {: .callout}
 
-So, to install our package, we can run:
+So, to install our package, we can use **Pip**. [Pip](https://pypi.org/project/pip/) is a package manager,
+that is, a package that install packages. We are going to learn more about it in the next section.
+For now, we can run:
 
 ~~~
 cd conversions
 pip install -e .
 ~~~
 {: .language-bash}
-The `-e` flag (aka `--editable`) tells pip to install this package in editable mode. This allows us to make 
+The `-e` flag (aka `--editable`) tells Pip to install this package in editable mode. This allows us to make 
 changes to the package without re-installing it. Analysis code can change dramatically over time, so this is a 
 useful option!
+
+## Pip
+
+Pip is the most common package manager for python. Pip allows you to easily install python packages locally from your computer or from an online repository like the [Python Package Index (PyPI)](https://pypi.org/). Once a package is installed with pip, you can `import` that package and use it in your own code.
+
+Pip is a command line tool. We'll start by exploring its help manual:
+
+~~~
+pip
+~~~
+{:.language-bash}
+
+The output will look like this
+~~~
+Usage:   
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring
+                              environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort).
+  --trusted-host <hostname>   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate
+                              in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+  --no-color                  Suppress colored output
+~~~
+{: .output}
+
+This shows the basic commands available with pip and and the general options.
+
+> ## Exercise
+> 1. Use pip to install the `sphinx` package, we will need it later.
+> 2. Choose a pip command and look up its options. Discuss the command with your
+> neighbour.
+>
+> > ## Solution
+> >
+> > ~~~
+> > pip install sphinx
+> > ~~~
+> > {: .language-bash}
+> {: .solution}
+{: .challenge}
+
 
 Now we can try importing and using our package.
 
