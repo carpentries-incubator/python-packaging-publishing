@@ -327,7 +327,7 @@ from .speed import kph_to_ms
 ```
 {: .language-python}
 
-The `.` before the `temperature` and `speed` mean that they refer to local modules, that is,
+The `.` before the `temperature` and `speed` means that they refer to local modules, that is,
 files in the same directory as the `__init__.py` file. If we start a new Python interpreter,
 we can now import `fahr_to_celsius` and `kph_to_ms` directly from the `conversions` module:
 
