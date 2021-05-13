@@ -22,7 +22,7 @@ When we develop code for research, we often start by writing unorganized code in
 Eventually, we might want to re-use the code we wrote in other contexts. In order to re-use code, it is 
 helpful to organize it into functions and classes in separate `.py` files. We call these files **modules**, and will
 soon go into more detail about them. Whenever we refer to a **module** in Python, we can think of it as
-as `.py` file that has a bunch of functions (and other objects) in them.
+as `.py` file that has other code, typically functions or other objects, in it.
 
 <!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
 
