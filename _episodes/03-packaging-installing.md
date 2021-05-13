@@ -6,13 +6,13 @@ questions:
 - "How do I use my own functions?"
 - "How can I make my functions most usable for my collaborators?"
 objectives:
-- "Identify the components of a python package"
+- "Identify the components of a Python package"
 - "Apply a template for packaging existing code"
 - "Update the packaged project after modifying the code"
 - "Install and update a local or GitHub-hosted package"
 keypoints:
 - "Packaged code is reusable within and across systems"
-- "A python package consists of modules"
+- "A Python package consists of modules"
 - "Projects can be distributed in many ways and installed with a package manager"
 ---
 
@@ -59,7 +59,7 @@ Keep motivation as easing in  and gradually scaling up to stay inclusive -->
 
 ## Pip
 
-Pip is the most common package manager for python. Pip allows you to easily install python packages locally from your computer or from an online repository like the [Python Package Index (PyPI)](https://pypi.org/). Once a package is installed with pip, you can `import` that package and use it in your own code.
+Pip is the most common package manager for Python. Pip allows you to easily install Python packages locally from your computer or from an online repository like the [Python Package Index (PyPI)](https://pypi.org/). Once a package is installed with pip, you can `import` that package and use it in your own code.
 
 Pip is a command line tool. We'll start by exploring its help manual:
 
@@ -140,7 +140,7 @@ This shows the basic commands available with pip and and the general options.
 
 ## Python Modules
 
-A module is a piece of code that serves a specific purpose. In python, a module is written in a `.py` file. The name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, [numpy](https://numpy.org/) defines the value of pi with `numpy.pi`.
+A module is a piece of code that serves a specific purpose. In Python, a module is written in a `.py` file. The name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, [numpy](https://numpy.org/) defines the value of pi with `numpy.pi`.
 
 
 If a `.py` file is on the path, we can import functions from it to our current file. Open up Python, import `sys` and print the path.
@@ -200,7 +200,7 @@ and `numpy.random.rand`. respectively
 
 In this way, namespaces allow multiple packages to have functions of the same name without creating conflicts. Packages are namespaces or containers which can contain multiple modules.
 
-Making python code into a package requires no extra tools. We need to
+Making Python code into a package requires no extra tools. We need to
 
 - Create a directory, named after our package.
 - Put modules (`.py` files) in the directory.
@@ -215,7 +215,7 @@ Our final package will look like this:
 │   └── module-b.py  
 └── setup.py
 
-The `__init__.py` file tells python that the directory is supposed to be tread as a package.
+The `__init__.py` file tells Python that the directory is supposed to be tread as a package.
 
 Let's create a package called **conversions** with two modules **temperature** and **speed**.
 
@@ -308,7 +308,7 @@ The init file is the map that tells Python what our package looks like.  It is
 also what tells Python a directory is a module. An empty init file marks a
 directory as a module.
 
-Now, if we launch a new python terminal from this directory, we can import the package **conversions**
+Now, if we launch a new Python terminal from this directory, we can import the package **conversions**
 
 ~~~
 from conversions import temperature, speed
@@ -411,7 +411,7 @@ Now we can try importing and using our package.
 
 FIXME: how to make a tool command line installable
 
-More details on this may be found at [on the python packaging documentation site](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html)
+More details on this may be found at [on the Python packaging documentation site](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html)
 
 ## Getting a Package from A Colleague
 
