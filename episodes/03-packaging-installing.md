@@ -6,13 +6,13 @@ questions:
 - "How do I use my own functions?"
 - "How can I make my functions most usable for my collaborators?"
 objectives:
-- "Identify the components of a python package"
+- "Identify the components of a Python package"
 - "Apply a template for packaging existing code"
 - "Update the packaged project after modifying the code"
 - "Install and update a local or GitHub-hosted package"
 keypoints:
 - "Packaged code is reusable within and across systems"
-- "A python package consists of modules"
+- "A Python package consists of modules"
 - "Projects can be distributed in many ways and installed with a package manager"
 ---
 
@@ -20,13 +20,16 @@ keypoints:
 
 When we develop code for research, we often start by writing unorganized code in notebook cells or a script. 
 Eventually, we might want to re-use the code we wrote in other contexts. In order to re-use code, it is 
-helpful to organize it into functions and classes in separate `.py` files.
+helpful to organize it into functions and classes in separate `.py` files. We call these files **modules**, and will
+soon go into more detail about them. Whenever we refer to a **module** in Python, we can think of it as
+as `.py` file that has other code, typically functions or other objects, in it.
 
 <!-- Step zero from notebook to .py; then up to pip as an intermediate step to stage up -->
 
-e.g. a function to convert from degrees Fahrenheit to Celsius
+For example, say we are making a program that deals with temperature date. We have a function to convert
+from degrees Fahrenheit to Celsius:
 
-~~~
+```
 def fahr_to_celsius(temperature):
     """
     Function to convert temperature from fahrenheit to Celsius
@@ -43,8 +46,12 @@ def fahr_to_celsius(temperature):
     """
     return (temperature - 32) * (5 / 9)
 
-~~~
+```
 {: .language-python}
+
+We use this function a lot, so we don't want to have to copy and paste it every time. Instead, we can store it in a 
+module and **import** it from there. You have probably imported modules or functions before, this time we will do that
+for our own code!
 
 <!-- What is my modular resuable code vs what is my analysis
 Keep motivation as easing in  and gradually scaling up to stay inclusive -->
@@ -52,17 +59,17 @@ Keep motivation as easing in  and gradually scaling up to stay inclusive -->
 
 ## Pip
 
-Pip is the most common package manager for python. Pip allows you to easily install python packages locally from your computer or from an online repository like the [Python Package Index (PyPI)](https://pypi.org/). Once a package is installed with pip, you can `import` that package and use it in your own code.
+Pip is the most common package manager for Python. Pip allows you to easily install Python packages locally from your computer or from an online repository like the [Python Package Index (PyPI)](https://pypi.org/). Once a package is installed with pip, you can `import` that package and use it in your own code.
 
 Pip is a command line tool. We'll start by exploring its help manual:
 
-~~~
+```
 pip
-~~~
+```
 {:.language-bash}
 
 The output will look like this
-~~~
+```
 Usage:   
   pip <command> [options]
 
@@ -112,7 +119,7 @@ General Options:
                               whether a new version of pip is available for
                               download. Implied with --no-index.
   --no-color                  Suppress colored output
-~~~
+```
 {: .output}
 
 This shows the basic commands available with pip and and the general options.
@@ -124,34 +131,34 @@ This shows the basic commands available with pip and and the general options.
 >
 > > ## Solution
 > >
-> > ~~~
+> > ```
 > > pip install sphinx
-> > ~~~
+> > ```
 > > {: .language-bash}
 > {: .solution}
 {: .challenge}
 
 ## Python Modules
 
-A module is a piece of code that serves a specific purpose. In python, a module is written in a `.py` file. The name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, [numpy](https://numpy.org/) defines the value of pi with `numpy.pi`.
+A module is a piece of code that serves a specific purpose. In Python, a module is written in a `.py` file. The name of the file is name of the module. A module can contain classes, functions, or a combination of both. Modules can also define variables for use, for example, [numpy](https://numpy.org/) defines the value of pi with `numpy.pi`.
 
 
 If a `.py` file is on the path, we can import functions from it to our current file. Open up Python, import `sys` and print the path.
 
-~~~
+```
 import sys
 sys.path
-~~~
+```
 {:.language-python}
 
-~~~
+```
 ['',
 '/home/vlad/anaconda3/lib/python37.zip',
 '/home/vlad/anaconda3/lib/python3.7',
 '/home/vlad/anaconda3/lib/python3.7/lib-dynload',
 '/home/vlad/anaconda3/lib/python3.7/site-packages'
 ]
-~~~
+```
 {: .output}
 
 Here we see that Python is aware of the path to the Python executable, as well as other directories like `site-packages`.
@@ -159,13 +166,13 @@ Here we see that Python is aware of the path to the Python executable, as well a
 sys.path is a list of strings, each describing the absolute path to a directory. Python will look in these directories for modules. If we have a directory containing modules we want Python to be aware of, we append it that directory to the path. If I have a package in `/home/vlad/Documents/science/cool-package` I add it with `sys.path.append`
 
 
-~~~
+```
 sys.path.append('/home/vlad/Documents/science/cool-package')
 sys.path
-~~~
+```
 {:.language-python}
 
-~~~
+```
 ['',
 '/home/vlad/anaconda3/lib/python37.zip',
 '/home/vlad/anaconda3/lib/python3.7',
@@ -173,7 +180,7 @@ sys.path
 '/home/vlad/anaconda3/lib/python3.7/site-packages',
 '/home/vlad/Documents/science/cool-package'
 ]
-~~~
+```
 {: .output}
 
 We can see that the path to our module has been added to `sys.path`. Once the module you want is in sys.path, it can be imported just like any other module.
@@ -193,7 +200,7 @@ and `numpy.random.rand`. respectively
 
 In this way, namespaces allow multiple packages to have functions of the same name without creating conflicts. Packages are namespaces or containers which can contain multiple modules.
 
-Making python code into a package requires no extra tools. We need to
+Making Python code into a package requires no extra tools. We need to
 
 - Create a directory, named after our package.
 - Put modules (`.py` files) in the directory.
@@ -208,22 +215,22 @@ Our final package will look like this:
 │   └── module-b.py  
 └── setup.py
 
-The `__init__.py` file tells python that the directory is supposed to be tread as a package.
+The `__init__.py` file tells Python that the directory is supposed to be tread as a package.
 
 Let's create a package called **conversions** with two modules **temperature** and **speed**.
 
 ### Step 1: Creating a directory
 Create a directory called **conversions**
 
-~~~
+```
 mkdir conversions
-~~~
+```
 {: .language-bash}
 
 ### Step 2: Adding Modules
 
 conversions/temperature.py
-~~~
+```
 def fahr_to_celsius(temperature):
     """
     Function to convert temperature from fahrenheit to Celsius
@@ -239,7 +246,7 @@ def fahr_to_celsius(temperature):
           temperature in Celsius
     """
     return (temperature - 32) * (5 / 9)
-~~~
+```
 {: .language-python}
 
 the file temperature.py will be treated as a module called temperature. This module contains the function `fahr_to_celsius`. The top level container is the package `conversions`. The end user will import this as:
@@ -248,7 +255,7 @@ the file temperature.py will be treated as a module called temperature. This mod
 
 > ## Exercise
 > 1. Create a file named **speed.py** inside the **conversions** directory and add a function named `kph_to_ms` that will convert kilometres per hour to meters per second. Here's the docstring desribing the function:
-> ~~~
+> ```
 >     """
 >     Function to convert speed from kilometres per hour to meters per second
 > 
@@ -262,11 +269,11 @@ the file temperature.py will be treated as a module called temperature. This mod
 >     speed_ms : float
 >           speed in meters per second
 >     """
-> ~~~
+> ```
 > {: .language-python}
 > > ## Solution
 > > conversions/speed.py
-> > ~~~
+> > ```
 > > def kph_to_ms(speed):
 > >     """
 > >     Function to convert speed from kilometres per hour to meters per second
@@ -282,7 +289,7 @@ the file temperature.py will be treated as a module called temperature. This mod
 > >           speed in meters per second
 > >     """
 > >     return speed / 3.6
-> > ~~~
+> > ```
 > > {: .language-python}
 > {: .solution}
 {: .challenge}
@@ -290,36 +297,53 @@ the file temperature.py will be treated as a module called temperature. This mod
 
 ### Step 3 Adding the init file
 
-Finally, we create a file named `__init__.py` inside the `conversions` directory and add the following code:
+Finally, we create a file named `__init__.py` inside the `conversions` directory:
 
-~~~
-import temperature
-import speed
-~~~
-{: .language-python}
+```
+touch conversions/__init__.py
+```
+{: .language-bash}
 
 The init file is the map that tells Python what our package looks like.  It is
 also what tells Python a directory is a module. An empty init file marks a
-directory as a module. By adding import code, we can make our package easier to use.
+directory as a module.
 
-Now, if we launch a new python terminal from this directory, we can import the package **conversions**
+Now, if we launch a new Python terminal from this directory, we can import the package **conversions**
 
-e.g
-
-~~~
+```
 from conversions import temperature, speed
 
 print(temperature.fahr_to_celsius(100))
-~~~
+```
 {: .language-python}
 
-Now we can import from within this folder, but only if our working directory is at the top level `conversions` 
+Even if the `__init__.py` file is empty, its existence indicates to Python that we can import names
+from that package. However, by adding import code to it, we can make our package easier to use.
+Add the following code to the init file:
+
+```
+from .temperature import fahr_to_celsius
+from .speed import kph_to_ms
+```
+{: .language-python}
+
+The `.` before the `temperature` and `speed` means that they refer to local modules, that is,
+files in the same directory as the `__init__.py` file. If we start a new Python interpreter,
+we can now import `fahr_to_celsius` and `kph_to_ms` directly from the `conversions` module:
+
+```
+from conversions import fahr_to_celsius, kph_to_ms
+```
+{: .language-python}
+
+
+Now, we can import from `conversions`, but only if our working directory is one level above the `conversions` 
 directory. What if we want to use the **conversions** package from another project or directory?
 
 ## SetupTools and installing Locally
 
 The file **setup.py** contains the essential information about our package for PyPI. It needs to be machine readable, so be sure to format it correctly
-~~~
+```
 import setuptools
 
 with open("README.md", "r") as fh:
@@ -341,7 +365,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
 )
-~~~
+```
 {: .language-python}
 
 
@@ -360,22 +384,22 @@ from a local directory.
 > 
 > Usually the `.` and `..` file paths are hidden if we run `ls` (and the same happens for all file names that start
 > with the `.` character), but if we run `ls -a`, we can list them:
-> ~~~
+> ```
 > ls -a
-> ~~~
+> ```
 > {: .language-bash}
-> ~~~
+> ```
 > . .. conversions setup.py
-> ~~~
+> ```
 > {: .output}
 {: .callout}
 
 So, to install our package, we can run:
 
-~~~
+```
 cd conversions
 pip install -e .
-~~~
+```
 {: .language-bash}
 The `-e` flag (aka `--editable`) tells pip to install this package in editable mode. This allows us to make 
 changes to the package without re-installing it. Analysis code can change dramatically over time, so this is a 
@@ -387,7 +411,7 @@ Now we can try importing and using our package.
 
 FIXME: how to make a tool command line installable
 
-More details on this may be found at [on the python packaging documentation site](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html)
+More details on this may be found at [on the Python packaging documentation site](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html)
 
 ## Getting a Package from A Colleague
 
@@ -400,10 +424,10 @@ Download and unzip their folder
 Direct download via pip
 
 
-~~~
+```
 cd project_dir
 pip install .
-~~~
+```
 {: language-bash}
 
 
@@ -417,22 +441,22 @@ The next step is to generate distribution packages for the package. These are ar
 
 Make sure you have the latest versions of setuptools and wheel installed:
 
-~~~
+```
 python3 -m pip install --user --upgrade setuptools wheel
-~~~
+```
 {: .language-bash}
 
-~~~
+```
 python3 setup.py sdist bdist_wheel
-~~~
+```
 {: language-bash}
 This command should output a lot of text and once completed should generate two files in the dist directory:
 
-~~~
+```
 dist/
   example_pkg_your_username-0.0.1-py3-none-any.whl
   example_pkg_your_username-0.0.1.tar.gz
-~~~
+```
 {: language-bash}
 
 Finally, it’s time to upload your package to the Python Package Index!
@@ -443,20 +467,20 @@ Go to [test.pypi.org/account/register/](https://test.pypi.org/account/register/)
 
 Now that you are registered, you can use twine to upload the distribution packages. You’ll need to install Twine:
 
-~~~
+```
 python3 -m pip install --user --upgrade twine
-~~~
+```
 {: .language-bash}
 Once installed, run Twine to upload all of the archives under dist:
 
-~~~
+```
 python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-~~~
+```
 {: .language-bash}
 
 You will be prompted for the username and password you registered with Test PyPI. After the command completes, you should see output similar to this:
 
-~~~
+```
 Uploading distributions to https://test.pypi.org/legacy/
 Enter your username: [your username]
 Enter your password:
@@ -464,7 +488,7 @@ Uploading example_pkg_your_username-0.0.1-py3-none-any.whl
 100%|█████████████████████| 4.65k/4.65k [00:01<00:00, 2.88kB/s]
 Uploading example_pkg_your_username-0.0.1.tar.gz
 100%|█████████████████████| 4.25k/4.25k [00:01<00:00, 3.05kB/s]
-~~~
+```
 {: .language-bash}
 Once uploaded your package should be viewable on TestPyPI, for example, https://test.pypi.org/project/example-pkg-your-username
 
