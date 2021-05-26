@@ -19,5 +19,4 @@ before_install:
 install:
   - pip install pyyaml
 script:
-  - make lesson-check-all
   - make --always-make site
