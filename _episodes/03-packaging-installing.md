@@ -289,8 +289,18 @@ setuptools.setup(
 
 Now that our code is organized into a package and has setup instructions, how can we use it? If we try importing it now, what happens?
 
-We need to install it first. Earlier, we saw that pip can install packages remotely from PyPI. pip can also install 
-from a local directory.
+We need to install it first. To install our package, we can use **Pip**. [Pip](https://pypi.org/project/pip/) is a package manager,
+that is, a package that install packages. We are going to learn more about it in the next section.
+For now, we can run:
+
+```
+cd conversions
+pip install -e .
+```
+{: .language-bash}
+The `-e` flag (aka `--editable`) tells Pip to install this package in editable mode. This allows us to make 
+changes to the package without re-installing it. Analysis code can change dramatically over time, so this is a 
+useful option!
 
 > ## Relative file paths
 > We want to install the package located in the `conversions/` directory.
@@ -311,19 +321,6 @@ from a local directory.
 > ```
 > {: .output}
 {: .callout}
-
-So, to install our package, we can use **Pip**. [Pip](https://pypi.org/project/pip/) is a package manager,
-that is, a package that install packages. We are going to learn more about it in the next section.
-For now, we can run:
-
-```
-cd conversions
-pip install -e .
-```
-{: .language-bash}
-The `-e` flag (aka `--editable`) tells Pip to install this package in editable mode. This allows us to make 
-changes to the package without re-installing it. Analysis code can change dramatically over time, so this is a 
-useful option!
 
 ## Pip
 
