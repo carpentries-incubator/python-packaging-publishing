@@ -90,6 +90,7 @@ mkdir data
 mkdir docs
 mkdir experiments
 mkdir package
+mkdir results
 touch setup.py
 touch README.md
 ~~~
@@ -98,7 +99,7 @@ touch README.md
 We will also have a `.gitignore` file and some files and folders that are not included. In general data is ignored,
 but scripts that download or process the data in some way, are good to keep. Results should be ignored.
 
-> ## Exercise
+> ## Creating project files
 >
 > Make each of the following files in the project in the correct location by
 replacing the `__` on each line
@@ -110,6 +111,7 @@ replacing the `__` on each line
 > touch __/reproduce_paper.py # code to re-run the analyses reported in your methods paper about the package
 > touch __/helper_functions.py # auxilliary functions for routine tasks associated with the novel method
 > touch __/how_to_setup.md # details to help others prepare equivalent experiments to those presented in your paper
+> touch __/.gitignore # flags files that should be ignored by version control, such as big data files
 > ~~~
 > {: .language-bash}
 >
@@ -122,8 +124,18 @@ replacing the `__` on each line
 > > touch experiments/reproduce_paper.py
 > > touch package/helper_functions.py
 > > touch docs/how_to_setup.md
+> > touch ./.gitignore
 > > ~~~
 > > {: .language-bash }
+> > The `.gitignore` file could contain, for example, this line:
+> > ```
+> > data/*.csv
+> > results/*
+> > ```
+> > {: .language-none}
+> > Which would prevent `data/raw_data.csv` and any files in the `results/` directory from being included in version
+> > control. This is fairly common when working with very large files, and can be addressed by adding instructions on
+> > how to download the data.
 > {: .solution }
 {: .challenge}
 
