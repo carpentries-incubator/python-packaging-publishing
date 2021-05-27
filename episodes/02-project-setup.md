@@ -251,7 +251,7 @@ Clean up and organize content: where to different pieces of code go -->
 > To practice organising a project, download the [Gapminder example project][example-project] and spend a few minutes
 > organising it: create directories, move and rename files, and even edit the code if needed. Be sure to have a glance
 > at the content of each file. To download it, either use [this link][example-project-zip] to download a ZIP file or
-> clone the repository.
+> clone the [repository][example-project].
 > 
 > > ## Solution
 > > A possible way to organise the project is in the project's `tidy` branch. [Click here][tidy-branch] to open it on
