@@ -254,8 +254,12 @@ Clean up and organize content: where to different pieces of code go -->
 > clone the [repository][example-project].
 > 
 > > ## Solution
-> > A possible way to organise the project is in the project's `tidy` branch. [Click here][tidy-branch] to open it on
-> > GitHub. Discuss: what is different from the version you downloaded?
+> > A possible way to organise the project is in the project's `tidy` branch. You can open the `tidy` branch
+> on GitHub by clicking on [this link.][tidy-branch]
+> > Discuss: what is different from the version you downloaded?
+> > * How are directories organised?
+> > * Where is each file located?
+> > * Which directory represents a __Python package?__
 > {: .solution}
 {: .challenge}
 
