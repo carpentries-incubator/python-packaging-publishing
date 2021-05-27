@@ -15,7 +15,7 @@ before_install:
   - sudo Rscript -e "install.packages('checkpoint', repos = 'https://cran.rstudio.com', dependencies = TRUE)"
   - sudo Rscript -e "install.packages('ggplot2', repos = 'https://cran.rstudio.com', dependencies = TRUE)"
   - rvm use 2.7.1 --install --binary --fuzzy --default
-  - gem install json kramdown jekyll
+  - gem install json kramdown jekyll bundler
 install:
   - pip install pyyaml
 script:
