@@ -96,6 +96,28 @@ If we are using a virtual environment, that file will be inside our environment 
 
 **Note: these commands can also be used to locate other executables.**
 
+> ## Dependencies
+> We've seen that dependencies are independent packages that are required for another package to run. Think of a
+> particular package, either one that you want to create or one that you often use:
+>   - what dependencies does it have?
+>   - why is it important to keep track of these dependencies?
+>   - what may happen if a dependency goes through a major version update?
+> 
+> > ## Solution
+> >  - All Python packages obviously have the Python language as a dependency. For data analysis and scientific Python
+> > projects, a very common dependency is the [NumPy](https://numpy.org/) package, that provides the basis for numerical
+> > computing in Python, and additionally other common libraries of the scientific Python stack, such as
+> > [Pandas](https://pandas.pydata.org/) and [Matplotlib](https://matplotlib.org/).
+> >  - Keeping track of dependencies matters because our project depends on them to run correctly. If we are trying
+> > use a function or method from a dependency that behaves differently in different versions, we may get unexpected
+> > results.
+> >  - If a dependency goes through a major version update, such as Python 2 to Python 3, there may be breaking changes
+> > in downstream packages. If this happens for our package, we should test the package accordingly to see if everything
+> > works as expected. Testing software is a vast topic and we can leave it for now, but it is important to have that in
+> > mind when working with dependencies.
+> {: .solution} 
+{: .challenge}
+
 ## Environment and package managers
 
 There are different strategies to deal with Python environments. We are going to focus on two of them: `virtualenv` and `conda`.
@@ -113,17 +135,10 @@ This comes at the disadvantage of being heavier and usually slower than `virtual
 Because we are making a Python package, we can start off by using `virtualenv` and `pip`. We'll have a look at Conda
 environments later on.
 
-<!-- ## Dependencies
-
-what are dependencies?
-
-> ## Exercise
-> FIXME -->
-
 ## Create an environment
 
 Before we create an environment, let's see what happens when we import one of
-our favorite packages.  In a python interpreter:
+our favorite packages.  In a Python interpreter:
 
 ~~~
 import numpy
@@ -142,7 +157,7 @@ virtualenv myenv
 ~~~
 {: .language-bash}
 
-if python 3 isn't your default you might need to pass the version of python that you want installed:
+if Python 3 isn't your default you might need to pass the version of Python that you want installed:
 
 ~~~
 virtualenv myenv -p python3.6
