@@ -79,13 +79,14 @@ packages and replicate the environment on a new system.
 We can use the command-line to see which Python version is currently being used. This is the Python version that
 is used to execute any scripts or Python files that we run from the command-line. There are many ways to do that, but
 a simple one is to run:
+
 ```bash
 which python
 ```
 
 on Mac or LINUX, or:
 
-```
+```shell
 where python
 ```
 
@@ -95,15 +96,22 @@ If we are using a virtual environment, that file will be inside our environment 
 
 **Note: these commands can also be used to locate other executables.**
 
-how to chose which of the main strategies to use: `virtualenv` and `pip` or `conda`
+## Environment and package managers
 
-`conda` comes from Anaconda and does both package management and provides a virtual environment.
+There are different strategies to deal with Python environments. We are going to focus on two of them: `virtualenv` and `conda`.
 
-`pip` is the main python package installer
+- `virtualenv` is a tool to create isolated Python environments. It is so widespread that a subset of it has been integrated
+into the Python standard library under the [venv module.](https://docs.python.org/3/library/venv.html) `virtualenv` uses
+`pip`, that we've discussed previously, to install and manage packages inside an environment. Therefore, `virtualenv` is
+an __environment manager__ that is compatible with `pip`, a __package manager__. 
 
-`virtualenv` creates environments and are `pip` install compatible.
-
-Making your own packages pip installable requires fewer dependencies, so we'll focus on `virtualenv` and `pip` in this workshop
+- `conda` is a tool from the [Anaconda distribution](http://anaconda.org/) that is both an environment and package manager.
+Packages can be installed in Conda environments using both `pip` and `conda`. There are a fews advantages of using `conda`
+for installations, such as support for third-party packages (that aren't available on PyPI) and automatic dependency solving.
+This comes at the disadvantage of being heavier and usually slower than `virtualenv`.
+  
+Because we are making a Python package, we can start off by using `virtualenv` and `pip`. We'll have a look at Conda
+environments later on.
 
 <!-- ## Dependencies
 
