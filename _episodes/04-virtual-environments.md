@@ -148,30 +148,27 @@ practice. We'll have a look at Conda environments later on.
 Before we create an environment, let's see what happens when we import one of
 our favorite packages. In a Python interpreter:
 
-~~~
+```python
 import numpy
-~~~
-{: .language-python}
+```
 
 That should work, because we have the package installed on our system. If not,
 use a package you know you have installed, or install NumPy.
 
 Next, we'll create an environment named `myenv`:
 
-~~~
+```bash
 virtualenv myenv -p python3
-~~~
-{: .language-bash}
+```
 
 We could simply run `virtualenv myenv`, but the `-p python3` flag ensures that we create it with Python 3.
 
 You will notice that a `myenv/` folder has been created in the working directory. We can then activate
 our environment by running:
 
-~~~
+```bash
 source myenv/bin/activate
-~~~
-{: .language-bash}
+```
 
 Now we see that the CLI changes to show the environment name! We can also run the
 `where` or `which` command again to see that our Python executable has been changed.
@@ -184,18 +181,16 @@ The output should look something like `<working directory>/myenv/bin/python`.
 
 Let's start another Python interpreter (simply type `python`) and try to import NumPy again:
 
-~~~
+```python
 import numpy
-~~~
-{: .language-python}
+```
 
 It does not work! This is expected, because we have just created this environment from scratch. It only contains the
 base Python installation. To install NumPy in this environment, we must use `pip`:
 
-~~~
+```bash
 pip install numpy
-~~~
-{: .language-bash}
+```
 
 If we open a new Python interpreter, NumPy can now be imported.
 
@@ -205,10 +200,9 @@ We can check which packages are installed in our current environment using the `
 wish to save that list in a file for later use, we can use a UNIX redirect statement (`>`). More on those on the
 [SWC Shell Novice lesson](https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html).
 
-~~~
+```bash
 pip freeze > requirements.txt
-~~~
-{: .language-bash}
+```
 
 This saves the list of packages and respective versions in the `requirements.txt` file. Requirement files are very
 common in Python projects, as they are a simple way of specifying the project's dependencies.
@@ -217,10 +211,9 @@ common in Python projects, as they are a simple way of specifying the project's 
 
 When you're done with an environment, you can exit with the `deactivate` command.
 
-~~~
+```bash
 deactivate
-~~~
-{: .language-bash}
+```
 
 > ## Default environment
 > Note that an environment is only activated in the current Terminal window. If you open a new
@@ -235,10 +228,9 @@ deactivate
 > Hint: use the pip man file to find options you can pass to `pip install`
 >
 > > ## Solution
-> > ~~~
+> > ```bash
 > > pip install -r requirements.txt
-> > ~~~
-> > {: .language-bash}
+> > ```
 > > {: .solution}
 {: .challenge}
 
