@@ -1,21 +1,22 @@
 ---
-title: "Managing Python Environments with VirtualEnv"
+title: "Managing Virtual Environments with VirtualEnv and Conda"
 teaching: 0
 exercises: 0
 questions:
 - "How can I make sure the whole team (or lab) gets the same results?"
 - "How can I simplify setup and dependencies for people to use my code or reproduce my results?"
 objectives:
-- "Identify an environment, dependencies, and an environment manager"
-- "Install an older version of python"
-- "Use virtualenv to create an environment per project"
-- "Store a projects' dependencies"
-- "install dependencies for a project"
+- "Identify an environment, dependencies, and an environment manager."
+- "Install an older version of Python."
+- "Use virtualenv and/or conda to create an environment per project."
+- "Store a projects' dependencies."
+- "Install dependencies for a project."
 keypoints:
-- "A python dependency is another, independent package that a given project uses and requires to be able to run"
-- "An environment is"
-- "An environment manager enables one step installing and documentation of dependencies, including versions"
-- "Virtualenv is ..."
+- "A Python dependency is an independent package that a given project requires to be able to run."
+- "An environment is a directory that contains a Python installation, plus a number of additional packages."
+- "An environment manager enables one-step installing and documentation of dependencies, including versions."
+- "Virtualenv is a tool to create lightweight Python virtual environments."
+- "`conda` is a more advanced environment and package manager that is included with Anaconda."
 ---
 
 # Environments and Package managers
