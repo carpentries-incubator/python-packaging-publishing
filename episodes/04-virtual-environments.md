@@ -42,7 +42,7 @@ older Python packages that only run on Python 2, and thus may not run on our sys
 
 __How can we deal with that?__
 
-## Environments and Package managers
+## Virtual environments
 
 The answer to that is using __virtual environments__. We can think of an environment like a filing cabinet inside our
 computer: for each drawer, we have an installation of Python, plus a number of additional packages.
@@ -75,6 +75,25 @@ packages and replicate the environment on a new system.
 > Overall, we only need to learn the basics about virtual environments to be able to use them effectively. So, there is
 > great benefit with relatively low effort.
 {: .callout}
+
+We can use the command-line to see which Python version is currently being used. This is the Python version that
+is used to execute any scripts or Python files that we run from the command-line. There are many ways to do that, but
+a simple one is to run:
+```bash
+which python
+```
+
+on Mac or LINUX, or:
+
+```
+where python
+```
+
+In Windows machines. The `which` and `where` commands point to the __Python executable__ that is currently active.
+If we are using a virtual environment, that file will be inside our environment directory. If we see something like
+`/usr/bin/python`, it is likely that we are using a system-level version of Python.
+
+**Note: these commands can also be used to locate other executables.**
 
 how to chose which of the main strategies to use: `virtualenv` and `pip` or `conda`
 
