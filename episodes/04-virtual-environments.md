@@ -57,11 +57,24 @@ Whenever we __activate__ a virtual environment, our system will start using that
 in that environment will become available. Environments can also be saved so that you can install all of the
 packages and replicate the environment on a new system.
 
-Why use one:
-- to deliver code and keep it the same versions
-- to use contribute to a package you also use
-- to install on servers
-- to share your environment with others
+> ## Why use virtual environments?
+> When we are unfamiliar with virtual environments, they may seem like an unnecessary hurdle. If the code runs on
+> our current environment, why bother with the extra work of creating or using a different one? There are many reasons
+> to use a virtual environment:
+> 
+>  - to prevent conflicts with system-level installations;
+>  - to ensure consistency in the code that we deliver, _i.e.:_ keep it compatible with the same versions;
+>  - to install our code in different environments, such as a server or cloud platform;
+>  - to be able to share our environment with others (and prevent "works on my machine" errors).
+> 
+> Having isolated environments for each project greatly improves the organisation of our development environment. If 
+> something goes wrong in an environment (for example, the installation of a package breaks, or there is a version
+> conflict between distinct dependencies), we can simply delete that environment and recreate it. The rest of our system
+> is not affected or compromised. This can be **critical** in multi-user environments.
+> 
+> Overall, we only need to learn the basics about virtual environments to be able to use them effectively. So, there is
+> great benefit with relatively low effort.
+{: .callout}
 
 how to chose which of the main strategies to use: `virtualenv` and `pip` or `conda`
 
