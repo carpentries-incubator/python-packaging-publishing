@@ -19,9 +19,43 @@ keypoints:
 - "`conda` is a more advanced environment and package manager that is included with Anaconda."
 ---
 
-# Environments and Package managers
+## Major Python versions
 
-An environment consists of a certain Python version and some packages. A virtual environment allows you to have multiple, independent versions of python on your system. Environments can also be saved so that you can install all of the packages and replicate the environment on a new system.
+Let's assume that you are using a certain package in your data analysis project. That package may be required to run a
+very specialized algorithm or to process some file format that is specific of your study domain. However, upon trying to
+install the package (with a tool such as Pip, for example), you discover some sort of error. This error may be upon the
+import, or even during the installation process.
+
+This can be a common occurrence when working on programming projects, regardless of which language is being used. In
+Python, errors can come up because of __version conflicts__, that is, two or more packages require different versions
+of the same __dependency__. __A dependency is an independent package that another package requires to run.__ By logic,
+the base dependency of all Python packages is the Python language itself. In order to run a Python project, we need
+Python to be installed. However, there are important differences between major versions of Python, specially between
+versions 2 and 3. From January 2020, [Python 2 has been deprecated](https://www.python.org/doc/sunset-python-2/) in favour
+of Python 3, and there is even an [official guide](https://docs.python.org/3/howto/pyporting.html) and
+[package](https://docs.python.org/3/library/2to3.html) for porting code from one version to the other.
+
+There are plenty of systems running Python 2 in the wild, specially Python 2.7. It is common to have a "system-level"
+installation of the Python language in an older version. Most modern Python packages, however,
+may only support Python 3, as it is the current (and recommended) version of the language. In contrast, there are also
+older Python packages that only run on Python 2, and thus may not run on our system if we are currently using Python 3.
+
+__How can we deal with that?__
+
+## Environments and Package managers
+
+The answer to that is using __virtual environments__. We can think of an environment like a filing cabinet inside our
+computer: for each drawer, we have an installation of Python, plus a number of additional packages.
+
+<img src="../fig/filing-cabinet.png" width="200">
+
+Packages that are installed in an environment are restricted to that environment, and will not affect system-level
+installs. Being able to isolate the installation of a specific version of Python or of a certain set of Python packages
+is very important to organise our programming environment and to prevent conflicts.
+
+Whenever we __activate__ a virtual environment, our system will start using that version of Python and packages installed
+in that environment will become available. Environments can also be saved so that you can install all of the
+packages and replicate the environment on a new system.
 
 Why use one:
 - to deliver code and keep it the same versions
