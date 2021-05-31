@@ -92,7 +92,8 @@ where python
 
 In Windows machines. The `which` and `where` commands point to the __Python executable__ that is currently active.
 If we are using a virtual environment, that file will be inside our environment directory. If we see something like
-`/usr/bin/python`, it is likely that we are using a system-level version of Python.
+`/usr/bin/python`, it is likely that we are using a system-level version of Python. If you are using an Anaconda
+distribution of Python, it is likely that you will see `<path to your anaconda install>/bin/python`.
 
 **Note: these commands can also be used to locate other executables.**
 
@@ -132,13 +133,20 @@ Packages can be installed in Conda environments using both `pip` and `conda`. Th
 for installations, such as support for third-party packages (that aren't available on PyPI) and automatic dependency solving.
 This comes at the disadvantage of being heavier and usually slower than `virtualenv`.
   
-Because we are making a Python package, we can start off by using `virtualenv` and `pip`. We'll have a look at Conda
-environments later on.
+Because we are already familiar with `pip`, we can start off by using `virtualenv` to learn how environments work in
+practice. We'll have a look at Conda environments later on.
+
+> ## Installing `virtualenv`
+> If you do not have `virtualenv` installed, you can quickly install it with `pip`:
+> ```bash
+> pip install virtualenv
+> ```
+{: .callout}
 
 ## Create an environment
 
 Before we create an environment, let's see what happens when we import one of
-our favorite packages.  In a Python interpreter:
+our favorite packages. In a Python interpreter:
 
 ~~~
 import numpy
@@ -146,67 +154,79 @@ import numpy
 {: .language-python}
 
 That should work, because we have the package installed on our system. If not,
-use a package you know you have installed, or install numpy.
+use a package you know you have installed, or install NumPy.
 
-
-
-Next, we'll create an environment an environment from scratch.
+Next, we'll create an environment named `myenv`:
 
 ~~~
-virtualenv myenv
+virtualenv myenv -p python3
 ~~~
 {: .language-bash}
 
-if Python 3 isn't your default you might need to pass the version of Python that you want installed:
+We could simply run `virtualenv myenv`, but the `-p python3` flag ensures that we create it with Python 3.
 
-~~~
-virtualenv myenv -p python3.6
-~~~
-{: .language-bash}
-
-then we can activate the environment
+You will notice that a `myenv/` folder has been created in the working directory. We can then activate
+our environment by running:
 
 ~~~
 source myenv/bin/activate
 ~~~
 {: .language-bash}
 
-Now we see that the cli changes to show the environment name and we can further
-test our environment with our favorite package from before.
+Now we see that the CLI changes to show the environment name! We can also run the
+`where` or `which` command again to see that our Python executable has been changed.
+
+```bash
+which python  # or 'where python' for Windows.
+```
+
+The output should look something like `<working directory>/myenv/bin/python`.
+
+Let's start another Python interpreter (simply type `python`) and try to import NumPy again:
 
 ~~~
 import numpy
 ~~~
 {: .language-python}
 
-Now, it won't work, but we can install it and a few other favorites.
+It does not work! This is expected, because we have just created this environment from scratch. It only contains the
+base Python installation. To install NumPy in this environment, we must use `pip`:
 
 ~~~
 pip install numpy
 ~~~
 {: .language-bash}
 
-## save an environment
+If we open a new Python interpreter, NumPy can now be imported.
+
+## Listing packages and the requirements file.
+
+We can check which packages are installed in our current environment using the `pip freeze` command. If we
+wish to save that list in a file for later use, we can use a UNIX redirect statement (`>`). More on those on the
+[SWC Shell Novice lesson](https://swcarpentry.github.io/shell-novice/04-pipefilter/index.html).
 
 ~~~
 pip freeze > requirements.txt
 ~~~
 {: .language-bash}
 
-
+This saves the list of packages and respective versions in the `requirements.txt` file. Requirement files are very
+common in Python projects, as they are a simple way of specifying the project's dependencies.
 
 ## Deactivate an environment
 
-When you're done with an environment, you exit it with deactivate.  Also note
-that an environment only exists in the one terminal window. If you open a new
-terminal, you'll be back to your default environment.  
+When you're done with an environment, you can exit with the `deactivate` command.
 
 ~~~
 deactivate
 ~~~
 {: .language-bash}
 
-
+> ## Default environment
+> Note that an environment is only activated in the current Terminal window. If you open a new
+> Terminal, you'll be back to your default environment. This could be, for example, the `base` environment if you have
+> Anaconda installed, or your system's default Python environment.
+{: .callout}
 
 > ## Exercise
 > download a project, create a new environment and install from the
