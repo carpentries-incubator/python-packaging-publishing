@@ -8,7 +8,7 @@ questions:
 objectives:
 - "Identify an environment, dependencies, and an environment manager."
 - "Install an older version of Python."
-- "Use virtualenv and/or conda to create an environment per project."
+- "Use `virtualenv` and/or `conda` to create an environment per project."
 - "Store a project's dependencies."
 - "Install dependencies for a project."
 keypoints:
@@ -215,23 +215,39 @@ When you're done with an environment, you can exit with the `deactivate` command
 deactivate
 ```
 
+Not how the environment name disappears from the Shell prompt.
+
 > ## Default environment
 > Note that an environment is only activated in the current Terminal window. If you open a new
 > Terminal, you'll be back to your default environment. This could be, for example, the `base` environment if you have
 > Anaconda installed, or your system's default Python environment.
 {: .callout}
 
-> ## Exercise
-> download a project, create a new environment and install from the
->  requirements file
+> ## Using virtual environments
+> To use what we've learned so far, try doing the following:
+> - Find a project that interests you.
+> - Download or clone the project's repository.
+> - Create a new virtual environment for the project.
+> - Use the project's `requirements.txt` file to install the dependencies.
 >
-> Hint: use the pip man file to find options you can pass to `pip install`
+> __Hint:__ use `pip install -h` to see the possible options for the `pip install` command.
 >
 > > ## Solution
+> > We can use the [example-python-project](https://github.com/vinisalazar/example-python-project.git) from Episode 02
+> > to demonstrate this:
+> > ```bash
+> > git clone https://github.com/vinisalazar/example-python-project.git
+> > cd example-python-project
+> > virtualenv example-env
+> > source example-env/bin/activate
+> > ```
+> >
+> > The `-r` flag in the `pip install` command allows installing a project's requirements from a text file:
+> >
 > > ```bash
 > > pip install -r requirements.txt
 > > ```
-> > {: .solution}
+> {: .solution}
 {: .challenge}
 
 
