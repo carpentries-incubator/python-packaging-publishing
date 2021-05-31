@@ -1,5 +1,5 @@
 ---
-title: "Managing Virtual Environments with VirtualEnv and Conda"
+title: "Managing Virtual Environments"
 teaching: 0
 exercises: 0
 questions:
@@ -9,7 +9,7 @@ objectives:
 - "Identify an environment, dependencies, and an environment manager."
 - "Install an older version of Python."
 - "Use virtualenv and/or conda to create an environment per project."
-- "Store a projects' dependencies."
+- "Store a project's dependencies."
 - "Install dependencies for a project."
 keypoints:
 - "A Python dependency is an independent package that a given project requires to be able to run."
