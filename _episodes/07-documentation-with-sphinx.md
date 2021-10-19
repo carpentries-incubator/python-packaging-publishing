@@ -22,7 +22,7 @@ Sphinx is a tool for building documentation.
 > - [pytest](https://docs.pytest.org/en/latest/)
 > - [seaborn](https://seaborn.pydata.org/)
 > - [numpy](https://docs.scipy.org/doc/numpy/reference/)
-- - [scipy-cookbook](https://scipy-cookbook.readthedocs.io/)
+> - [scipy-cookbook](https://scipy-cookbook.readthedocs.io/)
 > - [scikit-learn](http://scikit-learn.org/stable/)
 >
 > Discuss what the common components are, what is helpful about these
@@ -32,6 +32,7 @@ Sphinx is a tool for building documentation.
 >
 > > ## Solution
 > > these all use sphinx to generate them?
+> {: .solution}
 {: .challenge}
 
 ## Sphinx quickstart
@@ -92,7 +93,7 @@ FIXME: adding pages
 
 ## API Documentation
 
-Add an api line to the `indnex.rst` so that it has a link to it.
+Add an api line to the `index.rst` so that it has a link to it.
 
 The create an API.rst file:
 
