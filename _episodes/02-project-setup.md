@@ -248,10 +248,24 @@ For reading, check out the [curriculum](https://mozilla.github.io/open-leadershi
 Clean up and organize content: where to different pieces of code go -->
 
 > ## Practice working on projects
-> FIXME: provide a example project folder, spend time sorting,
-> or allow people some time to work on their own projects and generating questions.
+> To practice organising a project, download the [Gapminder example project][example-project] and spend a few minutes
+> organising it: create directories, move and rename files, and even edit the code if needed. Be sure to have a glance
+> at the content of each file. To download it, either use [this link][example-project-zip] to download a ZIP file or
+> clone the [repository][example-project].
+> 
+> > ## Solution
+> > A possible way to organise the project is in the project's `tidy` branch. You can open the `tidy` branch
+> on GitHub by clicking on [this link.][tidy-branch]
+> > Discuss: what is different from the version you downloaded?
+> > * How are directories organised?
+> > * Where is each file located?
+> > * Which directory represents a __Python package?__
+> {: .solution}
 {: .challenge}
 
+[tidy-branch]: https://github.com/vinisalazar/example-python-project/tree/tidy
+[example-project]: https://github.com/vinisalazar/example-python-project
+[example-project-zip]:  https://github.com/vinisalazar/example-python-project/archive/refs/tags/v0.0.1.zip
 [good-practices-paper]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
 [no-license-article]: https://snyk.io/blog/over-10-of-python-packages-on-pypi-are-distributed-without-any-license/
 [licensing-episode]: https://swcarpentry.github.io/git-novice/11-licensing/index.html
