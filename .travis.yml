@@ -9,15 +9,14 @@ before_install:
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
   - echo "deb https://cran.rstudio.com/bin/linux/ubuntu trusty/" | sudo tee -a /etc/apt/sources.list
   - sudo apt-get update -y
-  - sudo apt-get install -y r-base
+  - sudo apt-get install -y r-base --allow-unauthenticated
   - sudo Rscript -e "install.packages('knitr', repos = 'https://', dependencies = TRUE)"
   - sudo Rscript -e "install.packages('stringr', repos = 'https://cran.rstudio.com', dependencies = TRUE)"
   - sudo Rscript -e "install.packages('checkpoint', repos = 'https://cran.rstudio.com', dependencies = TRUE)"
   - sudo Rscript -e "install.packages('ggplot2', repos = 'https://cran.rstudio.com', dependencies = TRUE)"
-  - rvm default
-  - gem install json kramdown jekyll
+  - rvm use 2.7.1 --install --binary --fuzzy --default
+  - gem install json kramdown jekyll bundler
 install:
   - pip install pyyaml
 script:
-  - make lesson-check-all
   - make --always-make site
