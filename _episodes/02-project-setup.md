@@ -95,9 +95,6 @@ touch README.md
 ~~~
 {: .language-bash}
 
-We will also have a `.gitignore` file and some files and folders that are not included. In general data is ignored,
-but scripts that download or process the data in some way, are good to keep. Results should be ignored.
-
 > ## Exercise
 >
 > Make each of the following files in the project in the correct location by
@@ -126,6 +123,39 @@ replacing the `__` on each line
 > > {: .language-bash }
 > {: .solution }
 {: .challenge}
+
+> ## Where to store results?
+> A question that we may ask ourselves is where to store our __results__, that is, our final, processed data. This is
+> debatable, and depends on the characteristics of our project. If we have many intermediate files between our
+> raw data and final results, it may be interesting to create a `results/` directory. If we only have a couple of 
+> intermediate files, we could simply store our results in the `data/` directory. If we generate many figures from
+> our data, we could create a directory called `figures/` or `img/`. 
+{: .callout}
+
+## Configuration files and `.gitignore`
+The root of the project, _i.e._ the `project` folder containing all of our subdirectories, may also contain
+configuration files from various applications. Some types of configuration files include:
+- `.editorconfig`, that interacts with text editors and IDEs;
+- `.yml` files that provide settings for web services (such as [GitHub Actions](https://docs.github.com/en/actions));
+- the `.gitignore` file, that specificies which files should be __ignored__ by Git version control.
+
+The `.gitignore` is particularly useful if we have large data files, and don't want them to be attached to our package
+distribution. To address this, we should include instructions or scripts to download the data. Results should also be
+ignored. For our example project, we could create a `.gitignore` file:
+
+```bash
+touch .gitignore
+```
+
+And add the following content to it:
+```none
+data/*.csv
+```
+
+This would ignore the `data/raw_data.csv` file, preventing from adding it to version control. This can be very important
+depending on the size of our data! We don't want the user to have to download very large files along with our repository,
+and it may even cause problems with hosting services. If a `results/` subdirectory was created, we should also add
+that to the `.gitignore` file.
 
 > ## Exercise
 >
