@@ -1,28 +1,15 @@
 ---
-title: "Carpentries Incubator Welcome"
+title: Mozilla Open Leaders Final Demo
 ---
 
+Hi, my name is Sarah Brown and I'm a postdoctoral researcher in Data Science at Brown University.
 
-This project started in the Mozilla Open Leaders Cohort 6 and I'm excited for it to move to the Carpentries Incubator.
-I'm building an open curriculum to teach researchers to release their python code in ways that better support repeatability and collaboration.
-In the Carpentries Incubator I hope that this material is more findable and that new contributors feel welcome to join the development.
+I'm building an open curriculum to teach researchers to release their python code in ways that better support repeatability and collaboration. The lesson design follows the Carpentries style: learner centric, accessible and delivered with participatory live coding.  The lesson will teach concepts of project organization, packaging, environments, documentation, and publishing.  These are topics that many researchers won't know: whether self-taught or focused on theory, these very practical aspects are not learned.
 
-The lesson design follows the Carpentries style: learner centric, accessible and delivered with participatory live coding.  
-The lesson teaches concepts of project organization, packaging, environments, documentation, and publishing.
-These are topics that many researchers won't know: whether self-taught or focused on theory, these very practical aspects are not learned.
+I hope my curriculum can move us from a state where a lot of research code is not released, and what much of is released is a set script that makes it easy to reproduce a paper's result, but make it hard to compare a new technique or apply a method to a new dataset.
+To get there, I aim to fill a gap in training researchers with minimal practices they can adopt without requiring learning  too many specialized tools. I found that a lot of documentation and tools for these concepts focus on bigger  software projects and I think data analysis projects have slightly different nature and deserve their own support in the form of tutorials and conventions.
 
-I hope my curriculum can more research code be released in a reusable form.
-At leas in my area of machine learning, much of the research code that is released is a set scripts that make it easy to reproduce a paper's result, but make it hard to compare that result to a newer technique or apply a method to a new dataset.
-To get there, I aim to fill a gap in training researchers with minimal practices they can adopt without requiring learning  too many specialized tools.
-I found that a lot of documentation and tools for these concepts focus on bigger  software projects and I think data analysis projects have slightly different nature and deserve their own support in the form of tutorials and conventions.
-
-
-To date, I've built out an outline with learning objectives and started filling in some activities.
-I ran one pilot of the workshop in March 2019.
-I would welcome more activities and examples to use in the workshop and more thoughtful conversation about what a minimal set of open source practices for this purpose could look like.
-There are a number of tagged issues and places where I had an idea for an exercise, but have not developed it fully, marked with FIXME in the repo.
-Some have additional notes as comments that only show when looking at the files offline or by clicking 'Raw' or 'edit' on Github in a browser.
-
+To date, I've built out an outline with learning objectives and started filling in some activities.  I will pilot the workshop as a full day session at Brown University in February. I would welcome more activities and examples to use in the workshop and more thoughtful conversation about what a minimal set of open source practices for this purpose could look like. I plan to make the lesson more accessible via the Carpentries Lab program, when it launches.
 
 <!-- ## Practice Version /Notes
 
@@ -80,3 +67,5 @@ Crowd AI as a possible resource
 I am building an open curriculum to prepare researchers to release the python data analysis projects and tools in ways that better support repeatability and comparison of methods. The lesson is designed to be delivered in the participatory live coding that is a signature of the Carpentries.
  <!-- means that the material is novice-friendly, learner-centric, and intended to be delivered in a live-code-along format.
 It focuses on researchers by anchoring on the core principles of open source that will provide benefit without too much unrewarded overhead to researchers. A focus on repeatability and comparison, is a step beyond reproducibility into a realm of more collaborative research and emphasizes documentation, packaging, and usability in a different way that a set of scripts that can be run, but not understood. -->
+
+

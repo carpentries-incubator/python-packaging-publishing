@@ -1,25 +1,25 @@
 ---
-title: "Managing Virtual Environments"
+title: Managing Virtual Environments
 teaching: 0
 exercises: 0
-questions:
-- "How can I make sure the whole team (or lab) gets the same results?"
-- "How can I simplify setup and dependencies for people to use my code or reproduce my results?"
-objectives:
-- "Identify an environment, dependencies, and an environment manager."
-- "Install an older version of Python."
-- "Use `virtualenv` and/or `conda` to create an environment per project."
-- "Store a project's dependencies."
-- "Install dependencies for a project."
-keypoints:
-- "A Python dependency is an independent package that a given project requires to be able to run."
-- "An environment is a directory that contains a Python installation, plus a number of additional packages."
-- "An environment manager enables one-step installing and documentation of dependencies, including versions."
-- "`virtualenv` is a tool to create lightweight Python virtual environments."
-- "`conda` is a more advanced environment and package manager that is included with Anaconda."
-- "Isolating our environment can be helpful to keep our system organized."  
-- "Dependencies can be 'pinned' to files such as `requirements.txt` or `environment.yml`."
 ---
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- Identify an environment, dependencies, and an environment manager.
+- Install an older version of Python.
+- Use `virtualenv` and/or `conda` to create an environment per project.
+- Store a project's dependencies.
+- Install dependencies for a project.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- How can I make sure the whole team (or lab) gets the same results?
+- How can I simplify setup and dependencies for people to use my code or reproduce my results?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Major Python versions
 
@@ -29,8 +29,8 @@ install the package (with a tool such as Pip, for example), you discover some so
 import, or even during the installation process.
 
 This can be a common occurrence when working on programming projects, regardless of which language is being used. In
-Python, errors can come up because of __version conflicts__, that is, two or more packages require different versions
-of the same __dependency__. __A dependency is an independent package that another package requires to run.__ By logic,
+Python, errors can come up because of **version conflicts**, that is, two or more packages require different versions
+of the same **dependency**. **A dependency is an independent package that another package requires to run.** By logic,
 the base dependency of all Python packages is the Python language itself. In order to run a Python project, we need
 Python to be installed. However, there are important differences between major versions of Python, specially between
 versions 2 and 3. From January 2020, [Python 2 has been deprecated](https://www.python.org/doc/sunset-python-2/) in favour
@@ -42,41 +42,46 @@ installation of the Python language in an older version. Most modern Python pack
 may only support Python 3, as it is the current (and recommended) version of the language. In contrast, there are also
 older Python packages that only run on Python 2, and thus may not run on our system if we are currently using Python 3.
 
-__How can we deal with that?__
+**How can we deal with that?**
 
 ## Virtual environments
 
-The answer to that is using __virtual environments__. We can think of an environment like a filing cabinet inside our
+The answer to that is using **virtual environments**. We can think of an environment like a filing cabinet inside our
 computer: for each drawer, we have an installation of Python, plus a number of additional packages.
 
-<img src="../fig/filing-cabinet.png" width="200">
+<img src="fig/filing-cabinet.png" width="200">
 
 Packages that are installed in an environment are restricted to that environment, and will not affect system-level
 installs. Being able to isolate the installation of a specific version of Python or of a certain set of Python packages
 is very important to organise our programming environment and to prevent conflicts.
 
-Whenever we __activate__ a virtual environment, our system will start using that version of Python and packages installed
+Whenever we **activate** a virtual environment, our system will start using that version of Python and packages installed
 in that environment will become available. Environments can also be saved so that you can install all of the
 packages and replicate the environment on a new system.
 
-> ## Why use virtual environments?
-> When we are unfamiliar with virtual environments, they may seem like an unnecessary hurdle. If the code runs on
-> our current environment, why bother with the extra work of creating or using a different one? There are many reasons
-> to use a virtual environment:
-> 
->  - to prevent conflicts with system-level installations;
->  - to ensure consistency in the code that we deliver, _i.e.:_ keep it compatible with the same versions;
->  - to install our code in different environments, such as a server or cloud platform;
->  - to be able to share our environment with others (and prevent "works on my machine" errors).
-> 
-> Having isolated environments for each project greatly improves the organisation of our development environment. If 
-> something goes wrong in an environment (for example, the installation of a package breaks, or there is a version
-> conflict between distinct dependencies), we can simply delete that environment and recreate it. The rest of our system
-> is not affected or compromised. This can be **critical** in multi-user environments.
-> 
-> Overall, we only need to learn the basics about virtual environments to be able to use them effectively. So, there is
-> great benefit with relatively low effort.
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Why use virtual environments?
+
+When we are unfamiliar with virtual environments, they may seem like an unnecessary hurdle. If the code runs on
+our current environment, why bother with the extra work of creating or using a different one? There are many reasons
+to use a virtual environment:
+
+- to prevent conflicts with system-level installations;
+- to ensure consistency in the code that we deliver, *i.e.:* keep it compatible with the same versions;
+- to install our code in different environments, such as a server or cloud platform;
+- to be able to share our environment with others (and prevent "works on my machine" errors).
+
+Having isolated environments for each project greatly improves the organisation of our development environment. If
+something goes wrong in an environment (for example, the installation of a package breaks, or there is a version
+conflict between distinct dependencies), we can simply delete that environment and recreate it. The rest of our system
+is not affected or compromised. This can be **critical** in multi-user environments.
+
+Overall, we only need to learn the basics about virtual environments to be able to use them effectively. So, there is
+great benefit with relatively low effort.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 We can use the command-line to see which Python version is currently being used. This is the Python version that
 is used to execute any scripts or Python files that we run from the command-line. There are many ways to do that, but
@@ -92,59 +97,75 @@ on Mac or LINUX, or:
 where python
 ```
 
-In Windows machines. The `which` and `where` commands point to the __Python executable__ that is currently active.
+In Windows machines. The `which` and `where` commands point to the **Python executable** that is currently active.
 If we are using a virtual environment, that file will be inside our environment directory. If we see something like
 `/usr/bin/python`, it is likely that we are using a system-level version of Python. If you are using an Anaconda
 distribution of Python, it is likely that you will see `<path to your anaconda install>/bin/python`.
 
 **Note: these commands can also be used to locate other executables.**
 
-> ## Dependencies
-> We've seen that dependencies are independent packages that are required for another package to run. Think of a
-> particular package, either one that you want to create or one that you often use:
->   - what dependencies does it have?
->   - why is it important to keep track of these dependencies?
->   - what may happen if a dependency goes through a major version update?
-> 
-> > ## Solution
-> >  - All Python packages obviously have the Python language as a dependency. For data analysis and scientific Python
-> > projects, a very common dependency is the [NumPy](https://numpy.org/) package, that provides the basis for numerical
-> > computing in Python, and additionally other common libraries of the scientific Python stack, such as
-> > [Pandas](https://pandas.pydata.org/) and [Matplotlib](https://matplotlib.org/).
-> >  - Keeping track of dependencies matters because our project depends on them to run correctly. If we are trying
-> > use a function or method from a dependency that behaves differently in different versions, we may get unexpected
-> > results. Also, it's important to know our dependencies' dependencies, which may sound like a lot, but it's something
-> > occurs very often. If our dependency requires a package, then we also require that package.
-> >  - If a dependency goes through a major version update, such as Python 2 to Python 3, there may be breaking changes
-> > in downstream packages. If this happens for our package, we should test the package accordingly to see if everything
-> > works as expected. Testing software is a vast topic and we can leave it for now, but it is important to have that in
-> > mind when working with dependencies.
-> {: .solution} 
-{: .challenge}
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Dependencies
+
+We've seen that dependencies are independent packages that are required for another package to run. Think of a
+particular package, either one that you want to create or one that you often use:
+
+- what dependencies does it have?
+- why is it important to keep track of these dependencies?
+- what may happen if a dependency goes through a major version update?
+
+:::::::::::::::  solution
+
+## Solution
+
+- All Python packages obviously have the Python language as a dependency. For data analysis and scientific Python
+  projects, a very common dependency is the [NumPy](https://numpy.org/) package, that provides the basis for numerical
+  computing in Python, and additionally other common libraries of the scientific Python stack, such as
+  [Pandas](https://pandas.pydata.org/) and [Matplotlib](https://matplotlib.org/).
+- Keeping track of dependencies matters because our project depends on them to run correctly. If we are trying
+  use a function or method from a dependency that behaves differently in different versions, we may get unexpected
+  results. Also, it's important to know our dependencies' dependencies, which may sound like a lot, but it's something
+  occurs very often. If our dependency requires a package, then we also require that package.
+- If a dependency goes through a major version update, such as Python 2 to Python 3, there may be breaking changes
+  in downstream packages. If this happens for our package, we should test the package accordingly to see if everything
+  works as expected. Testing software is a vast topic and we can leave it for now, but it is important to have that in
+  mind when working with dependencies.
+  
+  
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Environment and package managers
 
 There are different strategies to deal with Python environments. We are going to focus on two of them: `virtualenv` and `conda`.
 
 - `virtualenv` is a tool to create isolated Python environments. It is so widespread that a subset of it has been integrated
-into the Python standard library under the [venv module.](https://docs.python.org/3/library/venv.html) `virtualenv` uses
-`pip`, that we've discussed previously, to install and manage packages inside an environment. Therefore, `virtualenv` is
-an __environment manager__ that is compatible with `pip`, a __package manager__. 
+  into the Python standard library under the [venv module.](https://docs.python.org/3/library/venv.html) `virtualenv` uses
+  `pip`, that we've discussed previously, to install and manage packages inside an environment. Therefore, `virtualenv` is
+  an **environment manager** that is compatible with `pip`, a **package manager**.
 
-- `conda` is a tool from the [Anaconda distribution](http://anaconda.org/) that is both an environment and package manager.
-Packages can be installed in Conda environments using both `pip` and `conda`. There are a fews advantages of using Conda
-for installations, such as support for third-party packages (that aren't available on PyPI) and automatic dependency solving.
-This comes at the disadvantage of being heavier and usually slower than `virtualenv`.
-  
+- `conda` is a tool from the [Anaconda distribution](https://anaconda.org/) that is both an environment and package manager.
+  Packages can be installed in Conda environments using both `pip` and `conda`. There are a fews advantages of using Conda
+  for installations, such as support for third-party packages (that aren't available on PyPI) and automatic dependency solving.
+  This comes at the disadvantage of being heavier and usually slower than `virtualenv`.
+
 Because we are already familiar with `pip`, we can start off by using `virtualenv` to learn how environments work in
 practice. We'll have a look at Conda environments later on.
 
-> ## Installing `virtualenv`
-> If you do not have `virtualenv` installed, you can quickly install it with `pip`:
-> ```bash
-> pip install virtualenv
-> ```
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Installing `virtualenv`
+
+If you do not have `virtualenv` installed, you can quickly install it with `pip`:
+
+```bash
+pip install virtualenv
+```
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Create an environment
 
@@ -220,52 +241,68 @@ deactivate
 
 Not how the environment name disappears from the Shell prompt.
 
-> ## Default environment
-> Note that an environment is only activated in the current Terminal window. If you open a new
-> Terminal, you'll be back to your default environment. This could be, for example, the `base` environment if you have
-> Anaconda installed, or your system's default Python environment.
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
 
-> ## Using virtual environments
-> To use what we've learned so far, try doing the following:
-> - Find a project that interests you.
-> - Download or clone the project's repository.
-> - Create a new virtual environment for the project.
-> - Use the project's `requirements.txt` file to install the dependencies.
->
-> __Hint:__ use `pip install -h` to see the possible options for the `pip install` command.
->
-> > ## Solution
-> > We can use the [example-python-project](https://github.com/vinisalazar/example-python-project.git) from Episode 02
-> > to demonstrate this:
-> > ```bash
-> > git clone https://github.com/vinisalazar/example-python-project.git
-> > cd example-python-project
-> > virtualenv example-env
-> > source example-env/bin/activate
-> > ```
-> >
-> > The `-r` flag in the `pip install` command allows installing a project's requirements from a text file:
-> >
-> > ```bash
-> > pip install -r requirements.txt
-> > ```
-> {: .solution}
-{: .challenge}
+## Default environment
+
+Note that an environment is only activated in the current Terminal window. If you open a new
+Terminal, you'll be back to your default environment. This could be, for example, the `base` environment if you have
+Anaconda installed, or your system's default Python environment.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Using virtual environments
+
+To use what we've learned so far, try doing the following:
+
+- Find a project that interests you.
+- Download or clone the project's repository.
+- Create a new virtual environment for the project.
+- Use the project's `requirements.txt` file to install the dependencies.
+
+**Hint:** use `pip install -h` to see the possible options for the `pip install` command.
+
+:::::::::::::::  solution
+
+## Solution
+
+We can use the [example-python-project](https://github.com/vinisalazar/example-python-project.git) from Episode 02
+to demonstrate this:
+
+```bash
+git clone https://github.com/vinisalazar/example-python-project.git
+cd example-python-project
+virtualenv example-env
+source example-env/bin/activate
+```
+
+The `-r` flag in the `pip install` command allows installing a project's requirements from a text file:
+
+```bash
+pip install -r requirements.txt
+```
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 These are the basics of using `virtualenv` to create virtual environments. Alternatively, we could also use `conda`,
 which is a more advanced package and environment manager. `conda` has several advantages over `virtualenv`, at the cost
 of being heavier and slower.
 
 ## Conda environments
+
 `conda` works similarly to `virtualenv`, but we use the `conda` command for managing both packages and environments
-(with different subcommands, such as `conda create`, `conda install`, etc). If you are using Python for data analysis, 
+(with different subcommands, such as `conda create`, `conda install`, etc). If you are using Python for data analysis,
 chances are that you have it installed through Anaconda or Miniconda, as they are very popular distributions
 of Python. Both Anaconda and Miniconda come with the `conda` environment manager, that can be used
 from the command-line (if you have `(base)` in your Shell prompt, that means it's likely using the `base`,
 or default, `conda` environment). Try typing `conda` in your Terminal. You should see something like the following:
 
-```
+```output
 usage: conda [-h] [-V] command ...
 
 conda is a tool for managing and deploying applications, environments and packages.
@@ -302,7 +339,6 @@ optional arguments:
   -h, --help     Show this help message and exit.
   -V, --version  Show the conda version number and exit.
 ```
-{: .output}
 
 Differently than `virtualenv`, when we create a new environment with Conda, the folder containing the environment
 is not created in the working directory, but rather in the `envs/` directory in thefolder where Anaconda or Miniconda is
@@ -320,12 +356,13 @@ conda create -n example-env python=3.9
 
 After a while, a prompt should appear confirming if you want to create the environment. Simply type `y` and press Enter.
 
-In this command, the `-n` flag specifies the __name__ of our environment, and can be set to anything we like.
+In this command, the `-n` flag specifies the **name** of our environment, and can be set to anything we like.
 After the environment's name, we specify any packages that we want to install. In the example above, our command
 specifies that we want the `example-env` to have Python and the Python version should be 3.9.
-We could also specify `python=3` if we didn't care for the minor version number. 
+We could also specify `python=3` if we didn't care for the minor version number.
 
 To activate our newly created Conda environment, we use `conda activate`:
+
 ```bash
 conda activate example-env
 ```
@@ -336,14 +373,14 @@ Similar to `virtualenv`, we should see `(example-env)` in our prompt, meaning th
 ```bash
 which python
 ```
-```
+
+```output
 <path to anaconda folder>/envs/example-env/bin/python
 ```
-{: .output}
 
 ## Installing packages from Conda channels
 
-Now that we've activated our example environment, we can use the `conda install` command to install packages. If we 
+Now that we've activated our example environment, we can use the `conda install` command to install packages. If we
 consider the same `example-python-project` used in the previous examples, we can check the requirements file and
 see that it has four dependencies: Pandas, NumPy, Matplotlib, and Seaborn. We could install the dependencies
 like this:
@@ -359,30 +396,36 @@ do?
 The answer to the first question is one of the cool things about using Conda: it automatically downloads dependencies
 of packages we are attempting to install. In this case, NumPy is a dependency of Pandas and Matplotlib is a
 dependency of Seaborn. Thus, we only need to install Pandas and Seaborn and the other two packages will automatically
-be downloaded. `pip` also accounts for dependencies when installing new packages, but Conda's dependency __solver__ is
+be downloaded. `pip` also accounts for dependencies when installing new packages, but Conda's dependency **solver** is
 much more sophisticated, and ensures compatibility across all packages in our environment.
 
-The second question is because of [__channels__][conda-channels] in Conda. Here, we are using the `conda-forge`
+The second question is because of [**channels**][conda-channels] in Conda. Here, we are using the `conda-forge`
 channel. Channels are repositories of packages, much like PyPI is the repository used by `pip`.
 [Conda-forge](https://conda-forge.org/) is a well-stablished and community-driven repository for Conda packages (or
-__recipes__, as they are called). Conda-forge has an
+**recipes**, as they are called). Conda-forge has an
 advanced infrastructure to automatically maintain and update Conda recipes, and is a reliable source for installing
 packages through Conda. Check out their [docs](https://conda-forge.org/docs/) for more information. Other known
 Conda channels include [Bioconda](https://bioconda.github.io/), which specializes in bioinformatics software, and
 the [`R` channel](https://anaconda.org/r/repo), that provides packages for the R programming language.
 
-> ## Searching for Conda packages
-> To check if a package can be installed with Conda, go to [https://anaconda.org/](https://anaconda.org/) and use
-> the search bar to search for the package's name. If the package is available through a Conda channel, it'll be listed
-> here. By clicking on the package name, you can see the exact `conda` command to install it.
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
 
-After running the `conda install` command, we will get a prompt to confirm the installation, much like we did the 
+## Searching for Conda packages
+
+To check if a package can be installed with Conda, go to <https://anaconda.org/> and use
+the search bar to search for the package's name. If the package is available through a Conda channel, it'll be listed
+here. By clicking on the package name, you can see the exact `conda` command to install it.
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+After running the `conda install` command, we will get a prompt to confirm the installation, much like we did the
 `conda create` command. These prompts can be skipped by adding a `-y` flag to either commands.
 
 ## Listing packages and exporting a Conda environment
 
 To list available packages in a Conda environment, we can run:
+
 ```bash
 conda list
 ```
@@ -410,19 +453,41 @@ conda env create -f environment.yml
 And the environment will be recreated from the specified dependencies.
 
 ## Conclusion
+
 Wow, that was a lot of commands in a single episode. And those were only the basics of using virtual environments!
 However, we mustn't fret. It doesn't matter if we use `conda` or `virtualenv`, and different situations will call for
-different tools, the important thing to remember is to understand the __importance__ of using virtual environments.
+different tools, the important thing to remember is to understand the **importance** of using virtual environments.
 Having our environment isolated from the rest of our system is really good to prevent version conflicts, and "pinning"
-our dependencies in a `requirements.txt` or `environment.yml` can be very helpful for other users to install the 
+our dependencies in a `requirements.txt` or `environment.yml` can be very helpful for other users to install the
 necessary packages to run our code.
 
-> ## Official docs
-> For more information on `conda` and `virtualenv`, check out the official documentation pages:
-> - [Conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html)
-> - [Virtualenv docs](https://virtualenv.pypa.io/en/latest/)
-{: .callout}
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Official docs
+
+For more information on `conda` and `virtualenv`, check out the official documentation pages:
+
+- [Conda user guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html)
+- [Virtualenv docs](https://virtualenv.pypa.io/en/latest/)
+  
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 
 [conda-channels]: https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/channels.html
 
-{% include links.md %}
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- A Python dependency is an independent package that a given project requires to be able to run.
+- An environment is a directory that contains a Python installation, plus a number of additional packages.
+- An environment manager enables one-step installing and documentation of dependencies, including versions.
+- `virtualenv` is a tool to create lightweight Python virtual environments.
+- `conda` is a more advanced environment and package manager that is included with Anaconda.
+- Isolating our environment can be helpful to keep our system organized.
+- Dependencies can be 'pinned' to files such as `requirements.txt` or `environment.yml`.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
