@@ -33,7 +33,7 @@ life_cycle: 'pre-alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/fishtree-attempt/python-packaging-publishing/'
+source: 'https://github.com/carpentries-incubator/python-packaging-publishing'
 
 # Default branch of your lesson
 branch: 'main'
@@ -92,7 +92,6 @@ profiles:
 
 
 carpentry_description: Lesson Description
-url: https://preview.carpentries.org/python-packaging-publishing
+url: 'https://carpentries-incubator.github.io/python-packaging-publishing'
 analytics: carpentries
 lang: en
-workbench-beta: yes
