@@ -20,7 +20,7 @@ carpentry: 'incubator'
 title: 'Packaging and Publishing with Python'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 
+created: 2018-06-01 
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'
@@ -95,3 +95,4 @@ carpentry_description: Lesson Description
 url: 'https://carpentries-incubator.github.io/python-packaging-publishing'
 analytics: carpentries
 lang: en
+
