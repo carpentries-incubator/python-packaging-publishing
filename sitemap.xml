@@ -46,7 +46,13 @@
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/about_contributors.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/python-packaging-publishing/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/python-packaging-publishing/images.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/incubator-welcome.html</loc>
@@ -100,13 +106,25 @@
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/about_contributors.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/images.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/incubator-welcome.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/learner-profiles.html</loc>
@@ -119,6 +137,12 @@
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor/resources.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/python-packaging-publishing/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/python-packaging-publishing/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/python-packaging-publishing/learner-profiles.html</loc>
